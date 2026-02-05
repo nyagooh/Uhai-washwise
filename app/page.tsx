@@ -109,10 +109,10 @@ export default function Home() {
             >
               <div className="flex items-center gap-4 mb-4">
                 <div className="w-14 h-14 rounded-lg flex items-center justify-center" style={{ backgroundColor: '#E6F5F9' }}>
-                  <FaHandHoldingHeart className="text-2xl" style={{ color: '#2BA5C8' }} />
+                  <FaHandHoldingHeart className="text-2xl" style={{ color: '#0598CE' }} />
                 </div>
                 <div>
-                  <div className="text-3xl font-bold" style={{ color: '#2BA5C8' }}>75,958</div>
+                  <div className="text-3xl font-bold" style={{ color: '#0598CE' }}>75,958</div>
                   <div className="text-sm" style={{ color: '#6B7280' }}>People Helped</div>
                 </div>
               </div>
@@ -195,7 +195,7 @@ export default function Home() {
               >
                 <div className="section-label mb-6">About Us</div>
                 <h2 className="heading-lg mb-8" style={{ lineHeight: '1.2' }}>
-                  United in compassion, <span style={{ color: '#2BA5C8' }}>changing lives</span>
+                  United in compassion, <span style={{ color: '#0598CE' }}>changing lives</span>
                 </h2>
                 <p className="text-body mb-10" style={{ fontSize: '18px', lineHeight: '1.8' }}>
                   Driven by compassion and a shared vision, we work hand-in-hand with communities 
@@ -206,7 +206,7 @@ export default function Home() {
                 <div className="grid sm:grid-cols-2 gap-8 mb-10">
                   <div className="flex items-start gap-5">
                     <div className="w-14 h-14 flex items-center justify-center flex-shrink-0" style={{ backgroundColor: '#E6F5F9' }}>
-                      <FiDroplet className="text-2xl" style={{ color: '#2BA5C8' }} />
+                      <FiDroplet className="text-2xl" style={{ color: '#0598CE' }} />
                     </div>
                     <div>
                       <h4 className="font-bold mb-2 text-lg" style={{ color: '#1A1A1A' }}>Healthcare Support</h4>
@@ -215,7 +215,7 @@ export default function Home() {
                   </div>
                   <div className="flex items-start gap-5">
                     <div className="w-14 h-14 flex items-center justify-center flex-shrink-0" style={{ backgroundColor: '#E6F5F9' }}>
-                      <FiHeart className="text-2xl" style={{ color: '#2BA5C8' }} />
+                      <FiHeart className="text-2xl" style={{ color: '#0598CE' }} />
                     </div>
                     <div>
                       <h4 className="font-bold mb-2 text-lg" style={{ color: '#1A1A1A' }}>Helped Fund</h4>
@@ -236,7 +236,7 @@ export default function Home() {
         {/* ============================================
             OUR APPROACH SECTION
         ============================================ */}
-        <section ref={approachRef} className="py-32" style={{ backgroundColor: '#F9FAFB' }}>
+        <section ref={approachRef} className="py-32" style={{ backgroundColor: '#FFFFFF' }}>
           <div className="container-main">
             <div className="grid lg:grid-cols-2 gap-20 items-center">
               {/* Content */}
@@ -249,7 +249,7 @@ export default function Home() {
                   Our Approach
                 </motion.div>
                 <motion.h2 variants={fadeUp} className="heading-lg mb-8" style={{ lineHeight: '1.2' }}>
-                  Compassionate solutions for <span style={{ color: '#2BA5C8' }}>lasting impact</span>
+                  Compassionate solutions for <span style={{ color: '#0598CE' }}>lasting impact</span>
                 </motion.h2>
                 <motion.p variants={fadeUp} className="text-body mb-10" style={{ fontSize: '18px', lineHeight: '1.8' }}>
                   Our approach focuses on creating sustainable change by addressing root causes, 
@@ -302,7 +302,7 @@ export default function Home() {
                   style={{ backgroundColor: '#FFFFFF', boxShadow: '0 2px 8px rgba(0, 0, 0, 0.08)' }}
                 >
                   <div className="w-20 h-20 mx-auto mb-8 flex items-center justify-center" style={{ backgroundColor: '#E6F5F9' }}>
-                    <item.icon className="text-3xl" style={{ color: '#2BA5C8' }} />
+                    <item.icon className="text-3xl" style={{ color: '#0598CE' }} />
                   </div>
                   <h3 className="text-2xl font-bold mb-4" style={{ color: '#1A1A1A' }}>{item.title}</h3>
                   <p className="leading-relaxed" style={{ color: '#6B7280', fontSize: '16px' }}>{item.desc}</p>
@@ -315,7 +315,7 @@ export default function Home() {
         {/* ============================================
             STATS SECTION
         ============================================ */}
-        <section className="py-32" style={{ backgroundColor: '#2BA5C8' }}>
+        <section className="py-32" style={{ backgroundColor: '#0598CE' }}>
           <div className="container-main">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-12">
               {[
@@ -345,7 +345,7 @@ export default function Home() {
         {/* ============================================
             SERVICES / HOW WE HELP
         ============================================ */}
-        <section ref={servicesRef} className="py-32" style={{ backgroundColor: '#F9FAFB' }}>
+        <section ref={servicesRef} className="py-32" style={{ backgroundColor: '#FFFFFF' }}>
           <div className="container-main">
             <motion.div
               initial="hidden"
@@ -459,7 +459,7 @@ export default function Home() {
               >
                 <div className="section-label">Our Impact</div>
                 <h2 className="heading-lg mb-6">
-                  Helping others <span style={{ color: '#2BA5C8' }}>improves the world</span>
+                  Helping others <span style={{ color: '#0598CE' }}>improves the world</span>
                 </h2>
                 <p className="text-body mb-8">
                   Every project we undertake creates ripples of positive change throughout 
@@ -476,7 +476,7 @@ export default function Home() {
                     <div key={item.label}>
                       <div className="flex justify-between mb-2">
                         <span className="font-semibold" style={{ color: '#1A1A1A' }}>{item.label}</span>
-                        <span className="font-bold" style={{ color: '#2BA5C8' }}>{item.value}%</span>
+                        <span className="font-bold" style={{ color: '#0598CE' }}>{item.value}%</span>
                       </div>
                       <div className="progress-bar">
                         <motion.div
@@ -502,7 +502,7 @@ export default function Home() {
         {/* ============================================
             CTA SECTION
         ============================================ */}
-        <section className="py-32 relative overflow-hidden" style={{ backgroundColor: '#2BA5C8' }}>
+        <section className="py-32 relative overflow-hidden" style={{ backgroundColor: '#0598CE' }}>
           <div className="absolute inset-0">
             <Image
               src="https://images.unsplash.com/photo-1541252260730-0412e8e2108e?q=80&w=1920"
@@ -544,7 +544,7 @@ export default function Home() {
                   }}
                   onMouseEnter={(e) => {
                     e.currentTarget.style.backgroundColor = '#FFFFFF';
-                    e.currentTarget.style.color = '#2BA5C8';
+                    e.currentTarget.style.color = '#0598CE';
                   }}
                   onMouseLeave={(e) => {
                     e.currentTarget.style.backgroundColor = 'transparent';

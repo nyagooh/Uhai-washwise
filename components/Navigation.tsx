@@ -30,7 +30,7 @@ export default function Navigation() {
   return (
     <>
       {/* Top Bar */}
-      <div className="hidden lg:block py-2" style={{ backgroundColor: '#2BA5C8', color: '#FFFFFF' }}>
+      <div className="hidden lg:block py-2" style={{ backgroundColor: '#0598CE', color: '#FFFFFF' }}>
         <div className="container-main flex justify-between items-center text-sm">
           <div className="flex items-center gap-6">
             <span className="flex items-center gap-2">
@@ -66,12 +66,12 @@ export default function Navigation() {
           <div className="flex items-center justify-between">
             {/* Logo */}
             <Link href="/" className="flex items-center gap-3">
-              <div className="w-12 h-12 rounded-lg flex items-center justify-center" style={{ backgroundColor: '#2BA5C8' }}>
+              <div className="w-12 h-12 rounded-lg flex items-center justify-center" style={{ backgroundColor: '#0598CE' }}>
                 <span className="text-white font-bold text-xl">U</span>
               </div>
               <div>
                 <span className="font-display font-bold text-xl" style={{ color: '#1A1A1A' }}>
-                  Uhai<span style={{ color: '#2BA5C8' }}>WashWise</span>
+                  Uhai<span style={{ color: '#0598CE' }}>WashWise</span>
                 </span>
               </div>
             </Link>
@@ -84,7 +84,7 @@ export default function Navigation() {
                   href={link.href}
                   className="transition-colors relative"
                   style={{ 
-                    color: pathname === link.href ? '#2BA5C8' : '#1A1A1A',
+                    color: pathname === link.href ? '#0598CE' : '#1A1A1A',
                     fontWeight: pathname === link.href ? 600 : 500
                   }}
                 >
@@ -93,7 +93,7 @@ export default function Navigation() {
                     <motion.span
                       layoutId="navIndicator"
                       className="absolute -bottom-1 left-0 right-0 h-0.5"
-                      style={{ backgroundColor: '#2BA5C8' }}
+                      style={{ backgroundColor: '#0598CE' }}
                     />
                   )}
                 </Link>
@@ -140,7 +140,7 @@ export default function Navigation() {
                   }`}
                   style={{ 
                     backgroundColor: pathname === link.href ? '#E6F5F9' : 'transparent',
-                    color: pathname === link.href ? '#2BA5C8' : '#1A1A1A',
+                    color: pathname === link.href ? '#0598CE' : '#1A1A1A',
                     fontWeight: pathname === link.href ? 600 : 500
                   }}
                 >

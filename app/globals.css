@@ -18,6 +18,10 @@
     font-family: var(--font-inter), system-ui, sans-serif;
     font-weight: 500;
   }
+  
+  html {
+    background-color: #FFFFFF;
+  }
 }
 
 @layer components {
@@ -31,14 +35,14 @@
     @apply inline-flex items-center justify-center gap-2 px-10 py-4 
            text-white rounded-md
            transition-all duration-300;
-    background-color: #2BA5C8;
+    background-color: #0598CE;
     font-weight: 600;
-    box-shadow: 0 4px 12px rgba(43, 165, 200, 0.25);
+    box-shadow: 0 4px 12px rgba(5, 152, 206, 0.25);
   }
   
   .btn-primary:hover {
-    background-color: #2284A0;
-    box-shadow: 0 6px 16px rgba(43, 165, 200, 0.35);
+    background-color: #047A9F;
+    box-shadow: 0 6px 16px rgba(5, 152, 206, 0.35);
     transform: translateY(-1px);
   }
 
@@ -46,27 +50,27 @@
     @apply inline-flex items-center justify-center gap-2 px-8 py-4 
            text-white rounded-lg
            transition-all duration-300;
-    background-color: #1B5F7A;
+    background-color: #035C70;
     font-weight: 600;
-    box-shadow: 0 2px 4px rgba(27, 95, 122, 0.2);
+    box-shadow: 0 2px 4px rgba(3, 92, 112, 0.2);
   }
   
   .btn-secondary:hover {
-    background-color: #114250;
-    box-shadow: 0 4px 8px rgba(27, 95, 122, 0.3);
+    background-color: #023E41;
+    box-shadow: 0 4px 8px rgba(3, 92, 112, 0.3);
   }
 
   .btn-outline {
     @apply inline-flex items-center justify-center gap-2 px-8 py-4 
            bg-transparent border-2 rounded-lg 
            transition-all duration-300;
-    border-color: #2BA5C8;
-    color: #2BA5C8;
+    border-color: #0598CE;
+    color: #0598CE;
     font-weight: 600;
   }
   
   .btn-outline:hover {
-    background-color: #2BA5C8;
+    background-color: #0598CE;
     color: white;
   }
 
@@ -74,45 +78,45 @@
     @apply inline-flex items-center justify-center gap-2 px-10 py-4 
            bg-white rounded-md
            transition-all duration-300;
-    color: #2BA5C8;
-    border: 2px solid #2BA5C8;
+    color: #0598CE;
+    border: 2px solid #0598CE;
     font-weight: 600;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
   }
   
   .btn-white:hover {
-    background-color: #2BA5C8;
+    background-color: #0598CE;
     color: white;
-    box-shadow: 0 4px 12px rgba(43, 165, 200, 0.25);
+    box-shadow: 0 4px 12px rgba(5, 152, 206, 0.25);
   }
 
   .btn-donate {
     @apply inline-flex items-center justify-center gap-2 px-12 py-5 
            rounded-md
            transition-all duration-300;
-    background-color: #2BA5C8;
+    background-color: #0598CE;
     color: white;
     font-weight: 700;
-    box-shadow: 0 4px 16px rgba(43, 165, 200, 0.3);
+    box-shadow: 0 4px 16px rgba(5, 152, 206, 0.3);
   }
   
   .btn-donate:hover {
-    background-color: #2284A0;
-    box-shadow: 0 6px 20px rgba(43, 165, 200, 0.4);
+    background-color: #047A9F;
+    box-shadow: 0 6px 20px rgba(5, 152, 206, 0.4);
     transform: translateY(-2px);
   }
 
   /* Section Label */
   .section-label {
     @apply inline-flex items-center gap-2 text-xs uppercase tracking-wider mb-4;
-    color: #2BA5C8;
+    color: #0598CE;
     font-weight: 700;
   }
 
   .section-label::before {
     content: '';
     @apply w-2 h-2 rounded-full;
-    background-color: #2BA5C8;
+    background-color: #0598CE;
   }
 
   /* Headings - Premium Timeless with Increased Weight */
@@ -214,7 +218,7 @@
 
   .video-hero-overlay {
     @apply absolute inset-0;
-    background-color: rgba(43, 165, 200, 0.7);
+    background-color: rgba(5, 152, 206, 0.7);
   }
 }
 

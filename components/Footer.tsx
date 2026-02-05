@@ -22,7 +22,7 @@ const services = [
 
 export default function Footer() {
   return (
-    <footer style={{ backgroundColor: '#2BA5C8', color: '#FFFFFF' }}>
+    <footer style={{ backgroundColor: '#0598CE', color: '#FFFFFF' }}>
       {/* Main Footer */}
       <div className="container-main py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
@@ -30,7 +30,7 @@ export default function Footer() {
           <div>
             <Link href="/" className="flex items-center gap-3 mb-6">
               <div className="w-12 h-12 bg-white rounded-lg flex items-center justify-center">
-                <span className="font-bold text-xl" style={{ color: '#2BA5C8' }}>U</span>
+                <span className="font-bold text-xl" style={{ color: '#0598CE' }}>U</span>
               </div>
               <span className="font-display font-bold text-xl">
                 Uhai<span style={{ color: '#FFFFFF' }}>WashWise</span>
@@ -64,7 +64,7 @@ export default function Footer() {
                     className="transition-colors flex items-center gap-2 group hover:opacity-80"
                     style={{ color: 'rgba(255, 255, 255, 0.8)' }}
                   >
-                    <FiArrowRight className="opacity-0 -ml-4 group-hover:opacity-100 group-hover:ml-0 transition-all" style={{ color: '#2BA5C8' }} />
+                    <FiArrowRight className="opacity-0 -ml-4 group-hover:opacity-100 group-hover:ml-0 transition-all" style={{ color: '#0598CE' }} />
                     {link.name}
                   </Link>
                 </li>

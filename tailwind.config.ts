@@ -9,22 +9,22 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        // Premium Primary - Light Blue #2BA5C8
+        // Premium Primary - Bright Blue #0598CE
         primary: {
-          DEFAULT: '#2BA5C8', // Premium Light Blue - Main brand color
+          DEFAULT: '#0598CE', // Premium Bright Blue - Main brand color
           light: '#E6F5F9', // Very light blue for backgrounds
-          dark: '#1B5F7A', // Darker blue for depth
-          darker: '#0D3B52', // Darkest for text
+          dark: '#047A9F', // Darker blue for depth
+          darker: '#035C70', // Darkest for text
           50: '#E6F5F9',
           100: '#CCEBF3',
           200: '#99D7E7',
           300: '#66C3DB',
           400: '#33AFCF',
-          500: '#2BA5C8',
-          600: '#2284A0',
-          700: '#1A6378',
-          800: '#114250',
-          900: '#082128',
+          500: '#0598CE',
+          600: '#047A9F',
+          700: '#035C70',
+          800: '#023E41',
+          900: '#012012',
         },
         // Premium Neutrals - Timeless & Clean
         neutral: {
