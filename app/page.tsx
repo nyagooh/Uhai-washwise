@@ -80,7 +80,7 @@ export default function Home() {
                 
                 <motion.h1 variants={fadeUp} className="heading-xl mb-6" style={{ color: '#FFFFFF' }}>
                   United in Compassion,{' '}
-                  <span style={{ color: '#6BA83D' }}>Changing Lives</span>
+                  <span style={{ color: '#FFFFFF' }}>Changing Lives</span>
                 </motion.h1>
                 
                 <motion.p variants={fadeUp} className="text-xl text-white/80 mb-8 leading-relaxed">
@@ -108,15 +108,15 @@ export default function Home() {
               className="hidden lg:block absolute bottom-20 right-8 bg-white rounded-2xl p-6 shadow-2xl max-w-xs"
             >
               <div className="flex items-center gap-4 mb-4">
-                <div className="w-14 h-14 rounded-xl flex items-center justify-center" style={{ backgroundColor: '#E8F5E0' }}>
-                  <FaHandHoldingHeart className="text-2xl" style={{ color: '#6BA83D' }} />
+                <div className="w-14 h-14 rounded-lg flex items-center justify-center" style={{ backgroundColor: '#E6F5F9' }}>
+                  <FaHandHoldingHeart className="text-2xl" style={{ color: '#2BA5C8' }} />
                 </div>
                 <div>
                   <div className="text-3xl font-bold" style={{ color: '#2BA5C8' }}>75,958</div>
-                  <div className="text-sm" style={{ color: '#6B7C8C' }}>People Helped</div>
+                  <div className="text-sm" style={{ color: '#6B7280' }}>People Helped</div>
                 </div>
               </div>
-              <p className="text-sm" style={{ color: '#6B7C8C' }}>
+              <p className="text-sm" style={{ color: '#6B7280' }}>
                 Supporting growth through community-driven water initiatives.
               </p>
             </motion.div>
@@ -139,18 +139,18 @@ export default function Home() {
         {/* ============================================
             ABOUT SECTION - Photo Grid
         ============================================ */}
-        <section className="py-24 bg-white">
+        <section className="py-32" style={{ backgroundColor: '#FFFFFF' }}>
           <div className="container-main">
-            <div className="grid lg:grid-cols-2 gap-16 items-center">
+            <div className="grid lg:grid-cols-2 gap-20 items-center">
               {/* Photo Grid */}
               <motion.div
                 initial={{ opacity: 0, x: -30 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
-                className="grid grid-cols-2 gap-4"
+                className="grid grid-cols-2 gap-5"
               >
-                <div className="space-y-4">
-                  <div className="relative h-48 rounded-2xl overflow-hidden shadow-lg">
+                <div className="space-y-5">
+                  <div className="relative h-56 overflow-hidden" style={{ boxShadow: '0 4px 16px rgba(0, 0, 0, 0.1)' }}>
                     <Image
                       src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?q=80&w=600"
                       alt="Community"
@@ -158,7 +158,7 @@ export default function Home() {
                       className="object-cover hover:scale-105 transition-transform duration-500"
                     />
                   </div>
-                  <div className="relative h-64 rounded-2xl overflow-hidden shadow-lg">
+                  <div className="relative h-72 overflow-hidden" style={{ boxShadow: '0 4px 16px rgba(0, 0, 0, 0.1)' }}>
                     <Image
                       src="https://images.unsplash.com/photo-1594398901394-4e34939a4fd0?q=80&w=600"
                       alt="Water access"
@@ -167,8 +167,8 @@ export default function Home() {
                     />
                   </div>
                 </div>
-                <div className="space-y-4 pt-8">
-                  <div className="relative h-64 rounded-2xl overflow-hidden shadow-lg">
+                <div className="space-y-5 pt-12">
+                  <div className="relative h-72 overflow-hidden" style={{ boxShadow: '0 4px 16px rgba(0, 0, 0, 0.1)' }}>
                     <Image
                       src="https://images.unsplash.com/photo-1541544741505-83219e68c68c?q=80&w=600"
                       alt="Children"
@@ -176,7 +176,7 @@ export default function Home() {
                       className="object-cover hover:scale-105 transition-transform duration-500"
                     />
                   </div>
-                  <div className="relative h-48 rounded-2xl overflow-hidden shadow-lg">
+                  <div className="relative h-56 overflow-hidden" style={{ boxShadow: '0 4px 16px rgba(0, 0, 0, 0.1)' }}>
                     <Image
                       src="https://images.unsplash.com/photo-1532629345422-7515f3d16bb6?q=80&w=600"
                       alt="Support"
@@ -193,33 +193,33 @@ export default function Home() {
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
               >
-                <div className="section-label">About Us</div>
-                <h2 className="heading-lg mb-6">
+                <div className="section-label mb-6">About Us</div>
+                <h2 className="heading-lg mb-8" style={{ lineHeight: '1.2' }}>
                   United in compassion, <span style={{ color: '#2BA5C8' }}>changing lives</span>
                 </h2>
-                <p className="text-body mb-8">
+                <p className="text-body mb-10" style={{ fontSize: '18px', lineHeight: '1.8' }}>
                   Driven by compassion and a shared vision, we work hand-in-hand with communities 
                   to create meaningful change. Our evidence-based approach ensures every intervention 
                   delivers lasting impact.
                 </p>
 
-                <div className="grid sm:grid-cols-2 gap-6 mb-8">
-                  <div className="flex items-start gap-4">
-                    <div className="w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0" style={{ backgroundColor: '#E8F5E0' }}>
-                      <FiDroplet className="text-xl" style={{ color: '#6BA83D' }} />
+                <div className="grid sm:grid-cols-2 gap-8 mb-10">
+                  <div className="flex items-start gap-5">
+                    <div className="w-14 h-14 flex items-center justify-center flex-shrink-0" style={{ backgroundColor: '#E6F5F9' }}>
+                      <FiDroplet className="text-2xl" style={{ color: '#2BA5C8' }} />
                     </div>
                     <div>
-                      <h4 className="font-bold mb-1" style={{ color: '#0D3B52' }}>Healthcare Support</h4>
-                      <p className="text-sm" style={{ color: '#6B7C8C' }}>Providing essential services and resources to communities.</p>
+                      <h4 className="font-bold mb-2 text-lg" style={{ color: '#1A1A1A' }}>Healthcare Support</h4>
+                      <p className="text-sm leading-relaxed" style={{ color: '#6B7280' }}>Providing essential services and resources to communities.</p>
                     </div>
                   </div>
-                  <div className="flex items-start gap-4">
-                    <div className="w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0" style={{ backgroundColor: '#E8F5E0' }}>
-                      <FiHeart className="text-xl" style={{ color: '#6BA83D' }} />
+                  <div className="flex items-start gap-5">
+                    <div className="w-14 h-14 flex items-center justify-center flex-shrink-0" style={{ backgroundColor: '#E6F5F9' }}>
+                      <FiHeart className="text-2xl" style={{ color: '#2BA5C8' }} />
                     </div>
                     <div>
-                      <h4 className="font-bold mb-1" style={{ color: '#0D3B52' }}>Helped Fund</h4>
-                      <p className="text-sm" style={{ color: '#6B7C8C' }}>Supporting growth through community funding.</p>
+                      <h4 className="font-bold mb-2 text-lg" style={{ color: '#1A1A1A' }}>Helped Fund</h4>
+                      <p className="text-sm leading-relaxed" style={{ color: '#6B7280' }}>Supporting growth through community funding.</p>
                     </div>
                   </div>
                 </div>
@@ -236,22 +236,22 @@ export default function Home() {
         {/* ============================================
             OUR APPROACH SECTION
         ============================================ */}
-        <section ref={approachRef} className="py-24" style={{ backgroundColor: '#F3F6F8' }}>
+        <section ref={approachRef} className="py-32" style={{ backgroundColor: '#F9FAFB' }}>
           <div className="container-main">
-            <div className="grid lg:grid-cols-2 gap-16 items-center">
+            <div className="grid lg:grid-cols-2 gap-20 items-center">
               {/* Content */}
               <motion.div
                 initial="hidden"
                 animate={approachInView ? "visible" : "hidden"}
                 variants={stagger}
               >
-                <motion.div variants={fadeUp} className="section-label">
+                <motion.div variants={fadeUp} className="section-label mb-6">
                   Our Approach
                 </motion.div>
-                <motion.h2 variants={fadeUp} className="heading-lg mb-6">
+                <motion.h2 variants={fadeUp} className="heading-lg mb-8" style={{ lineHeight: '1.2' }}>
                   Compassionate solutions for <span style={{ color: '#2BA5C8' }}>lasting impact</span>
                 </motion.h2>
-                <motion.p variants={fadeUp} className="text-body mb-8">
+                <motion.p variants={fadeUp} className="text-body mb-10" style={{ fontSize: '18px', lineHeight: '1.8' }}>
                   Our approach focuses on creating sustainable change by addressing root causes, 
                   empowering communities, and delivering compassionate solutions that stand the test of time.
                 </motion.p>
@@ -284,13 +284,13 @@ export default function Home() {
         {/* ============================================
             MISSION / VISION / VALUES
         ============================================ */}
-        <section className="py-24 bg-white">
+        <section className="py-32" style={{ backgroundColor: '#FFFFFF' }}>
           <div className="container-main">
-            <div className="grid md:grid-cols-3 gap-8">
+            <div className="grid md:grid-cols-3 gap-10">
               {[
-                { icon: FiGlobe, title: 'Our Mission', color: 'green', desc: 'We strive to create positive change and empower communities through sustainable water solutions.' },
-                { icon: FiUsers, title: 'Our Vision', color: 'green', desc: 'A world where every community has access to clean water and climate-resilient infrastructure.' },
-                { icon: FiHeart, title: 'Our Values', color: 'green', desc: 'Integrity, compassion, innovation, and community-driven approaches guide everything we do.' },
+                { icon: FiGlobe, title: 'Our Mission', desc: 'We strive to create positive change and empower communities through sustainable water solutions.' },
+                { icon: FiUsers, title: 'Our Vision', desc: 'A world where every community has access to clean water and climate-resilient infrastructure.' },
+                { icon: FiHeart, title: 'Our Values', desc: 'Integrity, compassion, innovation, and community-driven approaches guide everything we do.' },
               ].map((item, index) => (
                 <motion.div
                   key={item.title}
@@ -298,14 +298,14 @@ export default function Home() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: index * 0.1 }}
-                  className="rounded-2xl p-8 text-center hover:shadow-2xl transition-shadow border-2"
-                  style={{ backgroundColor: '#E8F5E0', borderColor: '#6BA83D', boxShadow: '0 4px 6px rgba(27, 95, 122, 0.08)' }}
+                  className="p-10 text-center transition-all duration-300"
+                  style={{ backgroundColor: '#FFFFFF', boxShadow: '0 2px 8px rgba(0, 0, 0, 0.08)' }}
                 >
-                  <div className="w-16 h-16 mx-auto mb-6 rounded-full flex items-center justify-center" style={{ backgroundColor: '#1B5F7A' }}>
-                    <item.icon className="text-white text-2xl" />
+                  <div className="w-20 h-20 mx-auto mb-8 flex items-center justify-center" style={{ backgroundColor: '#E6F5F9' }}>
+                    <item.icon className="text-3xl" style={{ color: '#2BA5C8' }} />
                   </div>
-                  <h3 className="text-xl font-bold mb-4" style={{ color: '#0D3B52' }}>{item.title}</h3>
-                  <p style={{ color: '#6B7C8C' }}>{item.desc}</p>
+                  <h3 className="text-2xl font-bold mb-4" style={{ color: '#1A1A1A' }}>{item.title}</h3>
+                  <p className="leading-relaxed" style={{ color: '#6B7280', fontSize: '16px' }}>{item.desc}</p>
                 </motion.div>
               ))}
             </div>
@@ -315,9 +315,9 @@ export default function Home() {
         {/* ============================================
             STATS SECTION
         ============================================ */}
-        <section className="py-24" style={{ backgroundColor: '#1B5F7A' }}>
+        <section className="py-32" style={{ backgroundColor: '#2BA5C8' }}>
           <div className="container-main">
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-12">
               {[
                 { value: '25+', label: 'Years Experience' },
                 { value: '230+', label: 'Volunteers' },
@@ -332,10 +332,10 @@ export default function Home() {
                   transition={{ delay: index * 0.1 }}
                   className="text-center"
                 >
-                  <div className="text-5xl md:text-6xl font-display font-bold text-white mb-2">
+                  <div className="text-6xl md:text-7xl font-display text-white mb-4" style={{ fontWeight: 800 }}>
                     {stat.value}
                   </div>
-                  <div className="text-white/90 font-medium">{stat.label}</div>
+                  <div className="text-white/90 text-lg" style={{ fontWeight: 500 }}>{stat.label}</div>
                 </motion.div>
               ))}
             </div>
@@ -345,27 +345,27 @@ export default function Home() {
         {/* ============================================
             SERVICES / HOW WE HELP
         ============================================ */}
-        <section ref={servicesRef} className="py-24" style={{ backgroundColor: '#E8F5E0' }}>
+        <section ref={servicesRef} className="py-32" style={{ backgroundColor: '#F9FAFB' }}>
           <div className="container-main">
             <motion.div
               initial="hidden"
               animate={servicesInView ? "visible" : "hidden"}
               variants={stagger}
-              className="text-center mb-16"
+              className="text-center mb-20"
             >
-              <motion.div variants={fadeUp} className="section-label">
+              <motion.div variants={fadeUp} className="section-label mb-6">
                 How We Help
               </motion.div>
-              <motion.h2 variants={fadeUp} className="heading-lg mb-4">
+              <motion.h2 variants={fadeUp} className="heading-lg mb-8" style={{ lineHeight: '1.2' }}>
                 Bringing hope to every community
               </motion.h2>
-              <motion.p variants={fadeUp} className="max-w-2xl mx-auto" style={{ color: '#6B7C8C' }}>
+              <motion.p variants={fadeUp} className="max-w-2xl mx-auto" style={{ color: '#6B7280', fontSize: '18px', lineHeight: '1.8' }}>
                 We are dedicated to creating sustainable impact through innovative solutions 
                 that protect water resources and build climate resilience.
               </motion.p>
             </motion.div>
 
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
               {[
                 { 
                   image: 'https://images.unsplash.com/photo-1594398901394-4e34939a4fd0?q=80&w=600',
@@ -394,9 +394,10 @@ export default function Home() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: index * 0.1 }}
-                  className="card group"
+                  className="group overflow-hidden transition-all duration-300"
+                  style={{ backgroundColor: '#FFFFFF', boxShadow: '0 2px 8px rgba(0, 0, 0, 0.08)' }}
                 >
-                  <div className="relative h-48 overflow-hidden">
+                  <div className="relative h-56 overflow-hidden">
                     <Image
                       src={service.image}
                       alt={service.title}
@@ -404,9 +405,9 @@ export default function Home() {
                       className="object-cover group-hover:scale-110 transition-transform duration-500"
                     />
                   </div>
-                  <div className="p-6">
-                    <h3 className="font-bold text-lg mb-2" style={{ color: '#0D3B52' }}>{service.title}</h3>
-                    <p className="text-sm" style={{ color: '#6B7C8C' }}>{service.desc}</p>
+                  <div className="p-8">
+                    <h3 className="font-bold text-xl mb-3" style={{ color: '#1A1A1A' }}>{service.title}</h3>
+                    <p className="leading-relaxed" style={{ color: '#6B7280', fontSize: '15px' }}>{service.desc}</p>
                   </div>
                 </motion.div>
               ))}
@@ -424,7 +425,7 @@ export default function Home() {
         {/* ============================================
             IMPACT SECTION - Progress Bars
         ============================================ */}
-        <section ref={impactRef} className="py-24 bg-white">
+        <section ref={impactRef} className="py-24" style={{ backgroundColor: '#FFFFFF' }}>
           <div className="container-main">
             <div className="grid lg:grid-cols-2 gap-16 items-center">
               {/* Images */}
@@ -474,7 +475,7 @@ export default function Home() {
                   ].map((item) => (
                     <div key={item.label}>
                       <div className="flex justify-between mb-2">
-                        <span className="font-semibold" style={{ color: '#1A2B35' }}>{item.label}</span>
+                        <span className="font-semibold" style={{ color: '#1A1A1A' }}>{item.label}</span>
                         <span className="font-bold" style={{ color: '#2BA5C8' }}>{item.value}%</span>
                       </div>
                       <div className="progress-bar">
@@ -501,13 +502,13 @@ export default function Home() {
         {/* ============================================
             CTA SECTION
         ============================================ */}
-        <section className="py-24 relative overflow-hidden" style={{ background: 'linear-gradient(135deg, #2BA5C8 0%, #1B5F7A 100%)' }}>
+        <section className="py-32 relative overflow-hidden" style={{ backgroundColor: '#2BA5C8' }}>
           <div className="absolute inset-0">
             <Image
               src="https://images.unsplash.com/photo-1541252260730-0412e8e2108e?q=80&w=1920"
               alt="Background"
               fill
-              className="object-cover opacity-20"
+              className="object-cover opacity-15"
             />
           </div>
           <div className="container-main relative z-10 text-center">
@@ -516,33 +517,34 @@ export default function Home() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
             >
-              <div className="section-label justify-center" style={{ color: 'rgba(255, 255, 255, 0.9)' }}>
+              <div className="section-label justify-center mb-6" style={{ color: 'rgba(255, 255, 255, 0.9)' }}>
                 <span className="w-2 h-2 rounded-full bg-white inline-block mr-2"></span>
                 Get Involved
               </div>
-              <h2 className="heading-xl mb-6" style={{ color: '#FFFFFF' }}>
+              <h2 className="heading-xl mb-8" style={{ color: '#FFFFFF', lineHeight: '1.2' }}>
                 Building a better future{' '}
-                <span style={{ color: '#6BA83D' }}>together</span>
+                <span style={{ color: '#FFFFFF' }}>together</span>
               </h2>
-              <p className="text-xl max-w-2xl mx-auto mb-10" style={{ color: 'rgba(255, 255, 255, 0.9)' }}>
+              <p className="text-xl max-w-2xl mx-auto mb-12 leading-relaxed" style={{ color: 'rgba(255, 255, 255, 0.95)' }}>
                 Join us in our mission to secure water resources and build climate-resilient 
                 communities across East Africa.
               </p>
-              <div className="flex flex-wrap justify-center gap-4">
+              <div className="flex flex-wrap justify-center gap-6">
                 <Link href="/contact" className="btn-donate">
                   Donate Now
                   <FiHeart />
                 </Link>
                 <Link 
                   href="/about" 
-                  className="btn-outline transition-colors"
+                  className="btn-white"
                   style={{ 
                     borderColor: '#FFFFFF', 
                     color: '#FFFFFF',
+                    backgroundColor: 'transparent'
                   }}
                   onMouseEnter={(e) => {
                     e.currentTarget.style.backgroundColor = '#FFFFFF';
-                    e.currentTarget.style.color = '#1B5F7A';
+                    e.currentTarget.style.color = '#2BA5C8';
                   }}
                   onMouseLeave={(e) => {
                     e.currentTarget.style.backgroundColor = 'transparent';

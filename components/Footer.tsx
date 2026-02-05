@@ -22,21 +22,21 @@ const services = [
 
 export default function Footer() {
   return (
-    <footer style={{ backgroundColor: '#1B5F7A', color: '#FFFFFF' }}>
+    <footer style={{ backgroundColor: '#2BA5C8', color: '#FFFFFF' }}>
       {/* Main Footer */}
       <div className="container-main py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           {/* About */}
           <div>
             <Link href="/" className="flex items-center gap-3 mb-6">
-              <div className="w-12 h-12 bg-white rounded-xl flex items-center justify-center">
-                <span className="font-bold text-xl" style={{ color: '#1B5F7A' }}>U</span>
+              <div className="w-12 h-12 bg-white rounded-lg flex items-center justify-center">
+                <span className="font-bold text-xl" style={{ color: '#2BA5C8' }}>U</span>
               </div>
               <span className="font-display font-bold text-xl">
-                Uhai<span style={{ color: '#6BA83D' }}>WashWise</span>
+                Uhai<span style={{ color: '#FFFFFF' }}>WashWise</span>
               </span>
             </Link>
-            <p className="mb-6 leading-relaxed" style={{ color: 'rgba(255, 255, 255, 0.8)' }}>
+            <p className="mb-6 leading-relaxed" style={{ color: 'rgba(255, 255, 255, 0.9)' }}>
               Empowering communities through sustainable water management and climate resilience solutions across East Africa.
             </p>
             <div className="flex gap-3">
@@ -45,7 +45,7 @@ export default function Footer() {
                   key={i}
                   href="#"
                   className="w-10 h-10 rounded-full flex items-center justify-center transition-colors hover:opacity-80"
-                  style={{ backgroundColor: '#0D3B52', color: '#FFFFFF' }}
+                  style={{ backgroundColor: 'rgba(255, 255, 255, 0.2)', color: '#FFFFFF' }}
                 >
                   <Icon size={16} />
                 </a>
@@ -95,19 +95,19 @@ export default function Footer() {
             <h3 className="font-display font-bold text-lg mb-6">Contact Us</h3>
             <ul className="space-y-4">
               <li className="flex items-start gap-3">
-                <FiMapPin className="mt-1 flex-shrink-0" size={20} style={{ color: '#2BA5C8' }} />
-                <span style={{ color: 'rgba(255, 255, 255, 0.8)' }}>
+                <FiMapPin className="mt-1 flex-shrink-0" size={20} style={{ color: '#FFFFFF' }} />
+                <span style={{ color: 'rgba(255, 255, 255, 0.9)' }}>
                   Kisumu, Kenya<br />
                   East Africa
                 </span>
               </li>
               <li className="flex items-center gap-3">
-                <FiPhone className="flex-shrink-0" size={20} style={{ color: '#2BA5C8' }} />
-                <span style={{ color: 'rgba(255, 255, 255, 0.8)' }}>+254 123 456 789</span>
+                <FiPhone className="flex-shrink-0" size={20} style={{ color: '#FFFFFF' }} />
+                <span style={{ color: 'rgba(255, 255, 255, 0.9)' }}>+254 123 456 789</span>
               </li>
               <li className="flex items-center gap-3">
-                <FiMail className="flex-shrink-0" size={20} style={{ color: '#2BA5C8' }} />
-                <span style={{ color: 'rgba(255, 255, 255, 0.8)' }}>info@uhaiwashwise.org</span>
+                <FiMail className="flex-shrink-0" size={20} style={{ color: '#FFFFFF' }} />
+                <span style={{ color: 'rgba(255, 255, 255, 0.9)' }}>info@uhaiwashwise.org</span>
               </li>
             </ul>
           </div>
@@ -115,16 +115,16 @@ export default function Footer() {
       </div>
 
       {/* Bottom Bar */}
-      <div className="border-t" style={{ borderColor: '#0D3B52' }}>
+      <div className="border-t" style={{ borderColor: 'rgba(255, 255, 255, 0.2)' }}>
         <div className="container-main py-6 flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="text-sm" style={{ color: 'rgba(255, 255, 255, 0.7)' }}>
+          <p className="text-sm" style={{ color: 'rgba(255, 255, 255, 0.8)' }}>
             © {new Date().getFullYear()} Uhai WashWise. All rights reserved.
           </p>
           <div className="flex gap-6 text-sm">
-            <Link href="#" className="hover:opacity-80 transition-opacity" style={{ color: 'rgba(255, 255, 255, 0.7)' }}>
+            <Link href="#" className="hover:opacity-80 transition-opacity" style={{ color: 'rgba(255, 255, 255, 0.8)' }}>
               Privacy Policy
             </Link>
-            <Link href="#" className="hover:opacity-80 transition-opacity" style={{ color: 'rgba(255, 255, 255, 0.7)' }}>
+            <Link href="#" className="hover:opacity-80 transition-opacity" style={{ color: 'rgba(255, 255, 255, 0.8)' }}>
               Terms of Service
             </Link>
           </div>

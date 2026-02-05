@@ -30,11 +30,11 @@ export default function Navigation() {
   return (
     <>
       {/* Top Bar */}
-      <div className="hidden lg:block py-2" style={{ backgroundColor: '#1B5F7A', color: '#FFFFFF' }}>
+      <div className="hidden lg:block py-2" style={{ backgroundColor: '#2BA5C8', color: '#FFFFFF' }}>
         <div className="container-main flex justify-between items-center text-sm">
           <div className="flex items-center gap-6">
             <span className="flex items-center gap-2">
-              <FiPhone style={{ color: '#2BA5C8' }} />
+              <FiPhone style={{ color: '#FFFFFF' }} />
               +254 123 456 789
             </span>
             <span>info@uhaiwashwise.org</span>
@@ -66,12 +66,12 @@ export default function Navigation() {
           <div className="flex items-center justify-between">
             {/* Logo */}
             <Link href="/" className="flex items-center gap-3">
-              <div className="w-12 h-12 rounded-xl flex items-center justify-center" style={{ backgroundColor: '#1B5F7A' }}>
+              <div className="w-12 h-12 rounded-lg flex items-center justify-center" style={{ backgroundColor: '#2BA5C8' }}>
                 <span className="text-white font-bold text-xl">U</span>
               </div>
               <div>
-                <span className="font-display font-bold text-xl" style={{ color: '#0D3B52' }}>
-                  Uhai<span style={{ color: '#6BA83D' }}>WashWise</span>
+                <span className="font-display font-bold text-xl" style={{ color: '#1A1A1A' }}>
+                  Uhai<span style={{ color: '#2BA5C8' }}>WashWise</span>
                 </span>
               </div>
             </Link>
@@ -82,9 +82,10 @@ export default function Navigation() {
                 <Link
                   key={link.href}
                   href={link.href}
-                  className="font-medium transition-colors relative"
+                  className="transition-colors relative"
                   style={{ 
-                    color: pathname === link.href ? '#2BA5C8' : '#1A2B35'
+                    color: pathname === link.href ? '#2BA5C8' : '#1A1A1A',
+                    fontWeight: pathname === link.href ? 600 : 500
                   }}
                 >
                   {link.name}
@@ -110,7 +111,7 @@ export default function Navigation() {
             <button
               onClick={() => setIsMobileOpen(!isMobileOpen)}
               className="lg:hidden p-2"
-              style={{ color: '#0D3B52' }}
+              style={{ color: '#1A1A1A' }}
             >
               {isMobileOpen ? <FiX size={28} /> : <FiMenu size={28} />}
             </button>
@@ -134,12 +135,13 @@ export default function Navigation() {
                   key={link.href}
                   href={link.href}
                   onClick={() => setIsMobileOpen(false)}
-                  className={`py-3 px-4 rounded-lg font-medium transition-colors ${
+                  className={`py-3 px-4 rounded-lg transition-colors ${
                     pathname === link.href ? '' : 'hover:opacity-80'
                   }`}
                   style={{ 
-                    backgroundColor: pathname === link.href ? '#E8F5E0' : 'transparent',
-                    color: pathname === link.href ? '#6BA83D' : '#1A2B35'
+                    backgroundColor: pathname === link.href ? '#E6F5F9' : 'transparent',
+                    color: pathname === link.href ? '#2BA5C8' : '#1A1A1A',
+                    fontWeight: pathname === link.href ? 600 : 500
                   }}
                 >
                   {link.name}

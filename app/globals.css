@@ -13,88 +13,100 @@
   
   body {
     @apply antialiased;
-    background-color: #FAFBFC;
-    color: #1A2B35;
+    background-color: #FFFFFF;
+    color: #1A1A1A;
+    font-family: var(--font-inter), system-ui, sans-serif;
+    font-weight: 500;
   }
 }
 
 @layer components {
   /* Container */
   .container-main {
-    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+    @apply max-w-7xl mx-auto px-6 sm:px-8 lg:px-12;
   }
 
-  /* Buttons */
+  /* Buttons - Premium Timeless Style with Increased Weight */
   .btn-primary {
-    @apply inline-flex items-center justify-center gap-2 px-8 py-4 
-           text-white font-semibold rounded-lg
-           transition-all duration-300
-           shadow-lg hover:shadow-xl hover:-translate-y-0.5;
-    background-color: #1B5F7A;
-    box-shadow: 0 4px 6px rgba(27, 95, 122, 0.08);
+    @apply inline-flex items-center justify-center gap-2 px-10 py-4 
+           text-white rounded-md
+           transition-all duration-300;
+    background-color: #2BA5C8;
+    font-weight: 600;
+    box-shadow: 0 4px 12px rgba(43, 165, 200, 0.25);
   }
   
   .btn-primary:hover {
-    background-color: #2BA5C8;
+    background-color: #2284A0;
+    box-shadow: 0 6px 16px rgba(43, 165, 200, 0.35);
+    transform: translateY(-1px);
   }
 
   .btn-secondary {
     @apply inline-flex items-center justify-center gap-2 px-8 py-4 
-           text-white font-semibold rounded-lg
-           transition-all duration-300
-           shadow-md hover:shadow-lg;
-    background-color: #2BA5C8;
-    box-shadow: 0 4px 6px rgba(43, 165, 200, 0.08);
+           text-white rounded-lg
+           transition-all duration-300;
+    background-color: #1B5F7A;
+    font-weight: 600;
+    box-shadow: 0 2px 4px rgba(27, 95, 122, 0.2);
   }
   
   .btn-secondary:hover {
-    background-color: #1B5F7A;
+    background-color: #114250;
+    box-shadow: 0 4px 8px rgba(27, 95, 122, 0.3);
   }
 
   .btn-outline {
     @apply inline-flex items-center justify-center gap-2 px-8 py-4 
-           bg-transparent border-2 font-semibold rounded-lg 
+           bg-transparent border-2 rounded-lg 
            transition-all duration-300;
-    border-color: #1B5F7A;
-    color: #1B5F7A;
+    border-color: #2BA5C8;
+    color: #2BA5C8;
+    font-weight: 600;
   }
   
   .btn-outline:hover {
-    background-color: #1B5F7A;
+    background-color: #2BA5C8;
     color: white;
   }
 
   .btn-white {
-    @apply inline-flex items-center justify-center gap-2 px-8 py-4 
-           bg-white font-semibold rounded-lg
-           transition-all duration-300
-           shadow-lg hover:shadow-xl;
-    color: #1B5F7A;
-    box-shadow: 0 4px 6px rgba(27, 95, 122, 0.08);
+    @apply inline-flex items-center justify-center gap-2 px-10 py-4 
+           bg-white rounded-md
+           transition-all duration-300;
+    color: #2BA5C8;
+    border: 2px solid #2BA5C8;
+    font-weight: 600;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
   }
   
   .btn-white:hover {
-    background-color: #F3F6F8;
+    background-color: #2BA5C8;
+    color: white;
+    box-shadow: 0 4px 12px rgba(43, 165, 200, 0.25);
   }
 
   .btn-donate {
-    @apply inline-flex items-center justify-center gap-2 px-10 py-5 
-           font-bold rounded-lg
-           transition-all duration-300
-           shadow-xl hover:shadow-2xl hover:-translate-y-1;
-    background-color: #6BA83D;
+    @apply inline-flex items-center justify-center gap-2 px-12 py-5 
+           rounded-md
+           transition-all duration-300;
+    background-color: #2BA5C8;
     color: white;
-    box-shadow: 0 4px 6px rgba(107, 168, 61, 0.15);
+    font-weight: 700;
+    box-shadow: 0 4px 16px rgba(43, 165, 200, 0.3);
   }
   
   .btn-donate:hover {
-    background-color: #5A8F33;
+    background-color: #2284A0;
+    box-shadow: 0 6px 20px rgba(43, 165, 200, 0.4);
+    transform: translateY(-2px);
   }
 
   /* Section Label */
   .section-label {
-    @apply inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider mb-4;
+    @apply inline-flex items-center gap-2 text-xs uppercase tracking-wider mb-4;
     color: #2BA5C8;
+    font-weight: 700;
   }
 
   .section-label::before {
@@ -103,61 +115,73 @@
     background-color: #2BA5C8;
   }
 
-  /* Headings */
+  /* Headings - Premium Timeless with Increased Weight */
   .heading-xl {
-    @apply text-4xl sm:text-5xl lg:text-6xl font-display font-bold leading-tight;
-    color: #0D3B52;
+    @apply text-4xl sm:text-5xl lg:text-6xl font-display leading-tight;
+    color: #1A1A1A;
+    font-weight: 700;
   }
 
   .heading-lg {
-    @apply text-3xl sm:text-4xl lg:text-5xl font-display font-bold leading-tight;
-    color: #0D3B52;
+    @apply text-3xl sm:text-4xl lg:text-5xl font-display leading-tight;
+    color: #1A1A1A;
+    font-weight: 700;
   }
 
   .heading-md {
-    @apply text-2xl sm:text-3xl font-display font-bold leading-tight;
-    color: #0D3B52;
+    @apply text-2xl sm:text-3xl font-display leading-tight;
+    color: #1A1A1A;
+    font-weight: 700;
   }
 
   .heading-sm {
-    @apply text-xl sm:text-2xl font-display font-semibold leading-tight;
-    color: #0D3B52;
+    @apply text-xl sm:text-2xl font-display leading-tight;
+    color: #1A1A1A;
+    font-weight: 600;
   }
 
   /* Text */
   .text-body {
     @apply text-base sm:text-lg leading-relaxed;
-    color: #6B7C8C;
+    color: #6B7280;
+    font-weight: 500;
   }
 
   .text-body-sm {
     @apply text-sm sm:text-base leading-relaxed;
-    color: #6B7C8C;
+    color: #6B7280;
+    font-weight: 500;
   }
 
-  /* Cards */
+  /* Cards - Premium Timeless Sleek */
   .card {
-    @apply rounded-2xl overflow-hidden shadow-lg 
-           hover:shadow-xl transition-all duration-300 hover:-translate-y-1;
+    @apply overflow-hidden transition-all duration-300;
     background-color: #FFFFFF;
-    box-shadow: 0 4px 6px rgba(27, 95, 122, 0.08);
+    border: none;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  }
+  
+  .card:hover {
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+    transform: translateY(-2px);
   }
 
   .card-dark {
-    @apply rounded-2xl overflow-hidden text-white;
-    background-color: #1B5F7A;
+    @apply rounded-lg overflow-hidden text-white;
+    background-color: #2BA5C8;
   }
 
   /* Stats */
   .stat-number {
-    @apply text-5xl sm:text-6xl lg:text-7xl font-display font-bold;
+    @apply text-5xl sm:text-6xl lg:text-7xl font-display;
     color: #2BA5C8;
+    font-weight: 800;
   }
 
   /* Progress bar */
   .progress-bar {
     @apply h-2 rounded-full overflow-hidden;
-    background-color: #F3F6F8;
+    background-color: #E5E7EB;
   }
 
   .progress-fill {
@@ -190,7 +214,7 @@
 
   .video-hero-overlay {
     @apply absolute inset-0;
-    background: linear-gradient(135deg, rgba(27, 95, 122, 0.75) 0%, rgba(13, 59, 82, 0.85) 100%);
+    background-color: rgba(43, 165, 200, 0.7);
   }
 }
 

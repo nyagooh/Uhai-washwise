@@ -9,53 +9,35 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        // Primary Blue Palette - Deep Ocean Teal
+        // Premium Primary - Light Blue #2BA5C8
         primary: {
-          DEFAULT: '#1B5F7A', // Main Blue - Deep Ocean Teal
-          accent: '#2BA5C8', // Accent Blue - Bright Teal
-          dark: '#0D3B52', // Dark Blue - Navy Depth
-          50: '#E8F1F5',
-          100: '#D1E3EB',
-          200: '#A3C7D7',
-          300: '#75ABC3',
-          400: '#478FAF',
-          500: '#1B5F7A',
-          600: '#164F66',
-          700: '#113F52',
-          800: '#0D3B52',
-          900: '#082B3A',
+          DEFAULT: '#2BA5C8', // Premium Light Blue - Main brand color
+          light: '#E6F5F9', // Very light blue for backgrounds
+          dark: '#1B5F7A', // Darker blue for depth
+          darker: '#0D3B52', // Darkest for text
+          50: '#E6F5F9',
+          100: '#CCEBF3',
+          200: '#99D7E7',
+          300: '#66C3DB',
+          400: '#33AFCF',
+          500: '#2BA5C8',
+          600: '#2284A0',
+          700: '#1A6378',
+          800: '#114250',
+          900: '#082128',
         },
-        // Green Accents - Natural Leaf Green
-        green: {
-          DEFAULT: '#6BA83D', // Primary Green - Natural Leaf Green
-          subtle: '#E8F5E0', // Subtle Green - Whisper Green
-          50: '#F0F8EB',
-          100: '#E8F5E0',
-          200: '#D1EBC1',
-          300: '#BAE1A2',
-          400: '#A3D783',
-          500: '#6BA83D',
-          600: '#5A8F33',
-          700: '#497629',
-          800: '#385D1F',
-          900: '#274415',
-        },
-        // Premium Background & Neutrals
-        bg: {
-          DEFAULT: '#FAFBFC', // Cool White
-          secondary: '#F3F6F8', // Soft Cloud
-          card: '#FFFFFF', // Pure White
-        },
-        // Text Colors
-        text: {
-          DEFAULT: '#1A2B35', // Primary Text - Deep Charcoal
-          secondary: '#6B7C8C', // Secondary Text - Slate Gray
-          light: '#FFFFFF', // Light Text on Dark
+        // Premium Neutrals - Timeless & Clean
+        neutral: {
+          DEFAULT: '#1A1A1A', // Primary text
+          light: '#6B7280', // Secondary text
+          lighter: '#9CA3AF', // Tertiary text
+          bg: '#FFFFFF', // Pure white background
+          subtle: '#F9FAFB', // Subtle background
         },
       },
       fontFamily: {
         sans: ['var(--font-inter)', 'system-ui', 'sans-serif'],
-        display: ['var(--font-poppins)', 'system-ui', 'sans-serif'],
+        display: ['var(--font-inter)', 'system-ui', 'sans-serif'],
       },
       animation: {
         'fade-up': 'fadeUp 0.6s ease-out forwards',
