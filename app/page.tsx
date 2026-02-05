@@ -1,5 +1,6 @@
 'use client'
 
+import React from 'react'
 import { motion } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
 import Link from 'next/link'
@@ -43,7 +44,7 @@ export default function Home() {
   const [impactRef, impactInView] = useInView({ triggerOnce: true, threshold: 0.2 })
 
   return (
-    <>
+    <React.Fragment>
       <Navigation />
       
       <main>
@@ -546,6 +547,6 @@ export default function Home() {
       </main>
 
       <Footer />
-    </>
+    </React.Fragment>
   )
 }
