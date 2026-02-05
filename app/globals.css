@@ -26,30 +26,51 @@
   /* Buttons */
   .btn-primary {
     @apply inline-flex items-center justify-center gap-2 px-8 py-4 
-           bg-green text-white font-semibold rounded-lg
-           hover:bg-green-600 transition-all duration-300
+           text-white font-semibold rounded-lg
+           transition-all duration-300
            shadow-lg hover:shadow-xl hover:-translate-y-0.5;
+    background-color: #4CAF50;
+  }
+  
+  .btn-primary:hover {
+    background-color: #43A047;
   }
 
   .btn-secondary {
     @apply inline-flex items-center justify-center gap-2 px-8 py-4 
-           bg-primary text-white font-semibold rounded-lg
-           hover:bg-primary-600 transition-all duration-300
+           text-white font-semibold rounded-lg
+           transition-all duration-300
            shadow-md hover:shadow-lg;
+    background-color: #1F5FA3;
+  }
+  
+  .btn-secondary:hover {
+    background-color: #194C82;
   }
 
   .btn-outline {
     @apply inline-flex items-center justify-center gap-2 px-8 py-4 
-           bg-transparent border-2 border-primary text-primary 
-           font-semibold rounded-lg hover:bg-primary hover:text-white 
+           bg-transparent border-2 font-semibold rounded-lg 
            transition-all duration-300;
+    border-color: #1F5FA3;
+    color: #1F5FA3;
+  }
+  
+  .btn-outline:hover {
+    background-color: #1F5FA3;
+    color: white;
   }
 
   .btn-white {
     @apply inline-flex items-center justify-center gap-2 px-8 py-4 
-           bg-white text-primary font-semibold rounded-lg
-           hover:bg-lightBlue transition-all duration-300
+           bg-white font-semibold rounded-lg
+           transition-all duration-300
            shadow-lg hover:shadow-xl;
+    color: #1F5FA3;
+  }
+  
+  .btn-white:hover {
+    background-color: #EAF6FB;
   }
 
   .btn-donate {
@@ -62,29 +83,35 @@
 
   /* Section Label */
   .section-label {
-    @apply inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-green mb-4;
+    @apply inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider mb-4;
+    color: #4CAF50;
   }
 
   .section-label::before {
     content: '';
-    @apply w-2 h-2 bg-green rounded-full;
+    @apply w-2 h-2 rounded-full;
+    background-color: #4CAF50;
   }
 
   /* Headings */
   .heading-xl {
-    @apply text-4xl sm:text-5xl lg:text-6xl font-display font-bold leading-tight text-green;
+    @apply text-4xl sm:text-5xl lg:text-6xl font-display font-bold leading-tight;
+    color: #4CAF50;
   }
 
   .heading-lg {
-    @apply text-3xl sm:text-4xl lg:text-5xl font-display font-bold leading-tight text-green;
+    @apply text-3xl sm:text-4xl lg:text-5xl font-display font-bold leading-tight;
+    color: #4CAF50;
   }
 
   .heading-md {
-    @apply text-2xl sm:text-3xl font-display font-bold leading-tight text-green;
+    @apply text-2xl sm:text-3xl font-display font-bold leading-tight;
+    color: #4CAF50;
   }
 
   .heading-sm {
-    @apply text-xl sm:text-2xl font-display font-semibold leading-tight text-green;
+    @apply text-xl sm:text-2xl font-display font-semibold leading-tight;
+    color: #4CAF50;
   }
 
   /* Text */
@@ -101,26 +128,30 @@
   /* Cards */
   .card {
     @apply bg-white rounded-2xl overflow-hidden shadow-lg 
-           hover:shadow-xl transition-all duration-300 hover:-translate-y-1
-           border border-lightBlue-300;
+           hover:shadow-xl transition-all duration-300 hover:-translate-y-1;
+    border: 1px solid #EAF6FB;
   }
 
   .card-dark {
-    @apply bg-primary rounded-2xl overflow-hidden text-white;
+    @apply rounded-2xl overflow-hidden text-white;
+    background-color: #1F5FA3;
   }
 
   /* Stats */
   .stat-number {
-    @apply text-5xl sm:text-6xl lg:text-7xl font-display font-bold text-green;
+    @apply text-5xl sm:text-6xl lg:text-7xl font-display font-bold;
+    color: #4CAF50;
   }
 
   /* Progress bar */
   .progress-bar {
-    @apply h-2 bg-lightBlue rounded-full overflow-hidden;
+    @apply h-2 rounded-full overflow-hidden;
+    background-color: #EAF6FB;
   }
 
   .progress-fill {
-    @apply h-full bg-green rounded-full transition-all duration-1000;
+    @apply h-full rounded-full transition-all duration-1000;
+    background-color: #4CAF50;
   }
 
   /* Image overlay */
@@ -147,7 +178,8 @@
   }
 
   .video-hero-overlay {
-    @apply absolute inset-0 bg-green/70;
+    @apply absolute inset-0;
+    background-color: rgba(76, 175, 80, 0.7);
   }
 }
 
