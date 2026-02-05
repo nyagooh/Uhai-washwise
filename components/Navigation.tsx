@@ -30,20 +30,20 @@ export default function Navigation() {
   return (
     <>
       {/* Top Bar */}
-      <div className="hidden lg:block bg-secondary-900 text-white py-2">
+      <div className="hidden lg:block bg-primary text-white py-2">
         <div className="container-main flex justify-between items-center text-sm">
           <div className="flex items-center gap-6">
             <span className="flex items-center gap-2">
-              <FiPhone className="text-primary-500" />
+              <FiPhone className="text-accent" />
               +254 123 456 789
             </span>
             <span>info@uhaiwashwise.org</span>
           </div>
           <div className="flex items-center gap-4">
-            <a href="#" className="hover:text-primary-500 transition-colors"><FaFacebookF /></a>
-            <a href="#" className="hover:text-primary-500 transition-colors"><FaTwitter /></a>
-            <a href="#" className="hover:text-primary-500 transition-colors"><FaLinkedinIn /></a>
-            <a href="#" className="hover:text-primary-500 transition-colors"><FaInstagram /></a>
+            <a href="#" className="hover:text-accent transition-colors"><FaFacebookF /></a>
+            <a href="#" className="hover:text-accent transition-colors"><FaTwitter /></a>
+            <a href="#" className="hover:text-accent transition-colors"><FaLinkedinIn /></a>
+            <a href="#" className="hover:text-accent transition-colors"><FaInstagram /></a>
           </div>
         </div>
       </div>
@@ -62,12 +62,12 @@ export default function Navigation() {
           <div className="flex items-center justify-between">
             {/* Logo */}
             <Link href="/" className="flex items-center gap-3">
-              <div className="w-12 h-12 bg-primary-500 rounded-xl flex items-center justify-center">
+              <div className="w-12 h-12 bg-primary rounded-xl flex items-center justify-center">
                 <span className="text-white font-bold text-xl">U</span>
               </div>
               <div>
-                <span className="font-display font-bold text-xl text-secondary-900">
-                  Uhai<span className="text-primary-500">WashWise</span>
+                <span className="font-display font-bold text-xl text-primary">
+                  Uhai<span className="text-green">WashWise</span>
                 </span>
               </div>
             </Link>
@@ -80,15 +80,15 @@ export default function Navigation() {
                   href={link.href}
                   className={`font-medium transition-colors relative ${
                     pathname === link.href
-                      ? 'text-primary-500'
-                      : 'text-secondary-700 hover:text-primary-500'
+                      ? 'text-green'
+                      : 'text-text hover:text-green'
                   }`}
                 >
                   {link.name}
                   {pathname === link.href && (
                     <motion.span
                       layoutId="navIndicator"
-                      className="absolute -bottom-1 left-0 right-0 h-0.5 bg-primary-500"
+                      className="absolute -bottom-1 left-0 right-0 h-0.5 bg-green"
                     />
                   )}
                 </Link>
@@ -97,7 +97,7 @@ export default function Navigation() {
 
             {/* CTA Button */}
             <div className="hidden lg:flex items-center gap-4">
-              <Link href="/contact" className="btn-primary">
+              <Link href="/contact" className="btn-donate">
                 Donate Now
               </Link>
             </div>
@@ -105,7 +105,7 @@ export default function Navigation() {
             {/* Mobile Menu Button */}
             <button
               onClick={() => setIsMobileOpen(!isMobileOpen)}
-              className="lg:hidden p-2 text-secondary-900"
+              className="lg:hidden p-2 text-primary"
             >
               {isMobileOpen ? <FiX size={28} /> : <FiMenu size={28} />}
             </button>
@@ -130,8 +130,8 @@ export default function Navigation() {
                   onClick={() => setIsMobileOpen(false)}
                   className={`py-3 px-4 rounded-lg font-medium transition-colors ${
                     pathname === link.href
-                      ? 'bg-primary-50 text-primary-500'
-                      : 'text-secondary-700 hover:bg-secondary-50'
+                      ? 'bg-lightGreen text-green'
+                      : 'text-text hover:bg-lightBlue'
                   }`}
                 >
                   {link.name}
@@ -140,7 +140,7 @@ export default function Navigation() {
               <Link
                 href="/contact"
                 onClick={() => setIsMobileOpen(false)}
-                className="btn-primary mt-4 text-center"
+                className="btn-donate mt-4 text-center"
               >
                 Donate Now
               </Link>
