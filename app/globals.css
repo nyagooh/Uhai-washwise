@@ -72,19 +72,19 @@
 
   /* Headings */
   .heading-xl {
-    @apply text-4xl sm:text-5xl lg:text-6xl font-display font-bold leading-tight text-primary;
+    @apply text-4xl sm:text-5xl lg:text-6xl font-display font-bold leading-tight text-green;
   }
 
   .heading-lg {
-    @apply text-3xl sm:text-4xl lg:text-5xl font-display font-bold leading-tight text-primary;
+    @apply text-3xl sm:text-4xl lg:text-5xl font-display font-bold leading-tight text-green;
   }
 
   .heading-md {
-    @apply text-2xl sm:text-3xl font-display font-bold leading-tight text-primary;
+    @apply text-2xl sm:text-3xl font-display font-bold leading-tight text-green;
   }
 
   .heading-sm {
-    @apply text-xl sm:text-2xl font-display font-semibold leading-tight text-primary;
+    @apply text-xl sm:text-2xl font-display font-semibold leading-tight text-green;
   }
 
   /* Text */
@@ -147,7 +147,7 @@
   }
 
   .video-hero-overlay {
-    @apply absolute inset-0 bg-primary/70;
+    @apply absolute inset-0 bg-green/70;
   }
 }
 

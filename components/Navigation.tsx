@@ -30,7 +30,7 @@ export default function Navigation() {
   return (
     <>
       {/* Top Bar */}
-      <div className="hidden lg:block bg-primary text-white py-2">
+      <div className="hidden lg:block bg-green text-white py-2">
         <div className="container-main flex justify-between items-center text-sm">
           <div className="flex items-center gap-6">
             <span className="flex items-center gap-2">
@@ -62,12 +62,12 @@ export default function Navigation() {
           <div className="flex items-center justify-between">
             {/* Logo */}
             <Link href="/" className="flex items-center gap-3">
-              <div className="w-12 h-12 bg-primary rounded-xl flex items-center justify-center">
+              <div className="w-12 h-12 bg-green rounded-xl flex items-center justify-center">
                 <span className="text-white font-bold text-xl">U</span>
               </div>
               <div>
-                <span className="font-display font-bold text-xl text-primary">
-                  Uhai<span className="text-green">WashWise</span>
+                <span className="font-display font-bold text-xl text-green">
+                  Uhai<span className="text-primary">WashWise</span>
                 </span>
               </div>
             </Link>
@@ -106,7 +106,7 @@ export default function Navigation() {
             {/* Mobile Menu Button */}
             <button
               onClick={() => setIsMobileOpen(!isMobileOpen)}
-              className="lg:hidden p-2 text-primary"
+              className="lg:hidden p-2 text-green"
             >
               {isMobileOpen ? <FiX size={28} /> : <FiMenu size={28} />}
             </button>

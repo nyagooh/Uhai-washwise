@@ -22,7 +22,7 @@ const services = [
 
 export default function Footer() {
   return (
-    <footer className="bg-primary text-white">
+    <footer className="bg-green text-white">
       {/* Main Footer */}
       <div className="container-main py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
@@ -30,7 +30,7 @@ export default function Footer() {
           <div>
             <Link href="/" className="flex items-center gap-3 mb-6">
               <div className="w-12 h-12 bg-white rounded-xl flex items-center justify-center">
-                <span className="text-primary font-bold text-xl">U</span>
+                <span className="text-green font-bold text-xl">U</span>
               </div>
               <span className="font-display font-bold text-xl">
                 Uhai<span className="text-accent">WashWise</span>
@@ -44,7 +44,7 @@ export default function Footer() {
                 <a
                   key={i}
                   href="#"
-                  className="w-10 h-10 bg-primary-700 hover:bg-accent rounded-full flex items-center justify-center transition-colors"
+                  className="w-10 h-10 bg-green-700 hover:bg-accent rounded-full flex items-center justify-center transition-colors"
                 >
                   <Icon size={16} />
                 </a>
@@ -113,7 +113,7 @@ export default function Footer() {
       </div>
 
       {/* Bottom Bar */}
-      <div className="border-t border-primary-700">
+      <div className="border-t border-green-700">
         <div className="container-main py-6 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-white/70 text-sm">
             © {new Date().getFullYear()} Uhai WashWise. All rights reserved.

@@ -74,13 +74,13 @@ export default function Home() {
                 animate={heroInView ? "visible" : "hidden"}
                 variants={stagger}
               >
-                <motion.div variants={fadeUp} className="section-label text-white/80 before:bg-green">
+                <motion.div variants={fadeUp} className="section-label text-white/80 before:bg-accent">
                   Water Security for Africa
                 </motion.div>
                 
                 <motion.h1 variants={fadeUp} className="heading-xl text-white mb-6">
                   United in Compassion,{' '}
-                  <span className="text-green">Changing Lives</span>
+                  <span className="text-accent">Changing Lives</span>
                 </motion.h1>
                 
                 <motion.p variants={fadeUp} className="text-xl text-white/80 mb-8 leading-relaxed">
@@ -195,7 +195,7 @@ export default function Home() {
               >
                 <div className="section-label">About Us</div>
                 <h2 className="heading-lg mb-6">
-                  United in compassion, <span className="text-green">changing lives</span>
+                  United in compassion, <span className="text-primary">changing lives</span>
                 </h2>
                 <p className="text-body mb-8">
                   Driven by compassion and a shared vision, we work hand-in-hand with communities 
@@ -209,7 +209,7 @@ export default function Home() {
                       <FiDroplet className="text-green text-xl" />
                     </div>
                     <div>
-                      <h4 className="font-bold text-primary mb-1">Healthcare Support</h4>
+                      <h4 className="font-bold text-green mb-1">Healthcare Support</h4>
                       <p className="text-sm" style={{ color: '#666666' }}>Providing essential services and resources to communities.</p>
                     </div>
                   </div>
@@ -218,7 +218,7 @@ export default function Home() {
                       <FiHeart className="text-green text-xl" />
                     </div>
                     <div>
-                      <h4 className="font-bold text-primary mb-1">Helped Fund</h4>
+                      <h4 className="font-bold text-green mb-1">Helped Fund</h4>
                       <p className="text-sm" style={{ color: '#666666' }}>Supporting growth through community funding.</p>
                     </div>
                   </div>
@@ -249,7 +249,7 @@ export default function Home() {
                   Our Approach
                 </motion.div>
                 <motion.h2 variants={fadeUp} className="heading-lg mb-6">
-                  Compassionate solutions for <span className="text-green">lasting impact</span>
+                  Compassionate solutions for <span className="text-primary">lasting impact</span>
                 </motion.h2>
                 <motion.p variants={fadeUp} className="text-body mb-8">
                   Our approach focuses on creating sustainable change by addressing root causes, 
@@ -303,7 +303,7 @@ export default function Home() {
                   <div className="w-16 h-16 mx-auto mb-6 bg-green rounded-full flex items-center justify-center">
                     <item.icon className="text-white text-2xl" />
                   </div>
-                  <h3 className="text-xl font-bold text-primary mb-4">{item.title}</h3>
+                  <h3 className="text-xl font-bold text-green mb-4">{item.title}</h3>
                   <p style={{ color: '#666666' }}>{item.desc}</p>
                 </motion.div>
               ))}
@@ -360,7 +360,7 @@ export default function Home() {
               <motion.div variants={fadeUp} className="section-label text-green before:bg-green">
                 How We Help
               </motion.div>
-              <motion.h2 variants={fadeUp} className="heading-lg text-primary mb-4">
+              <motion.h2 variants={fadeUp} className="heading-lg text-green mb-4">
                 Bringing hope to every community
               </motion.h2>
               <motion.p variants={fadeUp} className="max-w-2xl mx-auto" style={{ color: '#666666' }}>
