@@ -81,8 +81,9 @@ export default function Navigation() {
                   className={`font-medium transition-colors relative ${
                     pathname === link.href
                       ? 'text-green'
-                      : 'text-text hover:text-green'
+                      : 'hover:text-green'
                   }`}
+                  style={{ color: pathname === link.href ? undefined : '#2E2E2E' }}
                 >
                   {link.name}
                   {pathname === link.href && (
@@ -131,8 +132,9 @@ export default function Navigation() {
                   className={`py-3 px-4 rounded-lg font-medium transition-colors ${
                     pathname === link.href
                       ? 'bg-lightGreen text-green'
-                      : 'text-text hover:bg-lightBlue'
+                      : 'hover:bg-lightBlue'
                   }`}
+                  style={{ color: pathname === link.href ? undefined : '#2E2E2E' }}
                 >
                   {link.name}
                 </Link>
