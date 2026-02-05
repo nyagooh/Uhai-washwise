@@ -6,7 +6,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import Navigation from '@/components/Navigation'
 import Footer from '@/components/Footer'
-import { FiPlay, FiArrowRight, FiCheck, FiDroplet, FiUsers, FiGlobe, FiHeart } from 'react-icons/fi'
+import { FiPlay, FiArrowRight, FiCheck, FiDroplet, FiUsers, FiGlobe, FiHeart, FiTarget, FiEye, FiMapPin, FiMail } from 'react-icons/fi'
 import { FaWater, FaRecycle, FaLeaf, FaHandHoldingHeart } from 'react-icons/fa'
 
 // Animation variants
@@ -84,8 +84,8 @@ export default function Home() {
                 </motion.h1>
                 
                 <motion.p variants={fadeUp} className="text-xl text-white/80 mb-8 leading-relaxed">
-                  Driven by compassion and a shared vision, we work hand-in-hand with communities 
-                  to create meaningful, sustainable change through innovative water solutions.
+                  A social enterprise working at the intersection of water, sanitation, climate action, and technology. 
+                  We design solutions that close the loop between waste, water, and ecosystems.
                 </motion.p>
                 
                 <motion.div variants={fadeUp} className="flex flex-wrap gap-4">
@@ -195,12 +195,16 @@ export default function Home() {
               >
                 <div className="section-label mb-6">About Us</div>
                 <h2 className="heading-lg mb-8" style={{ lineHeight: '1.2' }}>
-                  United in compassion, <span style={{ color: '#0598CE' }}>changing lives</span>
+                  Protecting Water as a <span style={{ color: '#0598CE' }}>Living System</span>
                 </h2>
                 <p className="text-body mb-10" style={{ fontSize: '18px', lineHeight: '1.8' }}>
-                  Driven by compassion and a shared vision, we work hand-in-hand with communities 
-                  to create meaningful change. Our evidence-based approach ensures every intervention 
-                  delivers lasting impact.
+                  Uhai WashWise is a social enterprise working at the intersection of water, sanitation, climate action, and technology. 
+                  We design and implement solutions that close the loop between waste, water, and ecosystems, with a strong focus on 
+                  circular economy principles, data-driven decision-making, and community-grounded action.
+                </p>
+                <p className="text-body mb-10" style={{ fontSize: '18px', lineHeight: '1.8' }}>
+                  Our flagship innovation, an AI-powered water quality monitoring and prediction tool, translates scientific and environmental 
+                  data into real-time insights, enabling early warning, rapid response, ecosystem protection, and long-term biodiversity restoration.
                 </p>
 
                 <div className="grid sm:grid-cols-2 gap-8 mb-10">
@@ -249,11 +253,12 @@ export default function Home() {
                   Our Approach
                 </motion.div>
                 <motion.h2 variants={fadeUp} className="heading-lg mb-8" style={{ lineHeight: '1.2' }}>
-                  Compassionate solutions for <span style={{ color: '#0598CE' }}>lasting impact</span>
+                  Turning Data into Action, <span style={{ color: '#0598CE' }}>Waste into Opportunity</span>
                 </motion.h2>
                 <motion.p variants={fadeUp} className="text-body mb-10" style={{ fontSize: '18px', lineHeight: '1.8' }}>
-                  Our approach focuses on creating sustainable change by addressing root causes, 
-                  empowering communities, and delivering compassionate solutions that stand the test of time.
+                  Our work combines research, innovation, and governance support to address water quality degradation, poor sanitation, 
+                  waste mismanagement, and climate risks, particularly in urban and peri-urban African contexts. Through community-based 
+                  research and evidence generation, we inform policy, planning, and practice.
                 </motion.p>
                 <motion.div variants={fadeUp}>
                   <Link href="/services" className="btn-primary">
@@ -288,9 +293,21 @@ export default function Home() {
           <div className="container-main">
             <div className="grid md:grid-cols-3 gap-10">
               {[
-                { icon: FiGlobe, title: 'Our Mission', desc: 'We strive to create positive change and empower communities through sustainable water solutions.' },
-                { icon: FiUsers, title: 'Our Vision', desc: 'A world where every community has access to clean water and climate-resilient infrastructure.' },
-                { icon: FiHeart, title: 'Our Values', desc: 'Integrity, compassion, innovation, and community-driven approaches guide everything we do.' },
+                { 
+                  icon: FiHeart, 
+                  title: 'Our Purpose', 
+                  desc: 'To protect water as a living system by transforming sanitation, waste, and data into practical solutions that safeguard water quality, restore biodiversity, and build climate-resilient communities.' 
+                },
+                { 
+                  icon: FiTarget, 
+                  title: 'Our Mission', 
+                  desc: 'To advance water security and climate resilience by designing and scaling circular, technology-enabled solutions in water quality, environmental sanitation, waste management, and governance, turning science, data, and community knowledge into measurable impact.' 
+                },
+                { 
+                  icon: FiEye, 
+                  title: 'Our Vision', 
+                  desc: 'A future where Africa\'s water bodies are clean, biodiverse, and resilient, supported by smart sanitation systems, responsible resource use, and data-driven decision-making that balances people, planet, and prosperity.' 
+                },
               ].map((item, index) => (
                 <motion.div
                   key={item.title}
@@ -500,61 +517,85 @@ export default function Home() {
         </section>
 
         {/* ============================================
-            CTA SECTION
+            CONTACT SECTION
         ============================================ */}
-        <section className="py-32 relative overflow-hidden" style={{ backgroundColor: '#0598CE' }}>
-          <div className="absolute inset-0">
-            <Image
-              src="https://images.unsplash.com/photo-1541252260730-0412e8e2108e?q=80&w=1920"
-              alt="Background"
-              fill
-              className="object-cover opacity-15"
-            />
-          </div>
-          <div className="container-main relative z-10 text-center">
+        <section className="py-32" style={{ backgroundColor: '#FFFFFF' }}>
+          <div className="container-main">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
+              className="text-center mb-20"
             >
-              <div className="section-label justify-center mb-6" style={{ color: 'rgba(255, 255, 255, 0.9)' }}>
-                <span className="w-2 h-2 rounded-full bg-white inline-block mr-2"></span>
-                Get Involved
-              </div>
-              <h2 className="heading-xl mb-8" style={{ color: '#FFFFFF', lineHeight: '1.2' }}>
-                Building a better future{' '}
-                <span style={{ color: '#FFFFFF' }}>together</span>
+              <div className="section-label justify-center mb-6">Contact Us</div>
+              <h2 className="heading-lg mb-8" style={{ lineHeight: '1.2' }}>
+                Get in <span style={{ color: '#0598CE' }}>Touch</span>
               </h2>
-              <p className="text-xl max-w-2xl mx-auto mb-12 leading-relaxed" style={{ color: 'rgba(255, 255, 255, 0.95)' }}>
-                Join us in our mission to secure water resources and build climate-resilient 
-                communities across East Africa.
+              <p className="text-xl max-w-2xl mx-auto leading-relaxed" style={{ color: '#6B7280' }}>
+                Have questions or ready to partner with us? We'd love to hear from you.
               </p>
-              <div className="flex flex-wrap justify-center gap-6">
-                <Link href="/contact" className="btn-donate">
-                  Donate Now
-                  <FiHeart />
-                </Link>
-                <Link 
-                  href="/about" 
-                  className="btn-white"
-                  style={{ 
-                    borderColor: '#FFFFFF', 
-                    color: '#FFFFFF',
-                    backgroundColor: 'transparent'
-                  }}
-                  onMouseEnter={(e) => {
-                    e.currentTarget.style.backgroundColor = '#FFFFFF';
-                    e.currentTarget.style.color = '#0598CE';
-                  }}
-                  onMouseLeave={(e) => {
-                    e.currentTarget.style.backgroundColor = 'transparent';
-                    e.currentTarget.style.color = '#FFFFFF';
-                  }}
-                >
-                  Learn More
-                </Link>
-              </div>
             </motion.div>
+
+            <div className="grid md:grid-cols-3 gap-10 max-w-5xl mx-auto">
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                className="text-center p-8 transition-all duration-300"
+                style={{ backgroundColor: '#FFFFFF', boxShadow: '0 2px 8px rgba(0, 0, 0, 0.08)' }}
+              >
+                <div className="w-16 h-16 mx-auto mb-6 flex items-center justify-center" style={{ backgroundColor: '#E6F5F9' }}>
+                  <FiMapPin className="text-2xl" style={{ color: '#0598CE' }} />
+                </div>
+                <h3 className="font-bold text-lg mb-3" style={{ color: '#1A1A1A' }}>Address</h3>
+                <p className="leading-relaxed" style={{ color: '#6B7280', fontSize: '16px' }}>
+                  Posta Flats, Ondiek Road<br />
+                  Kisumu, Kenya<br />
+                  P.O. Box 865-40123, Kisumu
+                </p>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.1 }}
+                className="text-center p-8 transition-all duration-300"
+                style={{ backgroundColor: '#FFFFFF', boxShadow: '0 2px 8px rgba(0, 0, 0, 0.08)' }}
+              >
+                <div className="w-16 h-16 mx-auto mb-6 flex items-center justify-center" style={{ backgroundColor: '#E6F5F9' }}>
+                  <FiMail className="text-2xl" style={{ color: '#0598CE' }} />
+                </div>
+                <h3 className="font-bold text-lg mb-3" style={{ color: '#1A1A1A' }}>Email</h3>
+                <a href="mailto:info@uhaiwashwise.org" className="leading-relaxed" style={{ color: '#0598CE', fontSize: '16px' }}>
+                  info@uhaiwashwise.org
+                </a>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.2 }}
+                className="text-center p-8 transition-all duration-300"
+                style={{ backgroundColor: '#FFFFFF', boxShadow: '0 2px 8px rgba(0, 0, 0, 0.08)' }}
+              >
+                <div className="w-16 h-16 mx-auto mb-6 flex items-center justify-center" style={{ backgroundColor: '#E6F5F9' }}>
+                  <FiArrowRight className="text-2xl" style={{ color: '#0598CE' }} />
+                </div>
+                <h3 className="font-bold text-lg mb-3" style={{ color: '#1A1A1A' }}>Website</h3>
+                <a href="http://www.uhaiwashwise.org" target="_blank" rel="noopener noreferrer" className="leading-relaxed" style={{ color: '#0598CE', fontSize: '16px' }}>
+                  www.uhaiwashwise.org
+                </a>
+              </motion.div>
+            </div>
+
+            <div className="text-center mt-12">
+              <Link href="/contact" className="btn-primary">
+                Send Us a Message
+                <FiArrowRight />
+              </Link>
+            </div>
           </div>
         </section>
       </main>

@@ -5,7 +5,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import Navigation from '@/components/Navigation'
 import Footer from '@/components/Footer'
-import { FiArrowRight, FiLinkedin, FiTwitter, FiMail } from 'react-icons/fi'
+import { FiArrowRight, FiLinkedin, FiTwitter, FiMail, FiAward, FiMapPin } from 'react-icons/fi'
 
 const fadeUp = {
   hidden: { opacity: 0, y: 30 },
@@ -14,34 +14,38 @@ const fadeUp = {
 
 const team = [
   {
-    name: 'Pauline Okeyo',
-    role: 'Founder & CEO',
+    name: 'Pauline Wambui Maina',
+    role: 'Director | Community Development & Environmental Management Expert',
     image: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=400',
-    bio: 'Pauline brings over 15 years of experience in environmental management and community development. Her vision drives our mission to create sustainable impact across East Africa.',
+    bio: 'Pauline holds a BSc in Community Development and Environmental Science with over five years of experience in community-based environmental programs, sanitation, and governance.',
+    education: 'BSc in Community Development and Environmental Science',
     linkedin: '#',
     twitter: '#',
   },
   {
-    name: 'William Ochieng',
-    role: 'Technical Director',
+    name: 'William Nyambeka Magwa',
+    role: 'Hydrology & Water Resources Management Expert',
     image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=400',
-    bio: 'William leads our technical initiatives, bringing expertise in water resource management and AI-driven environmental monitoring systems.',
+    bio: 'William is a hydrologist with over nine years of experience in watershed management, water conservation, climate-resilient interventions, and policy support across Kenya and the Horn of Africa. He specializes in surface and groundwater hydrology, GIS and remote sensing, MEAL frameworks, and participatory project implementation.',
+    education: 'BSc in Earth Science with IT, Maseno University | Certification in Monitoring, Evaluation, Learning & Accountability, University of Nairobi',
     linkedin: '#',
     twitter: '#',
   },
   {
-    name: 'Anne Wanjiku',
-    role: 'Operations Manager',
+    name: 'Anne Nyaguthii',
+    role: 'AI, ICT & Communications Lead',
     image: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?q=80&w=400',
-    bio: 'Anne oversees day-to-day operations, ensuring our programs run smoothly and effectively reach the communities we serve.',
+    bio: 'Specialist in digital systems, AI-enabled solutions, and communications for environmental and social impact.',
+    education: '',
     linkedin: '#',
     twitter: '#',
   },
   {
-    name: 'Bella Akinyi',
-    role: 'Community Engagement Lead',
+    name: 'Bella',
+    role: 'Waste Management Specialist',
     image: 'https://images.unsplash.com/photo-1531123897727-8f129e1688ce?q=80&w=400',
-    bio: 'Bella leads our community outreach initiatives, building strong relationships with local leaders and ensuring community voices are heard.',
+    bio: 'Expert in solid and liquid waste systems, resource recovery, and community-based waste solutions.',
+    education: '',
     linkedin: '#',
     twitter: '#',
   },
@@ -54,35 +58,36 @@ export default function TeamPage() {
       
       <main>
         {/* Hero */}
-        <section className="relative py-32 bg-secondary-900">
+        <section className="relative py-32" style={{ backgroundColor: '#0598CE' }}>
           <div className="absolute inset-0">
             <Image
               src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=1920"
               alt="Our Team"
               fill
-              className="object-cover opacity-30"
+              className="object-cover opacity-20"
             />
           </div>
           <div className="container-main relative z-10 text-center">
             <motion.div initial="hidden" animate="visible" variants={fadeUp}>
-              <div className="section-label text-primary-400 before:bg-primary-400 justify-center">
+              <div className="section-label justify-center mb-6" style={{ color: 'rgba(255, 255, 255, 0.9)' }}>
+                <span className="w-2 h-2 rounded-full bg-white inline-block mr-2"></span>
                 Our Team
               </div>
-              <h1 className="heading-xl text-white mb-6">
-                Dedicated Hearts Behind Our{' '}
-                <span className="text-primary-500">Mission</span>
+              <h1 className="heading-xl mb-6" style={{ color: '#FFFFFF' }}>
+                Dedicated Experts Behind Our{' '}
+                <span style={{ color: '#FFFFFF' }}>Mission</span>
               </h1>
-              <p className="text-secondary-300 text-xl max-w-2xl mx-auto">
-                Meet the passionate individuals driving positive change across East Africa.
+              <p className="text-xl max-w-2xl mx-auto leading-relaxed" style={{ color: 'rgba(255, 255, 255, 0.95)' }}>
+                A multidisciplinary team of environmental scientists, water resource experts, waste management specialists, and technology professionals.
               </p>
             </motion.div>
           </div>
         </section>
 
         {/* Team Grid */}
-        <section className="py-24 bg-white">
+        <section className="py-32" style={{ backgroundColor: '#FFFFFF' }}>
           <div className="container-main">
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-10">
               {team.map((member, index) => (
                 <motion.div
                   key={member.name}
@@ -92,7 +97,7 @@ export default function TeamPage() {
                   transition={{ delay: index * 0.1 }}
                   className="group"
                 >
-                  <div className="relative h-80 rounded-2xl overflow-hidden mb-6 shadow-lg">
+                  <div className="relative h-96 overflow-hidden mb-6" style={{ boxShadow: '0 4px 16px rgba(0, 0, 0, 0.1)' }}>
                     <Image
                       src={member.image}
                       alt={member.name}
@@ -100,21 +105,27 @@ export default function TeamPage() {
                       className="object-cover group-hover:scale-105 transition-transform duration-500"
                     />
                     {/* Social Overlay */}
-                    <div className="absolute inset-0 bg-primary-500/90 flex items-center justify-center gap-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                      <a href={member.linkedin} className="w-10 h-10 bg-white rounded-full flex items-center justify-center text-primary-500 hover:bg-secondary-900 hover:text-white transition-colors">
-                        <FiLinkedin />
+                    <div className="absolute inset-0 flex items-center justify-center gap-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300" style={{ backgroundColor: 'rgba(5, 152, 206, 0.9)' }}>
+                      <a href={member.linkedin} className="w-12 h-12 bg-white rounded-full flex items-center justify-center hover:bg-gray-100 transition-colors">
+                        <FiLinkedin className="text-xl" style={{ color: '#0598CE' }} />
                       </a>
-                      <a href={member.twitter} className="w-10 h-10 bg-white rounded-full flex items-center justify-center text-primary-500 hover:bg-secondary-900 hover:text-white transition-colors">
-                        <FiTwitter />
+                      <a href={member.twitter} className="w-12 h-12 bg-white rounded-full flex items-center justify-center hover:bg-gray-100 transition-colors">
+                        <FiTwitter className="text-xl" style={{ color: '#0598CE' }} />
                       </a>
-                      <a href="#" className="w-10 h-10 bg-white rounded-full flex items-center justify-center text-primary-500 hover:bg-secondary-900 hover:text-white transition-colors">
-                        <FiMail />
+                      <a href="#" className="w-12 h-12 bg-white rounded-full flex items-center justify-center hover:bg-gray-100 transition-colors">
+                        <FiMail className="text-xl" style={{ color: '#0598CE' }} />
                       </a>
                     </div>
                   </div>
-                  <h3 className="font-bold text-xl text-secondary-900 mb-1">{member.name}</h3>
-                  <p className="text-primary-500 font-medium mb-3">{member.role}</p>
-                  <p className="text-secondary-500 text-sm">{member.bio}</p>
+                  <h3 className="font-bold text-xl mb-2" style={{ color: '#1A1A1A' }}>{member.name}</h3>
+                  <p className="mb-3 font-semibold" style={{ color: '#0598CE' }}>{member.role}</p>
+                  <p className="mb-3 leading-relaxed" style={{ color: '#6B7280', fontSize: '15px' }}>{member.bio}</p>
+                  {member.education && (
+                    <div className="flex items-start gap-2 mt-3">
+                      <FiAward className="text-sm flex-shrink-0 mt-1" style={{ color: '#0598CE' }} />
+                      <p className="text-sm leading-relaxed" style={{ color: '#6B7280' }}>{member.education}</p>
+                    </div>
+                  )}
                 </motion.div>
               ))}
             </div>
@@ -122,24 +133,24 @@ export default function TeamPage() {
         </section>
 
         {/* Join Our Team */}
-        <section className="py-24 bg-secondary-50">
+        <section className="py-32" style={{ backgroundColor: '#FFFFFF' }}>
           <div className="container-main">
-            <div className="grid lg:grid-cols-2 gap-16 items-center">
+            <div className="grid lg:grid-cols-2 gap-20 items-center">
               <motion.div
                 initial={{ opacity: 0, x: -30 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
               >
-                <div className="section-label">Join Us</div>
-                <h2 className="heading-lg mb-6">
-                  Be Part of Our <span className="text-primary-500">Mission</span>
+                <div className="section-label mb-6">Join Us</div>
+                <h2 className="heading-lg mb-8" style={{ lineHeight: '1.2' }}>
+                  Be Part of Our <span style={{ color: '#0598CE' }}>Mission</span>
                 </h2>
-                <p className="text-body mb-6">
+                <p className="text-body mb-6" style={{ fontSize: '18px', lineHeight: '1.8' }}>
                   We're always looking for passionate individuals who share our vision for 
                   a sustainable future. Whether as a team member, volunteer, or partner, 
                   there's a place for you at Uhai WashWise.
                 </p>
-                <p className="text-body mb-8">
+                <p className="text-body mb-10" style={{ fontSize: '18px', lineHeight: '1.8' }}>
                   Join us in our mission to protect water resources, build climate-resilient 
                   communities, and create lasting positive impact across East Africa.
                 </p>
@@ -153,7 +164,8 @@ export default function TeamPage() {
                 initial={{ opacity: 0, x: 30 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
-                className="relative h-[400px] rounded-2xl overflow-hidden shadow-xl"
+                className="relative h-[400px] overflow-hidden"
+                style={{ boxShadow: '0 4px 16px rgba(0, 0, 0, 0.1)' }}
               >
                 <Image
                   src="https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?q=80&w=800"
@@ -167,17 +179,25 @@ export default function TeamPage() {
         </section>
 
         {/* CTA */}
-        <section className="py-24 bg-primary-500">
-          <div className="container-main text-center">
+        <section className="py-32 relative overflow-hidden" style={{ backgroundColor: '#0598CE' }}>
+          <div className="absolute inset-0">
+            <Image
+              src="https://images.unsplash.com/photo-1541252260730-0412e8e2108e?q=80&w=1920"
+              alt="Background"
+              fill
+              className="object-cover opacity-15"
+            />
+          </div>
+          <div className="container-main relative z-10 text-center">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
             >
-              <h2 className="heading-lg text-white mb-6">
+              <h2 className="heading-lg mb-8" style={{ color: '#FFFFFF', lineHeight: '1.2' }}>
                 Ready to Make an Impact?
               </h2>
-              <p className="text-white/80 text-xl max-w-2xl mx-auto mb-10">
+              <p className="text-xl max-w-2xl mx-auto mb-12 leading-relaxed" style={{ color: 'rgba(255, 255, 255, 0.95)' }}>
                 Connect with our team and discover how we can work together for a sustainable future.
               </p>
               <Link href="/contact" className="btn-white">

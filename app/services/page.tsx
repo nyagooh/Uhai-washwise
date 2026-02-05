@@ -5,7 +5,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import Navigation from '@/components/Navigation'
 import Footer from '@/components/Footer'
-import { FiArrowRight, FiDatabase, FiDroplet, FiRefreshCw, FiSearch, FiShield } from 'react-icons/fi'
+import { FiArrowRight, FiDatabase, FiDroplet, FiRefreshCw, FiSearch, FiShield, FiCheck, FiMapPin, FiMail } from 'react-icons/fi'
 
 const fadeUp = {
   hidden: { opacity: 0, y: 30 },
@@ -16,71 +16,88 @@ const services = [
   {
     id: 'knowledge',
     icon: FiDatabase,
-    title: 'Knowledge Management',
+    title: 'Knowledge Management & Learning Systems',
     subtitle: 'Data-Driven Insights',
     image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=800',
-    description: 'We centralize and disseminate critical environmental data to inform decision-making and policy development.',
+    description: 'We support organizations, governments, and programs to generate, manage, and use knowledge effectively.',
     features: [
-      'Environmental data collection and analysis',
-      'Knowledge sharing platforms',
-      'Policy research and advocacy',
-      'Capacity building and training',
+      'Knowledge Generation & Documentation: Studies, assessments, action research, policy briefs, technical guidelines',
+      'Knowledge Systems & Digital Platforms: KM strategies, digital repositories, GIS-enabled platforms, dashboards',
+      'Data Management & Analytics: Collection, quality assurance, standardization, and analysis of climate, hydrological, and WASH data',
+      'Monitoring, Evaluation, Learning & Adaptation (MEL): Learning-oriented MEL frameworks and adaptive management systems',
+      'Capacity Building & Knowledge Transfer: Trainings, communities of practice, peer learning',
+      'Policy, Planning & Governance Support: Translating evidence into policy-relevant insights and sector strategies',
+      'Knowledge Communication: Infographics, briefs, multimedia products, learning events',
+      'Innovation & Scaling Support: Piloting, innovation labs, scaling frameworks, research partnerships'
     ]
   },
   {
     id: 'environmental',
     icon: FiShield,
-    title: 'Environmental Management',
+    title: 'Environmental Management Services',
     subtitle: 'Ecosystem Protection',
     image: 'https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?q=80&w=800',
     description: 'Comprehensive environmental monitoring and conservation programs to protect vital ecosystems.',
     features: [
-      'Biodiversity conservation',
-      'Habitat restoration',
-      'Environmental impact assessments',
-      'Climate adaptation strategies',
+      'Environmental Assessments & Compliance: ESIA, Environmental Audits, Strategic Environmental Assessments, EMPs',
+      'Solid & Liquid Waste Management: Integrated planning, recycling, resource recovery, composting, landfill design',
+      'Pollution Control & Environmental Monitoring: Water, air, soil, and noise quality monitoring',
+      'Natural Resource & Ecosystem Management: Wetlands, water resources, biodiversity conservation, ecosystem restoration',
+      'Climate Change Mitigation & Adaptation: Climate risk assessments, adaptation planning, nature-based solutions',
+      'Urban Environmental Management: Drainage, flood management, green infrastructure, informal settlement upgrading',
+      'Environmental Monitoring & Reporting: Regulatory compliance reporting, performance tracking',
+      'Environmental Governance & Capacity Building: Policy development, SOPs, training, institutional strengthening',
+      'Stakeholder Engagement: Community consultations, awareness campaigns, environmental communication'
     ]
   },
   {
     id: 'water',
     icon: FiDroplet,
-    title: 'Water Resources Management',
+    title: 'Integrated Water Resources Management (IWRM)',
     subtitle: 'Clean Water Access',
     image: 'https://images.unsplash.com/photo-1594398901394-4e34939a4fd0?q=80&w=800',
     description: 'Integrated water resource management ensuring sustainable access to clean water for communities.',
     features: [
-      'Water quality monitoring',
-      'Community water systems',
-      'Watershed management',
-      'AI-powered early warning systems',
+      'Enabling environment and governance assessments for IWRM',
+      'Sustainable source water protection and financing mechanisms',
+      'Water resources infrastructure planning and development',
+      'Catchment and watershed management',
+      'Climate-resilient water resource planning'
     ]
   },
   {
     id: 'waste',
     icon: FiRefreshCw,
-    title: 'Waste Management',
+    title: 'Waste Management Solutions',
     subtitle: 'Circular Economy',
     image: 'https://images.unsplash.com/photo-1532996122724-e3c354a0b15b?q=80&w=800',
     description: 'Transforming waste into resources through innovative circular economy solutions.',
     features: [
-      'Waste collection and sorting',
-      'Recycling programs',
-      'Organic waste composting',
-      'Plastic waste upcycling',
+      'Waste characterization and baseline assessments',
+      'Integrated solid waste management planning',
+      'Waste collection, transport, and logistics systems',
+      'Waste segregation, recycling, and material recovery facilities',
+      'Organic waste management and composting solutions',
+      'Landfill design, rehabilitation, and management',
+      'Liquid waste, wastewater, and fecal sludge management',
+      'Hazardous, healthcare, e-waste, and special waste management',
+      'Capacity building, governance, and community engagement'
     ]
   },
   {
     id: 'research',
     icon: FiSearch,
-    title: 'Research & Innovation',
+    title: 'Water Research, Innovation & Digital Solutions',
     subtitle: 'Evidence-Based Solutions',
     image: 'https://images.unsplash.com/photo-1507413245164-6160d8298b31?q=80&w=800',
     description: 'Cutting-edge research and innovation driving sustainable environmental solutions.',
     features: [
-      'Applied research programs',
-      'Technology development',
-      'Pilot projects and scaling',
-      'Partnership with academic institutions',
+      'Water quality research and monitoring',
+      'AI-driven water quality prediction and early warning systems',
+      'Rural and urban water management technologies',
+      'Digital dashboards and decision-support tools',
+      'Water governance research and advisory',
+      'Publications and technical reports'
     ]
   },
 ]
@@ -92,33 +109,34 @@ export default function ServicesPage() {
       
       <main>
         {/* Hero */}
-        <section className="relative py-32 bg-secondary-900">
+        <section className="relative py-32" style={{ backgroundColor: '#0598CE' }}>
           <div className="absolute inset-0">
             <Image
               src="https://images.unsplash.com/photo-1559027615-cd4628902d4a?q=80&w=1920"
               alt="Services"
               fill
-              className="object-cover opacity-30"
+              className="object-cover opacity-20"
             />
           </div>
           <div className="container-main relative z-10 text-center">
             <motion.div initial="hidden" animate="visible" variants={fadeUp}>
-              <div className="section-label text-primary-400 before:bg-primary-400 justify-center">
+              <div className="section-label justify-center mb-6" style={{ color: 'rgba(255, 255, 255, 0.9)' }}>
+                <span className="w-2 h-2 rounded-full bg-white inline-block mr-2"></span>
                 Our Services
               </div>
-              <h1 className="heading-xl text-white mb-6">
-                Bringing Hope to{' '}
-                <span className="text-primary-500">Every Community</span>
+              <h1 className="heading-xl mb-6" style={{ color: '#FFFFFF' }}>
+                Comprehensive Solutions for{' '}
+                <span style={{ color: '#FFFFFF' }}>Water Security</span>
               </h1>
-              <p className="text-secondary-300 text-xl max-w-2xl mx-auto">
-                Comprehensive solutions for water security, environmental protection, and sustainable development.
+              <p className="text-xl max-w-2xl mx-auto leading-relaxed" style={{ color: 'rgba(255, 255, 255, 0.95)' }}>
+                Locally grounded, scalable, and investable solutions supporting sustainable water security and climate resilience.
               </p>
             </motion.div>
           </div>
         </section>
 
         {/* Services List */}
-        <section className="py-24 bg-white">
+        <section className="py-32" style={{ backgroundColor: '#FFFFFF' }}>
           <div className="container-main">
             {services.map((service, index) => (
               <motion.div
@@ -127,12 +145,10 @@ export default function ServicesPage() {
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                className={`grid lg:grid-cols-2 gap-16 items-center mb-24 last:mb-0 ${
-                  index % 2 === 1 ? 'lg:flex-row-reverse' : ''
-                }`}
+                className={`grid lg:grid-cols-2 gap-20 items-center mb-32 last:mb-0`}
               >
                 <div className={index % 2 === 1 ? 'lg:order-2' : ''}>
-                  <div className="relative h-[400px] rounded-2xl overflow-hidden shadow-xl">
+                  <div className="relative h-[500px] overflow-hidden" style={{ boxShadow: '0 4px 16px rgba(0, 0, 0, 0.1)' }}>
                     <Image
                       src={service.image}
                       alt={service.title}
@@ -143,18 +159,20 @@ export default function ServicesPage() {
                 </div>
 
                 <div className={index % 2 === 1 ? 'lg:order-1' : ''}>
-                  <div className="w-16 h-16 bg-primary-100 rounded-2xl flex items-center justify-center mb-6">
-                    <service.icon className="text-primary-500 text-2xl" />
+                  <div className="w-16 h-16 flex items-center justify-center mb-6" style={{ backgroundColor: '#E6F5F9' }}>
+                    <service.icon className="text-3xl" style={{ color: '#0598CE' }} />
                   </div>
-                  <div className="section-label">{service.subtitle}</div>
-                  <h2 className="heading-md mb-4">{service.title}</h2>
-                  <p className="text-body mb-6">{service.description}</p>
+                  <div className="section-label mb-4">{service.subtitle}</div>
+                  <h2 className="heading-md mb-6" style={{ lineHeight: '1.2' }}>{service.title}</h2>
+                  <p className="text-body mb-8" style={{ fontSize: '18px', lineHeight: '1.8' }}>{service.description}</p>
                   
-                  <ul className="space-y-3 mb-8">
-                    {service.features.map((feature) => (
-                      <li key={feature} className="flex items-center gap-3">
-                        <div className="w-2 h-2 bg-primary-500 rounded-full" />
-                        <span className="text-secondary-600">{feature}</span>
+                  <ul className="space-y-4 mb-10">
+                    {service.features.map((feature, idx) => (
+                      <li key={idx} className="flex items-start gap-4">
+                        <div className="w-6 h-6 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5" style={{ backgroundColor: '#E6F5F9' }}>
+                          <FiCheck className="text-sm" style={{ color: '#0598CE' }} />
+                        </div>
+                        <span style={{ color: '#6B7280', fontSize: '16px', lineHeight: '1.6' }}>{feature}</span>
                       </li>
                     ))}
                   </ul>
@@ -169,28 +187,84 @@ export default function ServicesPage() {
           </div>
         </section>
 
-        {/* CTA */}
-        <section className="py-24 bg-secondary-900">
-          <div className="container-main text-center">
+        {/* Contact Section */}
+        <section className="py-32" style={{ backgroundColor: '#FFFFFF' }}>
+          <div className="container-main">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
+              className="text-center mb-20"
             >
-              <div className="section-label text-primary-400 before:bg-primary-400 justify-center">
-                Get Started
-              </div>
-              <h2 className="heading-lg text-white mb-6">
-                Ready to Partner With Us?
+              <div className="section-label justify-center mb-6">Contact Us</div>
+              <h2 className="heading-lg mb-8" style={{ lineHeight: '1.2' }}>
+                Get in <span style={{ color: '#0598CE' }}>Touch</span>
               </h2>
-              <p className="text-secondary-300 text-xl max-w-2xl mx-auto mb-10">
-                Let's work together to create sustainable impact in your community.
+              <p className="text-xl max-w-2xl mx-auto leading-relaxed" style={{ color: '#6B7280' }}>
+                Have questions or ready to partner with us? We'd love to hear from you.
               </p>
+            </motion.div>
+
+            <div className="grid md:grid-cols-3 gap-10 max-w-5xl mx-auto">
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                className="text-center p-8 transition-all duration-300"
+                style={{ backgroundColor: '#FFFFFF', boxShadow: '0 2px 8px rgba(0, 0, 0, 0.08)' }}
+              >
+                <div className="w-16 h-16 mx-auto mb-6 flex items-center justify-center" style={{ backgroundColor: '#E6F5F9' }}>
+                  <FiMapPin className="text-2xl" style={{ color: '#0598CE' }} />
+                </div>
+                <h3 className="font-bold text-lg mb-3" style={{ color: '#1A1A1A' }}>Address</h3>
+                <p className="leading-relaxed" style={{ color: '#6B7280', fontSize: '16px' }}>
+                  Posta Flats, Ondiek Road<br />
+                  Kisumu, Kenya<br />
+                  P.O. Box 865-40123, Kisumu
+                </p>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.1 }}
+                className="text-center p-8 transition-all duration-300"
+                style={{ backgroundColor: '#FFFFFF', boxShadow: '0 2px 8px rgba(0, 0, 0, 0.08)' }}
+              >
+                <div className="w-16 h-16 mx-auto mb-6 flex items-center justify-center" style={{ backgroundColor: '#E6F5F9' }}>
+                  <FiMail className="text-2xl" style={{ color: '#0598CE' }} />
+                </div>
+                <h3 className="font-bold text-lg mb-3" style={{ color: '#1A1A1A' }}>Email</h3>
+                <a href="mailto:info@uhaiwashwise.org" className="leading-relaxed" style={{ color: '#0598CE', fontSize: '16px' }}>
+                  info@uhaiwashwise.org
+                </a>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.2 }}
+                className="text-center p-8 transition-all duration-300"
+                style={{ backgroundColor: '#FFFFFF', boxShadow: '0 2px 8px rgba(0, 0, 0, 0.08)' }}
+              >
+                <div className="w-16 h-16 mx-auto mb-6 flex items-center justify-center" style={{ backgroundColor: '#E6F5F9' }}>
+                  <FiArrowRight className="text-2xl" style={{ color: '#0598CE' }} />
+                </div>
+                <h3 className="font-bold text-lg mb-3" style={{ color: '#1A1A1A' }}>Website</h3>
+                <a href="http://www.uhaiwashwise.org" target="_blank" rel="noopener noreferrer" className="leading-relaxed" style={{ color: '#0598CE', fontSize: '16px' }}>
+                  www.uhaiwashwise.org
+                </a>
+              </motion.div>
+            </div>
+
+            <div className="text-center mt-12">
               <Link href="/contact" className="btn-primary">
-                Contact Us
+                Send Us a Message
                 <FiArrowRight />
               </Link>
-            </motion.div>
+            </div>
           </div>
         </section>
       </main>

@@ -9,11 +9,9 @@ import { FaFacebookF, FaTwitter, FaLinkedinIn, FaInstagram } from 'react-icons/f
 
 const navLinks = [
   { name: 'Home', href: '/' },
-  { name: 'About Us', href: '/about' },
   { name: 'Services', href: '/services' },
-  { name: 'Our Team', href: '/team' },
-  { name: 'Portfolio', href: '/portfolio' },
-  { name: 'Contact', href: '/contact' },
+  { name: 'About', href: '/about' },
+  { name: 'Impacts', href: '/impacts' },
 ]
 
 export default function Navigation() {

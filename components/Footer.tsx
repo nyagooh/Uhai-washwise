@@ -97,17 +97,18 @@ export default function Footer() {
               <li className="flex items-start gap-3">
                 <FiMapPin className="mt-1 flex-shrink-0" size={20} style={{ color: '#FFFFFF' }} />
                 <span style={{ color: 'rgba(255, 255, 255, 0.9)' }}>
+                  Posta Flats, Ondiek Road<br />
                   Kisumu, Kenya<br />
-                  East Africa
+                  P.O. Box 865–40123, Kisumu
                 </span>
               </li>
               <li className="flex items-center gap-3">
-                <FiPhone className="flex-shrink-0" size={20} style={{ color: '#FFFFFF' }} />
-                <span style={{ color: 'rgba(255, 255, 255, 0.9)' }}>+254 123 456 789</span>
+                <FiMail className="flex-shrink-0" size={20} style={{ color: '#FFFFFF' }} />
+                <a href="mailto:info@uhaiwashwise.org" style={{ color: 'rgba(255, 255, 255, 0.9)' }}>info@uhaiwashwise.org</a>
               </li>
               <li className="flex items-center gap-3">
-                <FiMail className="flex-shrink-0" size={20} style={{ color: '#FFFFFF' }} />
-                <span style={{ color: 'rgba(255, 255, 255, 0.9)' }}>info@uhaiwashwise.org</span>
+                <FiArrowRight className="flex-shrink-0" size={20} style={{ color: '#FFFFFF' }} />
+                <a href="http://www.uhaiwashwise.org" target="_blank" rel="noopener noreferrer" style={{ color: 'rgba(255, 255, 255, 0.9)' }}>www.uhaiwashwise.org</a>
               </li>
             </ul>
           </div>
