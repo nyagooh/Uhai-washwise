@@ -12,8 +12,9 @@
   }
   
   body {
-    @apply bg-white antialiased;
-    color: #2E2E2E;
+    @apply antialiased;
+    background-color: #FAFBFC;
+    color: #1A2B35;
   }
 }
 
@@ -29,11 +30,12 @@
            text-white font-semibold rounded-lg
            transition-all duration-300
            shadow-lg hover:shadow-xl hover:-translate-y-0.5;
-    background-color: #4CAF50;
+    background-color: #1B5F7A;
+    box-shadow: 0 4px 6px rgba(27, 95, 122, 0.08);
   }
   
   .btn-primary:hover {
-    background-color: #43A047;
+    background-color: #2BA5C8;
   }
 
   .btn-secondary {
@@ -41,23 +43,24 @@
            text-white font-semibold rounded-lg
            transition-all duration-300
            shadow-md hover:shadow-lg;
-    background-color: #1F5FA3;
+    background-color: #2BA5C8;
+    box-shadow: 0 4px 6px rgba(43, 165, 200, 0.08);
   }
   
   .btn-secondary:hover {
-    background-color: #194C82;
+    background-color: #1B5F7A;
   }
 
   .btn-outline {
     @apply inline-flex items-center justify-center gap-2 px-8 py-4 
            bg-transparent border-2 font-semibold rounded-lg 
            transition-all duration-300;
-    border-color: #1F5FA3;
-    color: #1F5FA3;
+    border-color: #1B5F7A;
+    color: #1B5F7A;
   }
   
   .btn-outline:hover {
-    background-color: #1F5FA3;
+    background-color: #1B5F7A;
     color: white;
   }
 
@@ -66,92 +69,100 @@
            bg-white font-semibold rounded-lg
            transition-all duration-300
            shadow-lg hover:shadow-xl;
-    color: #1F5FA3;
+    color: #1B5F7A;
+    box-shadow: 0 4px 6px rgba(27, 95, 122, 0.08);
   }
   
   .btn-white:hover {
-    background-color: #EAF6FB;
+    background-color: #F3F6F8;
   }
 
   .btn-donate {
     @apply inline-flex items-center justify-center gap-2 px-10 py-5 
-           bg-accent font-bold rounded-lg
-           hover:bg-accent-600 transition-all duration-300
+           font-bold rounded-lg
+           transition-all duration-300
            shadow-xl hover:shadow-2xl hover:-translate-y-1;
-    color: #2E2E2E;
+    background-color: #6BA83D;
+    color: white;
+    box-shadow: 0 4px 6px rgba(107, 168, 61, 0.15);
+  }
+  
+  .btn-donate:hover {
+    background-color: #5A8F33;
   }
 
   /* Section Label */
   .section-label {
     @apply inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider mb-4;
-    color: #4CAF50;
+    color: #2BA5C8;
   }
 
   .section-label::before {
     content: '';
     @apply w-2 h-2 rounded-full;
-    background-color: #4CAF50;
+    background-color: #2BA5C8;
   }
 
   /* Headings */
   .heading-xl {
     @apply text-4xl sm:text-5xl lg:text-6xl font-display font-bold leading-tight;
-    color: #4CAF50;
+    color: #0D3B52;
   }
 
   .heading-lg {
     @apply text-3xl sm:text-4xl lg:text-5xl font-display font-bold leading-tight;
-    color: #4CAF50;
+    color: #0D3B52;
   }
 
   .heading-md {
     @apply text-2xl sm:text-3xl font-display font-bold leading-tight;
-    color: #4CAF50;
+    color: #0D3B52;
   }
 
   .heading-sm {
     @apply text-xl sm:text-2xl font-display font-semibold leading-tight;
-    color: #4CAF50;
+    color: #0D3B52;
   }
 
   /* Text */
   .text-body {
     @apply text-base sm:text-lg leading-relaxed;
-    color: #666666;
+    color: #6B7C8C;
   }
 
   .text-body-sm {
     @apply text-sm sm:text-base leading-relaxed;
-    color: #666666;
+    color: #6B7C8C;
   }
 
   /* Cards */
   .card {
-    @apply bg-white rounded-2xl overflow-hidden shadow-lg 
+    @apply rounded-2xl overflow-hidden shadow-lg 
            hover:shadow-xl transition-all duration-300 hover:-translate-y-1;
-    border: 1px solid #EAF6FB;
+    background-color: #FFFFFF;
+    box-shadow: 0 4px 6px rgba(27, 95, 122, 0.08);
   }
 
   .card-dark {
     @apply rounded-2xl overflow-hidden text-white;
-    background-color: #1F5FA3;
+    background-color: #1B5F7A;
   }
 
   /* Stats */
   .stat-number {
     @apply text-5xl sm:text-6xl lg:text-7xl font-display font-bold;
-    color: #4CAF50;
+    color: #2BA5C8;
   }
 
   /* Progress bar */
   .progress-bar {
     @apply h-2 rounded-full overflow-hidden;
-    background-color: #EAF6FB;
+    background-color: #F3F6F8;
   }
 
   .progress-fill {
     @apply h-full rounded-full transition-all duration-1000;
-    background-color: #4CAF50;
+    background-color: #2BA5C8;
   }
 
   /* Image overlay */
@@ -179,7 +190,7 @@
 
   .video-hero-overlay {
     @apply absolute inset-0;
-    background-color: rgba(76, 175, 80, 0.7);
+    background: linear-gradient(135deg, rgba(27, 95, 122, 0.75) 0%, rgba(13, 59, 82, 0.85) 100%);
   }
 }
 

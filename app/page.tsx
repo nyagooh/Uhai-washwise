@@ -1,6 +1,5 @@
 'use client'
 
-import React from 'react'
 import { motion } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
 import Link from 'next/link'
@@ -44,9 +43,8 @@ export default function Home() {
   const [impactRef, impactInView] = useInView({ triggerOnce: true, threshold: 0.2 })
 
   return (
-    <React.Fragment>
+    <div>
       <Navigation />
-      
       <main>
         {/* ============================================
             HERO SECTION - VIDEO BACKGROUND
@@ -75,13 +73,14 @@ export default function Home() {
                 animate={heroInView ? "visible" : "hidden"}
                 variants={stagger}
               >
-                <motion.div variants={fadeUp} className="section-label text-white/80 before:bg-accent">
+                <motion.div variants={fadeUp} className="section-label" style={{ color: 'rgba(255, 255, 255, 0.8)' }}>
+                  <span className="w-2 h-2 rounded-full bg-white inline-block mr-2"></span>
                   Water Security for Africa
                 </motion.div>
                 
-                <motion.h1 variants={fadeUp} className="heading-xl text-white mb-6">
+                <motion.h1 variants={fadeUp} className="heading-xl mb-6" style={{ color: '#FFFFFF' }}>
                   United in Compassion,{' '}
-                  <span className="text-accent">Changing Lives</span>
+                  <span style={{ color: '#6BA83D' }}>Changing Lives</span>
                 </motion.h1>
                 
                 <motion.p variants={fadeUp} className="text-xl text-white/80 mb-8 leading-relaxed">
@@ -109,15 +108,15 @@ export default function Home() {
               className="hidden lg:block absolute bottom-20 right-8 bg-white rounded-2xl p-6 shadow-2xl max-w-xs"
             >
               <div className="flex items-center gap-4 mb-4">
-                <div className="w-14 h-14 bg-lightGreen rounded-xl flex items-center justify-center">
-                  <FaHandHoldingHeart className="text-green text-2xl" />
+                <div className="w-14 h-14 rounded-xl flex items-center justify-center" style={{ backgroundColor: '#E8F5E0' }}>
+                  <FaHandHoldingHeart className="text-2xl" style={{ color: '#6BA83D' }} />
                 </div>
                 <div>
-                  <div className="text-3xl font-bold text-green">75,958</div>
-                  <div className="text-sm" style={{ color: '#666666' }}>People Helped</div>
+                  <div className="text-3xl font-bold" style={{ color: '#2BA5C8' }}>75,958</div>
+                  <div className="text-sm" style={{ color: '#6B7C8C' }}>People Helped</div>
                 </div>
               </div>
-              <p className="text-sm" style={{ color: '#666666' }}>
+              <p className="text-sm" style={{ color: '#6B7C8C' }}>
                 Supporting growth through community-driven water initiatives.
               </p>
             </motion.div>
@@ -196,7 +195,7 @@ export default function Home() {
               >
                 <div className="section-label">About Us</div>
                 <h2 className="heading-lg mb-6">
-                  United in compassion, <span className="text-primary">changing lives</span>
+                  United in compassion, <span style={{ color: '#2BA5C8' }}>changing lives</span>
                 </h2>
                 <p className="text-body mb-8">
                   Driven by compassion and a shared vision, we work hand-in-hand with communities 
@@ -206,21 +205,21 @@ export default function Home() {
 
                 <div className="grid sm:grid-cols-2 gap-6 mb-8">
                   <div className="flex items-start gap-4">
-                    <div className="w-12 h-12 bg-lightGreen rounded-xl flex items-center justify-center flex-shrink-0">
-                      <FiDroplet className="text-green text-xl" />
+                    <div className="w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0" style={{ backgroundColor: '#E8F5E0' }}>
+                      <FiDroplet className="text-xl" style={{ color: '#6BA83D' }} />
                     </div>
                     <div>
-                      <h4 className="font-bold text-green mb-1">Healthcare Support</h4>
-                      <p className="text-sm" style={{ color: '#666666' }}>Providing essential services and resources to communities.</p>
+                      <h4 className="font-bold mb-1" style={{ color: '#0D3B52' }}>Healthcare Support</h4>
+                      <p className="text-sm" style={{ color: '#6B7C8C' }}>Providing essential services and resources to communities.</p>
                     </div>
                   </div>
                   <div className="flex items-start gap-4">
-                    <div className="w-12 h-12 bg-lightGreen rounded-xl flex items-center justify-center flex-shrink-0">
-                      <FiHeart className="text-green text-xl" />
+                    <div className="w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0" style={{ backgroundColor: '#E8F5E0' }}>
+                      <FiHeart className="text-xl" style={{ color: '#6BA83D' }} />
                     </div>
                     <div>
-                      <h4 className="font-bold text-green mb-1">Helped Fund</h4>
-                      <p className="text-sm" style={{ color: '#666666' }}>Supporting growth through community funding.</p>
+                      <h4 className="font-bold mb-1" style={{ color: '#0D3B52' }}>Helped Fund</h4>
+                      <p className="text-sm" style={{ color: '#6B7C8C' }}>Supporting growth through community funding.</p>
                     </div>
                   </div>
                 </div>
@@ -237,7 +236,7 @@ export default function Home() {
         {/* ============================================
             OUR APPROACH SECTION
         ============================================ */}
-        <section ref={approachRef} className="py-24 bg-lightBlue">
+        <section ref={approachRef} className="py-24" style={{ backgroundColor: '#F3F6F8' }}>
           <div className="container-main">
             <div className="grid lg:grid-cols-2 gap-16 items-center">
               {/* Content */}
@@ -250,7 +249,7 @@ export default function Home() {
                   Our Approach
                 </motion.div>
                 <motion.h2 variants={fadeUp} className="heading-lg mb-6">
-                  Compassionate solutions for <span className="text-primary">lasting impact</span>
+                  Compassionate solutions for <span style={{ color: '#2BA5C8' }}>lasting impact</span>
                 </motion.h2>
                 <motion.p variants={fadeUp} className="text-body mb-8">
                   Our approach focuses on creating sustainable change by addressing root causes, 
@@ -299,13 +298,14 @@ export default function Home() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: index * 0.1 }}
-                  className="bg-lightGreen rounded-2xl p-8 text-center hover:shadow-2xl transition-shadow border-2 border-green"
+                  className="rounded-2xl p-8 text-center hover:shadow-2xl transition-shadow border-2"
+                  style={{ backgroundColor: '#E8F5E0', borderColor: '#6BA83D', boxShadow: '0 4px 6px rgba(27, 95, 122, 0.08)' }}
                 >
-                  <div className="w-16 h-16 mx-auto mb-6 bg-green rounded-full flex items-center justify-center">
+                  <div className="w-16 h-16 mx-auto mb-6 rounded-full flex items-center justify-center" style={{ backgroundColor: '#1B5F7A' }}>
                     <item.icon className="text-white text-2xl" />
                   </div>
-                  <h3 className="text-xl font-bold text-green mb-4">{item.title}</h3>
-                  <p style={{ color: '#666666' }}>{item.desc}</p>
+                  <h3 className="text-xl font-bold mb-4" style={{ color: '#0D3B52' }}>{item.title}</h3>
+                  <p style={{ color: '#6B7C8C' }}>{item.desc}</p>
                 </motion.div>
               ))}
             </div>
@@ -315,7 +315,7 @@ export default function Home() {
         {/* ============================================
             STATS SECTION
         ============================================ */}
-        <section className="py-24 bg-green">
+        <section className="py-24" style={{ backgroundColor: '#1B5F7A' }}>
           <div className="container-main">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
               {[
@@ -338,11 +338,6 @@ export default function Home() {
                   <div className="text-white/90 font-medium">{stat.label}</div>
                 </motion.div>
               ))}
-                >
-                  <div className="text-5xl md:text-6xl font-bold text-white mb-2">{stat.value}</div>
-                  <div className="text-white/80">{stat.label}</div>
-                </motion.div>
-              ))}
             </div>
           </div>
         </section>
@@ -350,7 +345,7 @@ export default function Home() {
         {/* ============================================
             SERVICES / HOW WE HELP
         ============================================ */}
-        <section ref={servicesRef} className="py-24 bg-lightGreen">
+        <section ref={servicesRef} className="py-24" style={{ backgroundColor: '#E8F5E0' }}>
           <div className="container-main">
             <motion.div
               initial="hidden"
@@ -358,13 +353,13 @@ export default function Home() {
               variants={stagger}
               className="text-center mb-16"
             >
-              <motion.div variants={fadeUp} className="section-label text-green before:bg-green">
+              <motion.div variants={fadeUp} className="section-label">
                 How We Help
               </motion.div>
-              <motion.h2 variants={fadeUp} className="heading-lg text-green mb-4">
+              <motion.h2 variants={fadeUp} className="heading-lg mb-4">
                 Bringing hope to every community
               </motion.h2>
-              <motion.p variants={fadeUp} className="max-w-2xl mx-auto" style={{ color: '#666666' }}>
+              <motion.p variants={fadeUp} className="max-w-2xl mx-auto" style={{ color: '#6B7C8C' }}>
                 We are dedicated to creating sustainable impact through innovative solutions 
                 that protect water resources and build climate resilience.
               </motion.p>
@@ -410,8 +405,8 @@ export default function Home() {
                     />
                   </div>
                   <div className="p-6">
-                    <h3 className="font-bold text-lg text-green mb-2">{service.title}</h3>
-                    <p className="text-sm" style={{ color: '#666666' }}>{service.desc}</p>
+                    <h3 className="font-bold text-lg mb-2" style={{ color: '#0D3B52' }}>{service.title}</h3>
+                    <p className="text-sm" style={{ color: '#6B7C8C' }}>{service.desc}</p>
                   </div>
                 </motion.div>
               ))}
@@ -463,7 +458,7 @@ export default function Home() {
               >
                 <div className="section-label">Our Impact</div>
                 <h2 className="heading-lg mb-6">
-                  Helping others <span className="text-primary-500">improves the world</span>
+                  Helping others <span style={{ color: '#2BA5C8' }}>improves the world</span>
                 </h2>
                 <p className="text-body mb-8">
                   Every project we undertake creates ripples of positive change throughout 
@@ -479,8 +474,8 @@ export default function Home() {
                   ].map((item) => (
                     <div key={item.label}>
                       <div className="flex justify-between mb-2">
-                        <span className="font-semibold text-secondary-900">{item.label}</span>
-                        <span className="font-bold text-primary-500">{item.value}%</span>
+                        <span className="font-semibold" style={{ color: '#1A2B35' }}>{item.label}</span>
+                        <span className="font-bold" style={{ color: '#2BA5C8' }}>{item.value}%</span>
                       </div>
                       <div className="progress-bar">
                         <motion.div
@@ -506,7 +501,7 @@ export default function Home() {
         {/* ============================================
             CTA SECTION
         ============================================ */}
-        <section className="py-24 bg-green relative overflow-hidden">
+        <section className="py-24 relative overflow-hidden" style={{ background: 'linear-gradient(135deg, #2BA5C8 0%, #1B5F7A 100%)' }}>
           <div className="absolute inset-0">
             <Image
               src="https://images.unsplash.com/photo-1541252260730-0412e8e2108e?q=80&w=1920"
@@ -521,14 +516,15 @@ export default function Home() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
             >
-              <div className="section-label text-white/90 before:bg-white justify-center">
+              <div className="section-label justify-center" style={{ color: 'rgba(255, 255, 255, 0.9)' }}>
+                <span className="w-2 h-2 rounded-full bg-white inline-block mr-2"></span>
                 Get Involved
               </div>
-              <h2 className="heading-xl text-white mb-6">
+              <h2 className="heading-xl mb-6" style={{ color: '#FFFFFF' }}>
                 Building a better future{' '}
-                <span className="text-accent">together</span>
+                <span style={{ color: '#6BA83D' }}>together</span>
               </h2>
-              <p className="text-white/90 text-xl max-w-2xl mx-auto mb-10">
+              <p className="text-xl max-w-2xl mx-auto mb-10" style={{ color: 'rgba(255, 255, 255, 0.9)' }}>
                 Join us in our mission to secure water resources and build climate-resilient 
                 communities across East Africa.
               </p>
@@ -537,7 +533,22 @@ export default function Home() {
                   Donate Now
                   <FiHeart />
                 </Link>
-                <Link href="/about" className="btn-outline border-white text-white hover:bg-white hover:text-green">
+                <Link 
+                  href="/about" 
+                  className="btn-outline transition-colors"
+                  style={{ 
+                    borderColor: '#FFFFFF', 
+                    color: '#FFFFFF',
+                  }}
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.backgroundColor = '#FFFFFF';
+                    e.currentTarget.style.color = '#1B5F7A';
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.backgroundColor = 'transparent';
+                    e.currentTarget.style.color = '#FFFFFF';
+                  }}
+                >
                   Learn More
                 </Link>
               </div>
@@ -547,6 +558,6 @@ export default function Home() {
       </main>
 
       <Footer />
-    </React.Fragment>
+    </div>
   )
 }

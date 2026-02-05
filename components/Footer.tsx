@@ -22,7 +22,7 @@ const services = [
 
 export default function Footer() {
   return (
-    <footer className="bg-green text-white">
+    <footer style={{ backgroundColor: '#1B5F7A', color: '#FFFFFF' }}>
       {/* Main Footer */}
       <div className="container-main py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
@@ -30,13 +30,13 @@ export default function Footer() {
           <div>
             <Link href="/" className="flex items-center gap-3 mb-6">
               <div className="w-12 h-12 bg-white rounded-xl flex items-center justify-center">
-                <span className="text-green font-bold text-xl">U</span>
+                <span className="font-bold text-xl" style={{ color: '#1B5F7A' }}>U</span>
               </div>
               <span className="font-display font-bold text-xl">
-                Uhai<span className="text-accent">WashWise</span>
+                Uhai<span style={{ color: '#6BA83D' }}>WashWise</span>
               </span>
             </Link>
-            <p className="text-white/80 mb-6 leading-relaxed">
+            <p className="mb-6 leading-relaxed" style={{ color: 'rgba(255, 255, 255, 0.8)' }}>
               Empowering communities through sustainable water management and climate resilience solutions across East Africa.
             </p>
             <div className="flex gap-3">
@@ -44,7 +44,8 @@ export default function Footer() {
                 <a
                   key={i}
                   href="#"
-                  className="w-10 h-10 bg-green-700 hover:bg-accent rounded-full flex items-center justify-center transition-colors"
+                  className="w-10 h-10 rounded-full flex items-center justify-center transition-colors hover:opacity-80"
+                  style={{ backgroundColor: '#0D3B52', color: '#FFFFFF' }}
                 >
                   <Icon size={16} />
                 </a>
@@ -60,9 +61,10 @@ export default function Footer() {
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className="text-white/80 hover:text-accent transition-colors flex items-center gap-2 group"
+                    className="transition-colors flex items-center gap-2 group hover:opacity-80"
+                    style={{ color: 'rgba(255, 255, 255, 0.8)' }}
                   >
-                    <FiArrowRight className="opacity-0 -ml-4 group-hover:opacity-100 group-hover:ml-0 transition-all" />
+                    <FiArrowRight className="opacity-0 -ml-4 group-hover:opacity-100 group-hover:ml-0 transition-all" style={{ color: '#2BA5C8' }} />
                     {link.name}
                   </Link>
                 </li>
@@ -93,19 +95,19 @@ export default function Footer() {
             <h3 className="font-display font-bold text-lg mb-6">Contact Us</h3>
             <ul className="space-y-4">
               <li className="flex items-start gap-3">
-                <FiMapPin className="text-accent mt-1 flex-shrink-0" size={20} />
-                <span className="text-white/80">
+                <FiMapPin className="mt-1 flex-shrink-0" size={20} style={{ color: '#2BA5C8' }} />
+                <span style={{ color: 'rgba(255, 255, 255, 0.8)' }}>
                   Kisumu, Kenya<br />
                   East Africa
                 </span>
               </li>
               <li className="flex items-center gap-3">
-                <FiPhone className="text-accent flex-shrink-0" size={20} />
-                <span className="text-white/80">+254 123 456 789</span>
+                <FiPhone className="flex-shrink-0" size={20} style={{ color: '#2BA5C8' }} />
+                <span style={{ color: 'rgba(255, 255, 255, 0.8)' }}>+254 123 456 789</span>
               </li>
               <li className="flex items-center gap-3">
-                <FiMail className="text-accent flex-shrink-0" size={20} />
-                <span className="text-white/80">info@uhaiwashwise.org</span>
+                <FiMail className="flex-shrink-0" size={20} style={{ color: '#2BA5C8' }} />
+                <span style={{ color: 'rgba(255, 255, 255, 0.8)' }}>info@uhaiwashwise.org</span>
               </li>
             </ul>
           </div>
@@ -113,16 +115,16 @@ export default function Footer() {
       </div>
 
       {/* Bottom Bar */}
-      <div className="border-t border-green-700">
+      <div className="border-t" style={{ borderColor: '#0D3B52' }}>
         <div className="container-main py-6 flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="text-white/70 text-sm">
+          <p className="text-sm" style={{ color: 'rgba(255, 255, 255, 0.7)' }}>
             © {new Date().getFullYear()} Uhai WashWise. All rights reserved.
           </p>
           <div className="flex gap-6 text-sm">
-            <Link href="#" className="text-white/70 hover:text-accent transition-colors">
+            <Link href="#" className="hover:opacity-80 transition-opacity" style={{ color: 'rgba(255, 255, 255, 0.7)' }}>
               Privacy Policy
             </Link>
-            <Link href="#" className="text-white/70 hover:text-accent transition-colors">
+            <Link href="#" className="hover:opacity-80 transition-opacity" style={{ color: 'rgba(255, 255, 255, 0.7)' }}>
               Terms of Service
             </Link>
           </div>

@@ -9,73 +9,48 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        // Primary Water Blue - Trust, water authority, professionalism
+        // Primary Blue Palette - Deep Ocean Teal
         primary: {
-          DEFAULT: '#1F5FA3',
-          50: '#E8F1FA',
-          100: '#D1E3F5',
-          200: '#A3C7EB',
-          300: '#75ABE1',
-          400: '#478FD7',
-          500: '#1F5FA3',
-          600: '#194C82',
-          700: '#133962',
-          800: '#0C2641',
-          900: '#061321',
+          DEFAULT: '#1B5F7A', // Main Blue - Deep Ocean Teal
+          accent: '#2BA5C8', // Accent Blue - Bright Teal
+          dark: '#0D3B52', // Dark Blue - Navy Depth
+          50: '#E8F1F5',
+          100: '#D1E3EB',
+          200: '#A3C7D7',
+          300: '#75ABC3',
+          400: '#478FAF',
+          500: '#1B5F7A',
+          600: '#164F66',
+          700: '#113F52',
+          800: '#0D3B52',
+          900: '#082B3A',
         },
-        // Primary Eco Green - Sustainability, life, environment
+        // Green Accents - Natural Leaf Green
         green: {
-          DEFAULT: '#4CAF50',
-          50: '#E8F5E9',
-          100: '#C8E6C9',
-          200: '#A5D6A7',
-          300: '#81C784',
-          400: '#66BB6A',
-          500: '#4CAF50',
-          600: '#43A047',
-          700: '#388E3C',
-          800: '#2E7D32',
-          900: '#1B5E20',
+          DEFAULT: '#6BA83D', // Primary Green - Natural Leaf Green
+          subtle: '#E8F5E0', // Subtle Green - Whisper Green
+          50: '#F0F8EB',
+          100: '#E8F5E0',
+          200: '#D1EBC1',
+          300: '#BAE1A2',
+          400: '#A3D783',
+          500: '#6BA83D',
+          600: '#5A8F33',
+          700: '#497629',
+          800: '#385D1F',
+          900: '#274415',
         },
-        // Secondary Light Blue - Clean, calm backgrounds
-        lightBlue: {
-          DEFAULT: '#EAF6FB',
-          50: '#F7FCFE',
-          100: '#EAF6FB',
-          200: '#D5EDF7',
-          300: '#C0E4F3',
-          400: '#ABDBEF',
-          500: '#96D2EB',
+        // Premium Background & Neutrals
+        bg: {
+          DEFAULT: '#FAFBFC', // Cool White
+          secondary: '#F3F6F8', // Soft Cloud
+          card: '#FFFFFF', // Pure White
         },
-        // Secondary Light Green - Nature balance
-        lightGreen: {
-          DEFAULT: '#F0FAF4',
-          50: '#FAFEFB',
-          100: '#F0FAF4',
-          200: '#E1F5E9',
-          300: '#D2F0DE',
-          400: '#C3EBD3',
-          500: '#B4E6C8',
-        },
-        // Accent Warm Sun Yellow - Donate button, key numbers
-        accent: {
-          DEFAULT: '#F4C430',
-          50: '#FEF9E7',
-          100: '#FDF4CF',
-          200: '#FCE99F',
-          300: '#FADE6F',
-          400: '#F9D33F',
-          500: '#F4C430',
-          600: '#D9A819',
-          700: '#A88214',
-          800: '#775D0E',
-          900: '#463709',
-        },
-        // Text color
+        // Text Colors
         text: {
-          DEFAULT: '#2E2E2E',
-          light: '#666666',
-          lighter: '#999999',
+          DEFAULT: '#1A2B35', // Primary Text - Deep Charcoal
+          secondary: '#6B7C8C', // Secondary Text - Slate Gray
+          light: '#FFFFFF', // Light Text on Dark
         },
       },
       fontFamily: {
