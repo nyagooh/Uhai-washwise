@@ -74,13 +74,13 @@ export default function Home() {
                 animate={heroInView ? "visible" : "hidden"}
                 variants={stagger}
               >
-                <motion.div variants={fadeUp} className="section-label text-white/80 before:bg-primary-500">
+                <motion.div variants={fadeUp} className="section-label text-white/80 before:bg-green">
                   Water Security for Africa
                 </motion.div>
                 
                 <motion.h1 variants={fadeUp} className="heading-xl text-white mb-6">
                   United in Compassion,{' '}
-                  <span className="text-primary-500">Changing Lives</span>
+                  <span className="text-green">Changing Lives</span>
                 </motion.h1>
                 
                 <motion.p variants={fadeUp} className="text-xl text-white/80 mb-8 leading-relaxed">
@@ -108,15 +108,15 @@ export default function Home() {
               className="hidden lg:block absolute bottom-20 right-8 bg-white rounded-2xl p-6 shadow-2xl max-w-xs"
             >
               <div className="flex items-center gap-4 mb-4">
-                <div className="w-14 h-14 bg-primary-100 rounded-xl flex items-center justify-center">
-                  <FaHandHoldingHeart className="text-primary-500 text-2xl" />
+                <div className="w-14 h-14 bg-lightGreen rounded-xl flex items-center justify-center">
+                  <FaHandHoldingHeart className="text-green text-2xl" />
                 </div>
                 <div>
-                  <div className="text-3xl font-bold text-secondary-900">75,958</div>
-                  <div className="text-secondary-500 text-sm">People Helped</div>
+                  <div className="text-3xl font-bold text-green">75,958</div>
+                  <div className="text-sm" style={{ color: '#666666' }}>People Helped</div>
                 </div>
               </div>
-              <p className="text-secondary-600 text-sm">
+              <p className="text-sm" style={{ color: '#666666' }}>
                 Supporting growth through community-driven water initiatives.
               </p>
             </motion.div>
@@ -195,7 +195,7 @@ export default function Home() {
               >
                 <div className="section-label">About Us</div>
                 <h2 className="heading-lg mb-6">
-                  United in compassion, <span className="text-primary-500">changing lives</span>
+                  United in compassion, <span className="text-green">changing lives</span>
                 </h2>
                 <p className="text-body mb-8">
                   Driven by compassion and a shared vision, we work hand-in-hand with communities 
@@ -205,21 +205,21 @@ export default function Home() {
 
                 <div className="grid sm:grid-cols-2 gap-6 mb-8">
                   <div className="flex items-start gap-4">
-                    <div className="w-12 h-12 bg-primary-100 rounded-xl flex items-center justify-center flex-shrink-0">
-                      <FiDroplet className="text-primary-500 text-xl" />
+                    <div className="w-12 h-12 bg-lightGreen rounded-xl flex items-center justify-center flex-shrink-0">
+                      <FiDroplet className="text-green text-xl" />
                     </div>
                     <div>
-                      <h4 className="font-bold text-secondary-900 mb-1">Healthcare Support</h4>
-                      <p className="text-secondary-500 text-sm">Providing essential services and resources to communities.</p>
+                      <h4 className="font-bold text-primary mb-1">Healthcare Support</h4>
+                      <p className="text-sm" style={{ color: '#666666' }}>Providing essential services and resources to communities.</p>
                     </div>
                   </div>
                   <div className="flex items-start gap-4">
-                    <div className="w-12 h-12 bg-accent-100 rounded-xl flex items-center justify-center flex-shrink-0">
-                      <FiHeart className="text-accent-500 text-xl" />
+                    <div className="w-12 h-12 bg-lightGreen rounded-xl flex items-center justify-center flex-shrink-0">
+                      <FiHeart className="text-green text-xl" />
                     </div>
                     <div>
-                      <h4 className="font-bold text-secondary-900 mb-1">Helped Fund</h4>
-                      <p className="text-secondary-500 text-sm">Supporting growth through community funding.</p>
+                      <h4 className="font-bold text-primary mb-1">Helped Fund</h4>
+                      <p className="text-sm" style={{ color: '#666666' }}>Supporting growth through community funding.</p>
                     </div>
                   </div>
                 </div>
@@ -236,7 +236,7 @@ export default function Home() {
         {/* ============================================
             OUR APPROACH SECTION
         ============================================ */}
-        <section ref={approachRef} className="py-24 bg-secondary-50">
+        <section ref={approachRef} className="py-24 bg-lightBlue">
           <div className="container-main">
             <div className="grid lg:grid-cols-2 gap-16 items-center">
               {/* Content */}
@@ -249,7 +249,7 @@ export default function Home() {
                   Our Approach
                 </motion.div>
                 <motion.h2 variants={fadeUp} className="heading-lg mb-6">
-                  Compassionate solutions for <span className="text-primary-500">lasting impact</span>
+                  Compassionate solutions for <span className="text-green">lasting impact</span>
                 </motion.h2>
                 <motion.p variants={fadeUp} className="text-body mb-8">
                   Our approach focuses on creating sustainable change by addressing root causes, 
@@ -288,9 +288,9 @@ export default function Home() {
           <div className="container-main">
             <div className="grid md:grid-cols-3 gap-8">
               {[
-                { icon: FiGlobe, title: 'Our Mission', color: 'primary', desc: 'We strive to create positive change and empower communities through sustainable water solutions.' },
-                { icon: FiUsers, title: 'Our Vision', color: 'accent', desc: 'A world where every community has access to clean water and climate-resilient infrastructure.' },
-                { icon: FiHeart, title: 'Our Values', color: 'primary', desc: 'Integrity, compassion, innovation, and community-driven approaches guide everything we do.' },
+                { icon: FiGlobe, title: 'Our Mission', color: 'green', desc: 'We strive to create positive change and empower communities through sustainable water solutions.' },
+                { icon: FiUsers, title: 'Our Vision', color: 'green', desc: 'A world where every community has access to clean water and climate-resilient infrastructure.' },
+                { icon: FiHeart, title: 'Our Values', color: 'green', desc: 'Integrity, compassion, innovation, and community-driven approaches guide everything we do.' },
               ].map((item, index) => (
                 <motion.div
                   key={item.title}
@@ -298,15 +298,13 @@ export default function Home() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: index * 0.1 }}
-                  className="bg-secondary-900 rounded-2xl p-8 text-center hover:shadow-2xl transition-shadow"
+                  className="bg-lightGreen rounded-2xl p-8 text-center hover:shadow-2xl transition-shadow border-2 border-green"
                 >
-                  <div className={`w-16 h-16 mx-auto mb-6 rounded-full flex items-center justify-center ${
-                    item.color === 'primary' ? 'bg-primary-500' : 'bg-accent-500'
-                  }`}>
+                  <div className="w-16 h-16 mx-auto mb-6 bg-green rounded-full flex items-center justify-center">
                     <item.icon className="text-white text-2xl" />
                   </div>
-                  <h3 className="text-xl font-bold text-white mb-4">{item.title}</h3>
-                  <p className="text-secondary-300">{item.desc}</p>
+                  <h3 className="text-xl font-bold text-primary mb-4">{item.title}</h3>
+                  <p style={{ color: '#666666' }}>{item.desc}</p>
                 </motion.div>
               ))}
             </div>
@@ -316,7 +314,7 @@ export default function Home() {
         {/* ============================================
             STATS SECTION
         ============================================ */}
-        <section className="py-24 bg-primary-500">
+        <section className="py-24 bg-green">
           <div className="container-main">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
               {[
@@ -333,6 +331,13 @@ export default function Home() {
                   transition={{ delay: index * 0.1 }}
                   className="text-center"
                 >
+                  <div className="text-5xl md:text-6xl font-display font-bold text-white mb-2">
+                    {stat.value}
+                  </div>
+                  <div className="text-white/90 font-medium">{stat.label}</div>
+                </motion.div>
+              ))}
+                >
                   <div className="text-5xl md:text-6xl font-bold text-white mb-2">{stat.value}</div>
                   <div className="text-white/80">{stat.label}</div>
                 </motion.div>
@@ -344,7 +349,7 @@ export default function Home() {
         {/* ============================================
             SERVICES / HOW WE HELP
         ============================================ */}
-        <section ref={servicesRef} className="py-24 bg-secondary-900">
+        <section ref={servicesRef} className="py-24 bg-lightGreen">
           <div className="container-main">
             <motion.div
               initial="hidden"
@@ -352,13 +357,13 @@ export default function Home() {
               variants={stagger}
               className="text-center mb-16"
             >
-              <motion.div variants={fadeUp} className="section-label text-primary-400 before:bg-primary-400">
+              <motion.div variants={fadeUp} className="section-label text-green before:bg-green">
                 How We Help
               </motion.div>
-              <motion.h2 variants={fadeUp} className="heading-lg text-white mb-4">
+              <motion.h2 variants={fadeUp} className="heading-lg text-primary mb-4">
                 Bringing hope to every community
               </motion.h2>
-              <motion.p variants={fadeUp} className="text-secondary-300 max-w-2xl mx-auto">
+              <motion.p variants={fadeUp} className="max-w-2xl mx-auto" style={{ color: '#666666' }}>
                 We are dedicated to creating sustainable impact through innovative solutions 
                 that protect water resources and build climate resilience.
               </motion.p>
@@ -404,8 +409,8 @@ export default function Home() {
                     />
                   </div>
                   <div className="p-6">
-                    <h3 className="font-bold text-lg text-secondary-900 mb-2">{service.title}</h3>
-                    <p className="text-secondary-500 text-sm">{service.desc}</p>
+                    <h3 className="font-bold text-lg text-green mb-2">{service.title}</h3>
+                    <p className="text-sm" style={{ color: '#666666' }}>{service.desc}</p>
                   </div>
                 </motion.div>
               ))}
@@ -500,7 +505,7 @@ export default function Home() {
         {/* ============================================
             CTA SECTION
         ============================================ */}
-        <section className="py-24 bg-secondary-900 relative overflow-hidden">
+        <section className="py-24 bg-green relative overflow-hidden">
           <div className="absolute inset-0">
             <Image
               src="https://images.unsplash.com/photo-1541252260730-0412e8e2108e?q=80&w=1920"
@@ -515,23 +520,23 @@ export default function Home() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
             >
-              <div className="section-label text-primary-400 before:bg-primary-400 justify-center">
+              <div className="section-label text-white/90 before:bg-white justify-center">
                 Get Involved
               </div>
               <h2 className="heading-xl text-white mb-6">
                 Building a better future{' '}
-                <span className="text-primary-500">together</span>
+                <span className="text-accent">together</span>
               </h2>
-              <p className="text-secondary-300 text-xl max-w-2xl mx-auto mb-10">
+              <p className="text-white/90 text-xl max-w-2xl mx-auto mb-10">
                 Join us in our mission to secure water resources and build climate-resilient 
                 communities across East Africa.
               </p>
               <div className="flex flex-wrap justify-center gap-4">
-                <Link href="/contact" className="btn-primary">
+                <Link href="/contact" className="btn-donate">
                   Donate Now
                   <FiHeart />
                 </Link>
-                <Link href="/about" className="btn-outline border-white text-white hover:bg-white hover:text-secondary-900">
+                <Link href="/about" className="btn-outline border-white text-white hover:bg-white hover:text-green">
                   Learn More
                 </Link>
               </div>
