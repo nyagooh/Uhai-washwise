@@ -36,7 +36,7 @@ export default function ContactPage() {
       
       <main>
         {/* Hero */}
-        <section className="relative py-32 bg-secondary-900">
+        <section className="relative py-20 md:py-32 bg-secondary-900 overflow-hidden">
           <div className="absolute inset-0">
             <Image
               src="/ChatGPT Image Feb 6, 2026, 12_40_42 PM.png"
@@ -48,14 +48,14 @@ export default function ContactPage() {
           </div>
           <div className="container-main relative z-10 text-center">
             <motion.div initial="hidden" animate="visible" variants={fadeUp}>
-              <div className="section-label text-primary-400 before:bg-primary-400 justify-center">
+              <div className="section-label text-primary-400 before:bg-primary-400 justify-center mb-4 md:mb-6 text-xs md:text-sm">
                 Contact Us
               </div>
-              <h1 className="heading-xl text-white mb-6">
+              <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold text-white mb-4 md:mb-6 px-4 md:px-0">
                 Let's Work{' '}
                 <span className="text-primary-500">Together</span>
               </h1>
-              <p className="text-secondary-300 text-xl max-w-2xl mx-auto">
+              <p className="text-secondary-300 text-base md:text-xl max-w-2xl mx-auto px-4 md:px-0">
                 Have questions or ready to partner with us? We'd love to hear from you.
               </p>
             </motion.div>

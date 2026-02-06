@@ -19,7 +19,7 @@ export default function WasteManagementProject() {
       
       <main>
         {/* Hero */}
-        <section className="relative py-32" style={{ backgroundColor: '#0598CE' }}>
+        <section className="relative py-20 md:py-32 overflow-hidden" style={{ backgroundColor: '#0598CE' }}>
           <div className="absolute inset-0">
             <Image
               src="/waste management/hand-african-american-man-picking-up-bottle-into-garbage-bags-while-cleaning-area-park-africa-volunteering-charity-people-ecology-concept.jpg"
@@ -29,16 +29,16 @@ export default function WasteManagementProject() {
             />
             <div className="absolute inset-0 bg-black/50" />
           </div>
-          <div className="container-main relative z-10">
+          <div className="container-main relative z-10 text-center">
             <motion.div initial="hidden" animate="visible" variants={fadeUp}>
-              <div className="section-label mb-6" style={{ color: 'rgba(255, 255, 255, 0.9)' }}>
+              <div className="section-label mb-4 md:mb-6 justify-center text-xs md:text-sm" style={{ color: 'rgba(255, 255, 255, 0.9)' }}>
                 <span className="w-2 h-2 rounded-full bg-white inline-block mr-2"></span>
                 Community Project
               </div>
-              <h1 className="heading-xl mb-6" style={{ color: '#FFFFFF' }}>
+              <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold mb-4 md:mb-6 px-4 md:px-0" style={{ color: '#FFFFFF' }}>
                 Waste Management Solutions
               </h1>
-              <p className="text-xl max-w-3xl leading-relaxed" style={{ color: 'rgba(255, 255, 255, 0.95)' }}>
+              <p className="text-base md:text-xl max-w-3xl mx-auto leading-relaxed px-4 md:px-0" style={{ color: 'rgba(255, 255, 255, 0.95)' }}>
                 Transforming waste into valuable resources through circular economy solutions and community-grounded action.
               </p>
             </motion.div>

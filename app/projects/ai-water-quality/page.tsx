@@ -19,7 +19,7 @@ export default function AIWaterQualityProject() {
       
       <main>
         {/* Hero */}
-        <section className="relative py-32" style={{ backgroundColor: '#0598CE' }}>
+        <section className="relative py-20 md:py-32 overflow-hidden" style={{ backgroundColor: '#0598CE' }}>
           <div className="absolute inset-0">
             <Image
               src="/AI wATER PREDICTING TOOL/Dashboard.png"
@@ -29,16 +29,16 @@ export default function AIWaterQualityProject() {
             />
             <div className="absolute inset-0 bg-black/50" />
           </div>
-          <div className="container-main relative z-10">
+          <div className="container-main relative z-10 text-center">
             <motion.div initial="hidden" animate="visible" variants={fadeUp}>
-              <div className="section-label mb-6" style={{ color: 'rgba(255, 255, 255, 0.9)' }}>
+              <div className="section-label mb-4 md:mb-6 justify-center text-xs md:text-sm" style={{ color: 'rgba(255, 255, 255, 0.9)' }}>
                 <span className="w-2 h-2 rounded-full bg-white inline-block mr-2"></span>
                 Innovation Project
               </div>
-              <h1 className="heading-xl mb-6" style={{ color: '#FFFFFF' }}>
+              <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold mb-4 md:mb-6 px-4 md:px-0" style={{ color: '#FFFFFF' }}>
                 AI Water Quality Monitoring
               </h1>
-              <p className="text-xl max-w-3xl leading-relaxed" style={{ color: 'rgba(255, 255, 255, 0.95)' }}>
+              <p className="text-base md:text-xl max-w-3xl mx-auto leading-relaxed px-4 md:px-0" style={{ color: 'rgba(255, 255, 255, 0.95)' }}>
                 Using AI-powered technology to monitor and predict water quality in real-time across East African communities.
               </p>
             </motion.div>

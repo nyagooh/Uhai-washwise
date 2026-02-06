@@ -59,7 +59,7 @@ export default function TeamPage() {
       
       <main>
         {/* Hero */}
-        <section className="relative py-32" style={{ backgroundColor: '#0598CE' }}>
+        <section className="relative py-20 md:py-32 overflow-hidden" style={{ backgroundColor: '#0598CE' }}>
           <div className="absolute inset-0">
             <Image
               src="/ChatGPT Image Feb 6, 2026, 12_40_42 PM.png"
@@ -71,15 +71,15 @@ export default function TeamPage() {
           </div>
           <div className="container-main relative z-10 text-center">
             <motion.div initial="hidden" animate="visible" variants={fadeUp}>
-              <div className="section-label justify-center mb-6" style={{ color: 'rgba(255, 255, 255, 0.9)' }}>
+              <div className="section-label justify-center mb-4 md:mb-6 text-xs md:text-sm" style={{ color: 'rgba(255, 255, 255, 0.9)' }}>
                 <span className="w-2 h-2 rounded-full bg-white inline-block mr-2"></span>
                 Our Team
               </div>
-              <h1 className="heading-xl mb-6" style={{ color: '#FFFFFF' }}>
+              <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold mb-4 md:mb-6 leading-tight px-4 md:px-0" style={{ color: '#FFFFFF' }}>
                 Dedicated Experts Behind Our{' '}
                 <span style={{ color: '#FFFFFF' }}>Mission</span>
               </h1>
-              <p className="text-xl max-w-2xl mx-auto leading-relaxed" style={{ color: 'rgba(255, 255, 255, 0.95)' }}>
+              <p className="text-base md:text-xl max-w-2xl mx-auto leading-relaxed px-4 md:px-0" style={{ color: 'rgba(255, 255, 255, 0.95)' }}>
                 A multidisciplinary team of environmental scientists, water resource experts, waste management specialists, and technology professionals.
               </p>
             </motion.div>

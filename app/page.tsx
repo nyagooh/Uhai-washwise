@@ -103,28 +103,28 @@ export default function Home() {
           
           {/* Content */}
           <div className="container-main relative z-10 py-32">
-            <div className="max-w-3xl">
+            <div className="max-w-3xl mx-auto text-center md:text-left md:mx-0">
               <motion.div
                 initial="hidden"
                 animate={heroInView ? "visible" : "hidden"}
                 variants={stagger}
               >
-                <motion.div variants={fadeUp} className="section-label" style={{ color: 'rgba(255, 255, 255, 0.8)' }}>
+                <motion.div variants={fadeUp} className="section-label justify-center md:justify-start" style={{ color: 'rgba(255, 255, 255, 0.8)' }}>
                   <span className="w-2 h-2 rounded-full bg-white inline-block mr-2"></span>
                   Water Security for Africa
                 </motion.div>
                 
-                <motion.h1 variants={fadeUp} className="heading-xl mb-6" style={{ color: '#FFFFFF' }}>
+                <motion.h1 variants={fadeUp} className="heading-xl mb-6 px-4 md:px-0" style={{ color: '#FFFFFF' }}>
                   United in Compassion,{' '}
                   <span style={{ color: '#FFFFFF' }}>Changing Lives</span>
                 </motion.h1>
                 
-                <motion.p variants={fadeUp} className="text-xl text-white/80 mb-8 leading-relaxed">
+                <motion.p variants={fadeUp} className="text-lg md:text-xl text-white/80 mb-8 leading-relaxed px-4 md:px-0">
                   A social enterprise working at the intersection of water, sanitation, climate action, and technology. 
                   We design solutions that close the loop between waste, water, and ecosystems.
                 </motion.p>
                 
-                <motion.div variants={fadeUp} className="flex flex-wrap gap-4">
+                <motion.div variants={fadeUp} className="flex flex-wrap gap-4 justify-center md:justify-start">
                   <Link href="/contact" className="btn-primary">
                     Partner With Us
                     <FiArrowRight />
