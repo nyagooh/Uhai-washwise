@@ -138,7 +138,7 @@ export default function Home() {
                   <FaHandHoldingHeart className="text-2xl" style={{ color: '#0598CE' }} />
                 </div>
                 <div>
-                  <div className="text-3xl font-bold" style={{ color: '#0598CE' }}>75,958</div>
+                  <div className="text-3xl font-bold" style={{ color: '#0F172A' }}>75,958</div>
                   <div className="text-sm" style={{ color: '#6B7280' }}>People Helped</div>
                 </div>
               </div>
@@ -179,7 +179,7 @@ export default function Home() {
                 Our Portfolio
               </div>
               <h2 className="heading-lg mb-6">
-                Best Work
+                Featured Projects
               </h2>
               <p className="text-xl max-w-2xl mx-auto" style={{ color: '#6B7280' }}>
                 Showcasing exceptional projects that create meaningful impact
@@ -562,7 +562,7 @@ export default function Home() {
                 How We Help
               </motion.div>
               <motion.h2 variants={fadeUp} className="heading-lg mb-8" style={{ lineHeight: '1.2' }}>
-                Bringing hope to every community
+                Empowering communities with practical solutions
               </motion.h2>
               <motion.p variants={fadeUp} className="max-w-2xl mx-auto" style={{ color: '#6B7280', fontSize: '18px', lineHeight: '1.8' }}>
                 We are dedicated to creating sustainable impact through innovative solutions 
@@ -570,27 +570,27 @@ export default function Home() {
               </motion.p>
             </motion.div>
 
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="grid md:grid-cols-2 gap-10">
               {[
                 { 
                   image: '/ocean-with-some-islands.jpg',
                   title: 'Water Access',
-                  desc: 'Providing clean water solutions to underserved communities.'
+                  desc: 'Designing reliable water supply systems, protection of sources, and climate-resilient infrastructure for underserved communities.'
                 },
                 { 
-                  image: '/WETLANDS/ducks-pond.jpg',
-                  title: 'Education',
-                  desc: 'Training communities in sustainable water management.'
+                  image: '/AI wATER PREDICTING TOOL/unrecognizable-ecologist-standing-where-sewage-waste-water-meets-river-taking-samples-determine-level-contamination-pollution.jpg',
+                  title: 'AI Water Quality',
+                  desc: 'Real-time monitoring and prediction tools that turn data into early warnings and actionable decisions.'
                 },
                 { 
                   image: '/waste management/pollution-concept-water-with-garbage.jpg',
                   title: 'Waste Management',
-                  desc: 'Transforming waste into valuable resources.'
+                  desc: 'Circular systems for collection, recovery, and reuse that reduce pollution and create green livelihoods.'
                 },
                 { 
                   image: '/WETLANDS/beautiful-grey-heron-meadow-wonderful-bird-nature-habitat.jpg',
-                  title: 'Environmental Protection',
-                  desc: 'Restoring and protecting vital ecosystems.'
+                  title: 'Ecosystem Protection',
+                  desc: 'Wetland restoration and biodiversity protection to safeguard water as a living system.'
                 },
               ].map((service, index) => (
                 <motion.div
@@ -599,20 +599,21 @@ export default function Home() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: index * 0.1 }}
-                  className="group overflow-hidden transition-all duration-300"
-                  style={{ backgroundColor: '#FFFFFF', boxShadow: '0 2px 8px rgba(0, 0, 0, 0.08)' }}
+                  className="group overflow-hidden transition-all duration-300 rounded-2xl"
+                  style={{ backgroundColor: '#FFFFFF', boxShadow: '0 8px 24px rgba(5, 152, 206, 0.12)' }}
                 >
-                  <div className="relative h-56 overflow-hidden">
+                  <div className="relative h-72 overflow-hidden">
                     <Image
                       src={service.image}
                       alt={service.title}
                       fill
-                      className="object-cover group-hover:scale-110 transition-transform duration-500"
+                      className="object-cover group-hover:scale-105 transition-transform duration-700"
                     />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
                   </div>
-                  <div className="p-8">
-                    <h3 className="font-bold text-xl mb-3" style={{ color: '#1A1A1A' }}>{service.title}</h3>
-                    <p className="leading-relaxed" style={{ color: '#6B7280', fontSize: '15px' }}>{service.desc}</p>
+                  <div className="p-10">
+                    <h3 className="font-bold text-2xl mb-4" style={{ color: '#0F172A' }}>{service.title}</h3>
+                    <p className="leading-relaxed" style={{ color: '#64748B', fontSize: '16px' }}>{service.desc}</p>
                   </div>
                 </motion.div>
               ))}
@@ -633,22 +634,37 @@ export default function Home() {
         <section ref={impactRef} className="py-32" style={{ backgroundColor: '#FFFFFF' }}>
           <div className="container-main">
             <div className="grid lg:grid-cols-2 gap-20 items-center">
-              {/* Images - Waste Management */}
+              {/* Images - Impact Highlights */}
               <motion.div
                 initial={{ opacity: 0, x: -30 }}
                 animate={impactInView ? { opacity: 1, x: 0 } : {}}
-                className="relative h-[700px] rounded-3xl overflow-hidden shadow-2xl"
+                className="grid gap-6"
               >
-                <Image
-                  src="/waste management/IMG_0582.png"
-                  alt="Waste Management Impact"
-                  fill
-                  className="object-cover hover:scale-105 transition-transform duration-700"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
-                <div className="absolute bottom-10 left-10 right-10">
-                  <h3 className="text-4xl font-bold text-white mb-3">Waste Management</h3>
-                  <p className="text-xl text-white/90">Transforming communities through sustainable practices</p>
+                <div className="relative h-[320px] rounded-3xl overflow-hidden shadow-2xl">
+                  <Image
+                    src="/waste management/IMG_0582.png"
+                    alt="Waste Management Impact"
+                    fill
+                    className="object-cover hover:scale-105 transition-transform duration-700"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
+                  <div className="absolute bottom-6 left-6 right-6">
+                    <h3 className="text-2xl font-bold text-white mb-2">Waste Management</h3>
+                    <p className="text-white/90">Cleaner neighborhoods and circular recovery systems</p>
+                  </div>
+                </div>
+                <div className="relative h-[320px] rounded-3xl overflow-hidden shadow-2xl">
+                  <Image
+                    src="/AI wATER PREDICTING TOOL/human-ai-touch-connection-technology-innovation.jpg"
+                    alt="AI Water Quality Impact"
+                    fill
+                    className="object-cover hover:scale-105 transition-transform duration-700"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
+                  <div className="absolute bottom-6 left-6 right-6">
+                    <h3 className="text-2xl font-bold text-white mb-2">AI Water Quality</h3>
+                    <p className="text-white/90">Real-time insights that protect health and ecosystems</p>
+                  </div>
                 </div>
               </motion.div>
 
