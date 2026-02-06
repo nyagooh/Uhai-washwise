@@ -2,11 +2,12 @@
 
 import { motion } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
+import { useState } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import Navigation from '@/components/Navigation'
 import Footer from '@/components/Footer'
-import { FiPlay, FiArrowRight, FiCheck, FiDroplet, FiUsers, FiGlobe, FiHeart, FiTarget, FiEye, FiMapPin, FiMail } from 'react-icons/fi'
+import { FiPlay, FiArrowRight, FiCheck, FiDroplet, FiUsers, FiGlobe, FiHeart, FiTarget, FiEye, FiMapPin, FiMail, FiChevronLeft, FiChevronRight } from 'react-icons/fi'
 import { FaWater, FaRecycle, FaLeaf, FaHandHoldingHeart } from 'react-icons/fa'
 
 // Animation variants
@@ -41,6 +42,46 @@ export default function Home() {
   const [approachRef, approachInView] = useInView({ triggerOnce: true, threshold: 0.2 })
   const [servicesRef, servicesInView] = useInView({ triggerOnce: true, threshold: 0.2 })
   const [impactRef, impactInView] = useInView({ triggerOnce: true, threshold: 0.2 })
+  const [currentProject, setCurrentProject] = useState(0)
+
+  const projects = [
+    {
+      title: 'Water Quality Dashboard',
+      description: 'AI-powered platform for real-time water quality monitoring and prediction across East African communities.',
+      image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1920',
+      tags: ['AI/ML', 'Water Tech', 'Dashboard'],
+      link: '/portfolio'
+    },
+    {
+      title: 'Community Sanitation App',
+      description: 'Mobile application connecting communities with sanitation services and waste management solutions.',
+      image: 'https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?q=80&w=1920',
+      tags: ['Mobile', 'IoT', 'Community'],
+      link: '/portfolio'
+    },
+    {
+      title: 'Climate Resilience Platform',
+      description: 'Data-driven platform helping communities adapt to climate change through predictive analytics.',
+      image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1920',
+      tags: ['Climate Tech', 'Analytics', 'Web'],
+      link: '/portfolio'
+    },
+    {
+      title: 'Waste-to-Resource System',
+      description: 'Circular economy platform transforming waste into valuable resources for sustainable communities.',
+      image: 'https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?q=80&w=1920',
+      tags: ['Circular Economy', 'Web', 'IoT'],
+      link: '/portfolio'
+    }
+  ]
+
+  const nextProject = () => {
+    setCurrentProject((prev) => (prev + 1) % projects.length)
+  }
+
+  const prevProject = () => {
+    setCurrentProject((prev) => (prev - 1 + projects.length) % projects.length)
+  }
 
   return (
     <div>
@@ -134,6 +175,168 @@ export default function Home() {
               <div className="w-px h-8 bg-white/40" />
             </div>
           </motion.div>
+        </section>
+
+        {/* ============================================
+            BEST WORK SECTION - Carousel
+        ============================================ */}
+        <section className="py-32" style={{ backgroundColor: '#F9FAFB' }}>
+          <div className="container-main">
+            {/* Section Header */}
+            <motion.div 
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8 }}
+              className="text-center mb-16"
+            >
+              <div className="section-label justify-center mb-6">
+                Our Portfolio
+              </div>
+              <h2 className="heading-lg mb-6">
+                Best Work
+              </h2>
+              <p className="text-xl max-w-2xl mx-auto" style={{ color: '#6B7280' }}>
+                Showcasing exceptional projects that create meaningful impact
+              </p>
+            </motion.div>
+
+            {/* Carousel Container */}
+            <motion.div 
+              initial={{ opacity: 0, scale: 0.95 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              className="relative"
+            >
+              {/* Main Image Card */}
+              <div className="relative h-[500px] sm:h-[600px] lg:h-[700px] rounded-2xl overflow-hidden shadow-2xl">
+                {/* Background Image */}
+                <motion.div
+                  key={currentProject}
+                  initial={{ scale: 1.1, opacity: 0 }}
+                  animate={{ scale: 1, opacity: 1 }}
+                  transition={{ duration: 0.7, ease: "easeOut" }}
+                  className="absolute inset-0"
+                >
+                  <Image
+                    src={projects[currentProject].image}
+                    alt={projects[currentProject].title}
+                    fill
+                    className="object-cover"
+                    priority
+                  />
+                  {/* Gradient Overlay */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
+                </motion.div>
+
+                {/* Content - Bottom */}
+                <div className="absolute inset-x-0 bottom-0 z-10 p-8 sm:p-12">
+                  <motion.div
+                    key={`content-${currentProject}`}
+                    initial={{ opacity: 0, y: 30 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5, delay: 0.2 }}
+                  >
+                    <h3 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 sm:mb-8" style={{ color: '#FFFFFF', textShadow: '0 2px 10px rgba(0,0,0,0.3)' }}>
+                      {projects[currentProject].title}
+                    </h3>
+                    <Link 
+                      href={projects[currentProject].link}
+                      className="inline-flex items-center gap-3 px-8 py-4 rounded-full transition-all duration-300 hover:scale-105"
+                      style={{ 
+                        backgroundColor: '#0598CE',
+                        color: '#FFFFFF',
+                        fontWeight: 600,
+                        fontSize: '16px',
+                        boxShadow: '0 4px 20px rgba(5, 152, 206, 0.4)'
+                      }}
+                    >
+                      Explore Project
+                      <FiArrowRight size={20} />
+                    </Link>
+                  </motion.div>
+                </div>
+
+                {/* Navigation Arrows - Inside Card */}
+                <motion.button
+                  initial={{ opacity: 0, x: -20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.5, delay: 0.4 }}
+                  onClick={prevProject}
+                  className="absolute left-4 sm:left-8 top-1/2 -translate-y-1/2 w-12 h-12 sm:w-14 sm:h-14 rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110 z-20"
+                  style={{ 
+                    backgroundColor: 'rgba(255, 255, 255, 0.2)',
+                    backdropFilter: 'blur(10px)'
+                  }}
+                  aria-label="Previous project"
+                >
+                  <FiChevronLeft size={24} style={{ color: '#FFFFFF' }} />
+                </motion.button>
+                <motion.button
+                  initial={{ opacity: 0, x: 20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.5, delay: 0.4 }}
+                  onClick={nextProject}
+                  className="absolute right-4 sm:right-8 top-1/2 -translate-y-1/2 w-12 h-12 sm:w-14 sm:h-14 rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110 z-20"
+                  style={{ 
+                    backgroundColor: '#0598CE',
+                    boxShadow: '0 4px 16px rgba(5, 152, 206, 0.4)'
+                  }}
+                  aria-label="Next project"
+                >
+                  <FiChevronRight size={24} style={{ color: '#FFFFFF' }} />
+                </motion.button>
+              </div>
+
+              {/* Navigation Info - Outside Card */}
+              <motion.div 
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: 0.5 }}
+                className="flex items-center justify-between mt-8"
+              >
+                {/* Progress Counter */}
+                <div className="flex items-baseline gap-2">
+                  <span className="text-3xl sm:text-4xl font-bold" style={{ color: '#0598CE' }}>
+                    {String(currentProject + 1).padStart(2, '0')}
+                  </span>
+                  <span className="text-xl" style={{ color: '#6B7280' }}>
+                    / {String(projects.length).padStart(2, '0')}
+                  </span>
+                </div>
+
+                {/* Dots Navigation */}
+                <div className="flex items-center gap-2">
+                  {projects.map((_, index) => (
+                    <button
+                      key={index}
+                      onClick={() => setCurrentProject(index)}
+                      className="transition-all duration-300"
+                      style={{
+                        width: currentProject === index ? '40px' : '8px',
+                        height: '8px',
+                        borderRadius: '4px',
+                        backgroundColor: currentProject === index ? '#0598CE' : '#D1D5DB'
+                      }}
+                      aria-label={`Go to project ${index + 1}`}
+                    />
+                  ))}
+                </div>
+
+                {/* View All Link */}
+                <Link 
+                  href="/portfolio"
+                  className="hidden sm:flex items-center gap-2 text-sm font-semibold transition-colors hover:opacity-80"
+                  style={{ color: '#0598CE' }}
+                >
+                  View All Projects
+                  <FiArrowRight size={16} />
+                </Link>
+              </motion.div>
+            </motion.div>
+          </div>
         </section>
 
         {/* ============================================
