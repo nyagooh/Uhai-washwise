@@ -115,9 +115,10 @@ export default function ServicesPage() {
               src="/ChatGPT Image Feb 6, 2026, 12_40_42 PM.png"
               alt="Hero Background"
               fill
-              className="object-cover opacity-40"
+              className="object-cover opacity-30"
+              priority
             />
-            <div className="absolute inset-0 bg-black/45" />
+            <div className="absolute inset-0 bg-black/60" />
           </div>
           <div className="container-main relative z-10 text-center px-4">
             <motion.div initial="hidden" animate="visible" variants={fadeUp}>
@@ -160,21 +161,21 @@ export default function ServicesPage() {
                     <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent" />
                   </div>
                   <div className="p-6 md:p-10">
-                    <div className="w-10 h-10 md:w-12 md:h-12 flex items-center justify-center mb-3 md:mb-4 rounded-xl" style={{ backgroundColor: '#E6F5F9' }}>
-                      <service.icon className="text-lg md:text-xl" style={{ color: '#0598CE' }} />
+                    <div className="w-12 h-12 md:w-14 md:h-14 flex items-center justify-center mb-4 md:mb-5 rounded-xl" style={{ backgroundColor: '#E6F5F9' }}>
+                      <service.icon className="text-xl md:text-2xl" style={{ color: '#0598CE' }} />
                     </div>
-                    <div className="section-label mb-2 md:mb-3 text-xs md:text-sm">{service.subtitle}</div>
-                    <h3 className="text-lg md:text-xl font-bold mb-2 md:mb-3" style={{ color: '#0F172A' }}>{service.title}</h3>
-                    <p className="text-sm leading-relaxed mb-3 md:mb-4" style={{ color: '#64748B' }}>{service.description}</p>
-                    <ul className="space-y-2 mb-4 md:mb-6">
+                    <div className="section-label mb-3 md:mb-4 text-sm">{service.subtitle}</div>
+                    <h3 className="text-xl md:text-2xl font-bold mb-3 md:mb-4" style={{ color: '#0F172A', lineHeight: '1.3' }}>{service.title}</h3>
+                    <p className="text-base md:text-lg leading-relaxed mb-5 md:mb-6" style={{ color: '#64748B' }}>{service.description}</p>
+                    <ul className="space-y-3 mb-6 md:mb-8">
                       {service.features.slice(0, 3).map((feature, idx) => (
-                        <li key={idx} className="flex items-start gap-2 text-xs md:text-sm" style={{ color: '#64748B' }}>
-                          <FiCheck className="mt-0.5 flex-shrink-0" style={{ color: '#0598CE' }} />
+                        <li key={idx} className="flex items-start gap-3 text-sm md:text-base" style={{ color: '#64748B' }}>
+                          <FiCheck className="mt-1 flex-shrink-0" size={18} style={{ color: '#0598CE' }} />
                           <span>{feature}</span>
                         </li>
                       ))}
                     </ul>
-                    <Link href="/contact" className="inline-flex items-center gap-2 text-sm font-semibold" style={{ color: '#0598CE' }}>
+                    <Link href="/contact" className="inline-flex items-center gap-2 text-base md:text-lg font-semibold hover:gap-3 transition-all" style={{ color: '#0598CE' }}>
                       Learn More
                       <FiArrowRight />
                     </Link>
