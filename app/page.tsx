@@ -48,7 +48,12 @@ export default function Home() {
     {
       title: 'AI Water Quality Monitoring',
       description: 'AI-powered platform for real-time water quality monitoring and prediction across East African communities.',
-      image: '/AI wATER PREDICTING TOOL/human-ai-touch-connection-technology-innovation.jpg',
+      image: '/AI wATER PREDICTING TOOL/Dashboard.png',
+      gallery: [
+        '/AI wATER PREDICTING TOOL/Dashboard.png',
+        '/AI wATER PREDICTING TOOL/Dashboard2.png',
+        '/AI wATER PREDICTING TOOL/unrecognizable-ecologist-standing-where-sewage-waste-water-meets-river-taking-samples-determine-level-contamination-pollution.jpg',
+      ],
       tags: ['AI/ML', 'Water Tech', 'Dashboard'],
       link: '/portfolio'
     },
@@ -56,6 +61,11 @@ export default function Home() {
       title: 'Waste Management Solutions',
       description: 'Circular economy platform transforming waste into valuable resources for sustainable communities.',
       image: '/waste management/IMG_0582.png',
+      gallery: [
+        '/waste management/hand-african-american-man-picking-up-bottle-into-garbage-bags-while-cleaning-area-park-africa-volunteering-charity-people-ecology-concept.jpg',
+        '/waste management/IMG_0596.png',
+        '/waste management/pollution-concept-water-with-garbage.jpg',
+      ],
       tags: ['Waste Management', 'Sustainability', 'Community'],
       link: '/portfolio'
     }
@@ -194,87 +204,112 @@ export default function Home() {
               transition={{ duration: 0.8, delay: 0.2 }}
               className="relative"
             >
-              {/* Main Image Card */}
-              <div className="relative h-[500px] sm:h-[600px] lg:h-[700px] rounded-2xl overflow-hidden shadow-2xl">
-                {/* Background Image */}
-                <motion.div
-                  key={currentProject}
-                  initial={{ scale: 1.1, opacity: 0 }}
-                  animate={{ scale: 1, opacity: 1 }}
-                  transition={{ duration: 0.7, ease: "easeOut" }}
-                  className="absolute inset-0"
-                >
-                  <Image
-                    src={projects[currentProject].image}
-                    alt={projects[currentProject].title}
-                    fill
-                    className="object-cover"
-                    priority
-                  />
-                  {/* Gradient Overlay */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
-                </motion.div>
-
-                {/* Content - Bottom */}
-                <div className="absolute inset-x-0 bottom-0 z-10 p-8 sm:p-12">
+              <div className="grid lg:grid-cols-5 gap-8 items-stretch">
+                {/* Image Panel */}
+                <div className="lg:col-span-3 relative h-[420px] sm:h-[520px] lg:h-[620px] rounded-3xl overflow-hidden shadow-2xl">
                   <motion.div
-                    key={`content-${currentProject}`}
-                    initial={{ opacity: 0, y: 30 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.5, delay: 0.2 }}
+                    key={currentProject}
+                    initial={{ scale: 1.05, opacity: 0 }}
+                    animate={{ scale: 1, opacity: 1 }}
+                    transition={{ duration: 0.7, ease: "easeOut" }}
+                    className="absolute inset-0"
                   >
-                    <h3 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 sm:mb-8" style={{ color: '#FFFFFF', textShadow: '0 2px 10px rgba(0,0,0,0.3)' }}>
+                    <Image
+                      src={projects[currentProject].image}
+                      alt={projects[currentProject].title}
+                      fill
+                      className="object-cover"
+                      priority
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
+                  </motion.div>
+                  <div className="absolute bottom-6 left-6 right-6 text-white">
+                    <div className="text-sm uppercase tracking-wider mb-2 opacity-80">Featured Project</div>
+                    <h3 className="text-3xl sm:text-4xl lg:text-5xl font-bold">
                       {projects[currentProject].title}
                     </h3>
-                    <Link 
-                      href={projects[currentProject].link}
-                      className="inline-flex items-center gap-3 px-8 py-4 rounded-full transition-all duration-300 hover:scale-105"
-                      style={{ 
-                        backgroundColor: '#0598CE',
-                        color: '#FFFFFF',
-                        fontWeight: 600,
-                        fontSize: '16px',
-                        boxShadow: '0 4px 20px rgba(5, 152, 206, 0.4)'
-                      }}
-                    >
-                      Explore Project
-                      <FiArrowRight size={20} />
-                    </Link>
-                  </motion.div>
+                  </div>
                 </div>
 
-                {/* Navigation Arrows - Inside Card */}
-                <motion.button
-                  initial={{ opacity: 0, x: -20 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.5, delay: 0.4 }}
-                  onClick={prevProject}
-                  className="absolute left-4 sm:left-8 top-1/2 -translate-y-1/2 w-12 h-12 sm:w-14 sm:h-14 rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110 z-20"
-                  style={{ 
-                    backgroundColor: 'rgba(255, 255, 255, 0.2)',
-                    backdropFilter: 'blur(10px)'
-                  }}
-                  aria-label="Previous project"
-                >
-                  <FiChevronLeft size={24} style={{ color: '#FFFFFF' }} />
-                </motion.button>
-                <motion.button
-                  initial={{ opacity: 0, x: 20 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.5, delay: 0.4 }}
-                  onClick={nextProject}
-                  className="absolute right-4 sm:right-8 top-1/2 -translate-y-1/2 w-12 h-12 sm:w-14 sm:h-14 rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110 z-20"
-                  style={{ 
-                    backgroundColor: '#0598CE',
-                    boxShadow: '0 4px 16px rgba(5, 152, 206, 0.4)'
-                  }}
-                  aria-label="Next project"
-                >
-                  <FiChevronRight size={24} style={{ color: '#FFFFFF' }} />
-                </motion.button>
+                {/* Info Panel */}
+                <div className="lg:col-span-2 h-full p-8 rounded-3xl" style={{ backgroundColor: '#FFFFFF', boxShadow: '0 10px 30px rgba(5, 152, 206, 0.12)' }}>
+                  <motion.div
+                    key={`content-${currentProject}`}
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5, delay: 0.1 }}
+                    className="h-full flex flex-col"
+                  >
+                    <div className="mb-6">
+                      <h4 className="text-2xl font-bold mb-3" style={{ color: '#0F172A' }}>
+                        {projects[currentProject].title}
+                      </h4>
+                      <p className="text-base leading-relaxed" style={{ color: '#64748B' }}>
+                        {projects[currentProject].description}
+                      </p>
+                    </div>
+                    <div className="flex flex-wrap gap-2 mb-6">
+                      {projects[currentProject].tags.map((tag) => (
+                        <span
+                          key={tag}
+                          className="px-3 py-1 rounded-full text-xs font-semibold"
+                          style={{ backgroundColor: '#E6F5F9', color: '#0598CE' }}
+                        >
+                          {tag}
+                        </span>
+                      ))}
+                    </div>
+                    <div className="grid grid-cols-3 gap-3 mb-6">
+                      {projects[currentProject].gallery.map((img, index) => (
+                        <div key={index} className="relative h-20 rounded-xl overflow-hidden">
+                          <Image
+                            src={img}
+                            alt={`${projects[currentProject].title} ${index + 1}`}
+                            fill
+                            className="object-cover"
+                          />
+                        </div>
+                      ))}
+                    </div>
+                    <div className="mt-auto flex items-center justify-between">
+                      <Link 
+                        href={projects[currentProject].link}
+                        className="inline-flex items-center gap-2 px-6 py-3 rounded-full transition-all duration-300 hover:scale-105"
+                        style={{ 
+                          backgroundColor: '#0598CE',
+                          color: '#FFFFFF',
+                          fontWeight: 600,
+                          fontSize: '14px',
+                          boxShadow: '0 4px 16px rgba(5, 152, 206, 0.35)'
+                        }}
+                      >
+                        Explore Project
+                        <FiArrowRight size={18} />
+                      </Link>
+                      <div className="flex items-center gap-2">
+                        <button
+                          onClick={prevProject}
+                          className="w-10 h-10 rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110"
+                          style={{ backgroundColor: '#E6F5F9', color: '#0598CE' }}
+                          aria-label="Previous project"
+                        >
+                          <FiChevronLeft size={18} />
+                        </button>
+                        <button
+                          onClick={nextProject}
+                          className="w-10 h-10 rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110"
+                          style={{ backgroundColor: '#0598CE', color: '#FFFFFF' }}
+                          aria-label="Next project"
+                        >
+                          <FiChevronRight size={18} />
+                        </button>
+                      </div>
+                    </div>
+                  </motion.div>
+                </div>
               </div>
 
-              {/* Navigation Info - Outside Card */}
+              {/* Navigation Info */}
               <motion.div 
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -282,7 +317,6 @@ export default function Home() {
                 transition={{ duration: 0.5, delay: 0.5 }}
                 className="flex items-center justify-between mt-8"
               >
-                {/* Progress Counter */}
                 <div className="flex items-baseline gap-2">
                   <span className="text-3xl sm:text-4xl font-bold" style={{ color: '#0598CE' }}>
                     {String(currentProject + 1).padStart(2, '0')}
@@ -291,8 +325,6 @@ export default function Home() {
                     / {String(projects.length).padStart(2, '0')}
                   </span>
                 </div>
-
-                {/* Dots Navigation */}
                 <div className="flex items-center gap-2">
                   {projects.map((_, index) => (
                     <button
@@ -309,8 +341,6 @@ export default function Home() {
                     />
                   ))}
                 </div>
-
-                {/* View All Link */}
                 <Link 
                   href="/portfolio"
                   className="hidden sm:flex items-center gap-2 text-sm font-semibold transition-colors hover:opacity-80"
