@@ -48,7 +48,7 @@ export default function Home() {
     {
       title: 'AI Water Quality Monitoring',
       description: 'AI-powered platform for real-time water quality monitoring and prediction across East African communities.',
-      image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1920',
+      image: '/AI wATER PREDICTING TOOL/human-ai-touch-connection-technology-innovation.jpg',
       tags: ['AI/ML', 'Water Tech', 'Dashboard'],
       link: '/portfolio'
     },
@@ -340,7 +340,7 @@ export default function Home() {
                 <div className="space-y-5">
                   <div className="relative h-56 overflow-hidden" style={{ boxShadow: '0 4px 16px rgba(0, 0, 0, 0.1)' }}>
                     <Image
-                      src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?q=80&w=600"
+                      src="/WETLANDS/green-grass-growing-near-lake.jpg"
                       alt="Community"
                       fill
                       className="object-cover hover:scale-105 transition-transform duration-500"
@@ -348,7 +348,7 @@ export default function Home() {
                   </div>
                   <div className="relative h-72 overflow-hidden" style={{ boxShadow: '0 4px 16px rgba(0, 0, 0, 0.1)' }}>
                     <Image
-                      src="https://images.unsplash.com/photo-1594398901394-4e34939a4fd0?q=80&w=600"
+                      src="/ocean-with-some-islands.jpg"
                       alt="Water access"
                       fill
                       className="object-cover hover:scale-105 transition-transform duration-500"
@@ -358,7 +358,7 @@ export default function Home() {
                 <div className="space-y-5 pt-12">
                   <div className="relative h-72 overflow-hidden" style={{ boxShadow: '0 4px 16px rgba(0, 0, 0, 0.1)' }}>
                     <Image
-                      src="https://images.unsplash.com/photo-1541544741505-83219e68c68c?q=80&w=600"
+                      src="/WETLANDS/ducks-pond.jpg"
                       alt="Children"
                       fill
                       className="object-cover hover:scale-105 transition-transform duration-500"
@@ -366,7 +366,7 @@ export default function Home() {
                   </div>
                   <div className="relative h-56 overflow-hidden" style={{ boxShadow: '0 4px 16px rgba(0, 0, 0, 0.1)' }}>
                     <Image
-                      src="https://images.unsplash.com/photo-1532629345422-7515f3d16bb6?q=80&w=600"
+                      src="/WETLANDS/beautiful-grey-heron-meadow-wonderful-bird-nature-habitat.jpg"
                       alt="Support"
                       fill
                       className="object-cover hover:scale-105 transition-transform duration-500"
@@ -464,7 +464,7 @@ export default function Home() {
                 className="relative h-[500px] rounded-2xl overflow-hidden shadow-xl"
               >
                 <Image
-                  src="https://images.unsplash.com/photo-1509099836639-18ba1795216d?q=80&w=800"
+                  src="/AI wATER PREDICTING TOOL/unrecognizable-ecologist-standing-where-sewage-waste-water-meets-river-taking-samples-determine-level-contamination-pollution.jpg"
                   alt="Our approach"
                   fill
                   className="object-cover"
@@ -573,22 +573,22 @@ export default function Home() {
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
               {[
                 { 
-                  image: 'https://images.unsplash.com/photo-1594398901394-4e34939a4fd0?q=80&w=600',
+                  image: '/ocean-with-some-islands.jpg',
                   title: 'Water Access',
                   desc: 'Providing clean water solutions to underserved communities.'
                 },
                 { 
-                  image: 'https://images.unsplash.com/photo-1532629345422-7515f3d16bb6?q=80&w=600',
+                  image: '/WETLANDS/ducks-pond.jpg',
                   title: 'Education',
                   desc: 'Training communities in sustainable water management.'
                 },
                 { 
-                  image: 'https://images.unsplash.com/photo-1559027615-cd4628902d4a?q=80&w=600',
+                  image: '/waste management/pollution-concept-water-with-garbage.jpg',
                   title: 'Waste Management',
                   desc: 'Transforming waste into valuable resources.'
                 },
                 { 
-                  image: 'https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?q=80&w=600',
+                  image: '/WETLANDS/beautiful-grey-heron-meadow-wonderful-bird-nature-habitat.jpg',
                   title: 'Environmental Protection',
                   desc: 'Restoring and protecting vital ecosystems.'
                 },

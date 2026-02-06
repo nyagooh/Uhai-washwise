@@ -18,7 +18,7 @@ const services = [
     icon: FiDatabase,
     title: 'Knowledge Management & Learning Systems',
     subtitle: 'Data-Driven Insights',
-    image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=800',
+    image: '/AI wATER PREDICTING TOOL/human-ai-touch-connection-technology-innovation.jpg',
     description: 'We support organizations, governments, and programs to generate, manage, and use knowledge effectively.',
     features: [
       'Knowledge Generation & Documentation: Studies, assessments, action research, policy briefs, technical guidelines',
@@ -36,7 +36,7 @@ const services = [
     icon: FiShield,
     title: 'Environmental Management Services',
     subtitle: 'Ecosystem Protection',
-    image: 'https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?q=80&w=800',
+    image: '/WETLANDS/beautiful-grey-heron-meadow-wonderful-bird-nature-habitat.jpg',
     description: 'Comprehensive environmental monitoring and conservation programs to protect vital ecosystems.',
     features: [
       'Environmental Assessments & Compliance: ESIA, Environmental Audits, Strategic Environmental Assessments, EMPs',
@@ -55,7 +55,7 @@ const services = [
     icon: FiDroplet,
     title: 'Integrated Water Resources Management (IWRM)',
     subtitle: 'Clean Water Access',
-    image: 'https://images.unsplash.com/photo-1594398901394-4e34939a4fd0?q=80&w=800',
+    image: '/ocean-with-some-islands.jpg',
     description: 'Integrated water resource management ensuring sustainable access to clean water for communities.',
     features: [
       'Enabling environment and governance assessments for IWRM',
@@ -70,7 +70,7 @@ const services = [
     icon: FiRefreshCw,
     title: 'Waste Management Solutions',
     subtitle: 'Circular Economy',
-    image: 'https://images.unsplash.com/photo-1532996122724-e3c354a0b15b?q=80&w=800',
+    image: '/waste management/pollution-concept-water-with-garbage.jpg',
     description: 'Transforming waste into resources through innovative circular economy solutions.',
     features: [
       'Waste characterization and baseline assessments',
@@ -89,7 +89,7 @@ const services = [
     icon: FiSearch,
     title: 'Water Research, Innovation & Digital Solutions',
     subtitle: 'Evidence-Based Solutions',
-    image: 'https://images.unsplash.com/photo-1507413245164-6160d8298b31?q=80&w=800',
+    image: '/WETLANDS/green-grass-growing-near-lake.jpg',
     description: 'Cutting-edge research and innovation driving sustainable environmental solutions.',
     features: [
       'Water quality research and monitoring',

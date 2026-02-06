@@ -16,7 +16,7 @@ const team = [
   {
     name: 'Pauline Wambui Maina',
     role: 'Director | Community Development & Environmental Management Expert',
-    image: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=400',
+    image: '/WETLANDS/green-grass-growing-near-lake.jpg',
     bio: 'Pauline holds a BSc in Community Development and Environmental Science with over five years of experience in community-based environmental programs, sanitation, and governance.',
     education: 'BSc in Community Development and Environmental Science',
     linkedin: '#',
@@ -25,7 +25,7 @@ const team = [
   {
     name: 'William Nyambeka Magwa',
     role: 'Hydrology & Water Resources Management Expert',
-    image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=400',
+    image: '/ocean-with-some-islands.jpg',
     bio: 'William is a hydrologist with over nine years of experience in watershed management, water conservation, climate-resilient interventions, and policy support across Kenya and the Horn of Africa. He specializes in surface and groundwater hydrology, GIS and remote sensing, MEAL frameworks, and participatory project implementation.',
     education: 'BSc in Earth Science with IT, Maseno University | Certification in Monitoring, Evaluation, Learning & Accountability, University of Nairobi',
     linkedin: '#',
@@ -34,7 +34,7 @@ const team = [
   {
     name: 'Anne Nyaguthii',
     role: 'AI, ICT & Communications Lead',
-    image: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?q=80&w=400',
+    image: '/AI wATER PREDICTING TOOL/human-ai-touch-connection-technology-innovation.jpg',
     bio: 'Specialist in digital systems, AI-enabled solutions, and communications for environmental and social impact.',
     education: '',
     linkedin: '#',
@@ -43,7 +43,7 @@ const team = [
   {
     name: 'Bella',
     role: 'Waste Management Specialist',
-    image: 'https://images.unsplash.com/photo-1531123897727-8f129e1688ce?q=80&w=400',
+    image: '/waste management/pollution-concept-water-with-garbage.jpg',
     bio: 'Expert in solid and liquid waste systems, resource recovery, and community-based waste solutions.',
     education: '',
     linkedin: '#',
@@ -168,7 +168,7 @@ export default function TeamPage() {
                 style={{ boxShadow: '0 4px 16px rgba(0, 0, 0, 0.1)' }}
               >
                 <Image
-                  src="https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?q=80&w=800"
+                  src="/WETLANDS/ducks-pond.jpg"
                   alt="Join our team"
                   fill
                   className="object-cover"
@@ -182,10 +182,10 @@ export default function TeamPage() {
         <section className="py-32 relative overflow-hidden" style={{ backgroundColor: '#0598CE' }}>
           <div className="absolute inset-0">
             <Image
-              src="https://images.unsplash.com/photo-1541252260730-0412e8e2108e?q=80&w=1920"
+              src="/ocean-with-some-islands.jpg"
               alt="Background"
               fill
-              className="object-cover opacity-15"
+              className="object-cover opacity-20"
             />
           </div>
           <div className="container-main relative z-10 text-center">

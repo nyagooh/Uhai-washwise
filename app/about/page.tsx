@@ -56,7 +56,7 @@ export default function AboutPage() {
               >
                 <div className="relative h-[500px] overflow-hidden" style={{ boxShadow: '0 4px 16px rgba(0, 0, 0, 0.1)' }}>
                   <Image
-                    src="https://images.unsplash.com/photo-1594398901394-4e34939a4fd0?q=80&w=800"
+                    src="/WETLANDS/green-grass-growing-near-lake.jpg"
                     alt="Our story"
                     fill
                     className="object-cover"
@@ -204,7 +204,7 @@ export default function AboutPage() {
                 style={{ boxShadow: '0 4px 16px rgba(0, 0, 0, 0.1)' }}
               >
                 <Image
-                  src="https://images.unsplash.com/photo-1559027615-cd4628902d4a?q=80&w=800"
+                  src="/waste management/IMG_0594.png"
                   alt="Contact"
                   fill
                   className="object-cover"
@@ -250,7 +250,7 @@ export default function AboutPage() {
                 style={{ boxShadow: '0 4px 16px rgba(0, 0, 0, 0.1)' }}
               >
                 <Image
-                  src="https://images.unsplash.com/photo-1559027615-cd4628902d4a?q=80&w=800"
+                  src="/waste management/IMG_0595.png"
                   alt="Partnership"
                   fill
                   className="object-cover"

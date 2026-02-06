@@ -16,7 +16,7 @@ const impactProjects = [
   {
     title: 'AI Water Quality Monitoring',
     description: 'Our flagship innovation uses AI-powered technology to monitor and predict water quality in real-time across East African communities. This tool translates scientific and environmental data into actionable insights, enabling early warning systems, rapid response, ecosystem protection, and long-term biodiversity restoration.',
-    image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1920',
+    image: '/AI wATER PREDICTING TOOL/human-ai-touch-connection-technology-innovation.jpg',
     stats: [
       { label: 'Communities Served', value: '50+' },
       { label: 'Data Points Analyzed', value: '1M+' },
