@@ -34,3 +34,11 @@ next-env.d.ts
 *.swp
 *.swo
 .DS_Store
+
+# Non-web media formats
+*.MOV
+*.mov
+*.HEIC
+*.heic
+*.AVI
+*.avi
