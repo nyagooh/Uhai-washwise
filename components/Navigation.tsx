@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 import { usePathname } from 'next/navigation'
 import { motion, AnimatePresence } from 'framer-motion'
 import { FiMenu, FiX, FiPhone, FiChevronDown } from 'react-icons/fi'
@@ -27,25 +28,6 @@ export default function Navigation() {
 
   return (
     <>
-      {/* Top Bar */}
-      <div className="hidden lg:block py-2" style={{ backgroundColor: '#0598CE', color: '#FFFFFF' }}>
-        <div className="container-main flex justify-between items-center text-sm">
-          <div className="flex items-center gap-6">
-            <span className="flex items-center gap-2">
-              <FiPhone style={{ color: '#FFFFFF' }} />
-              +254 123 456 789
-            </span>
-            <span>info@uhaiwashwise.org</span>
-          </div>
-          <div className="flex items-center gap-4">
-            <a href="#" className="hover:opacity-80 transition-opacity" style={{ color: '#FFFFFF' }}><FaFacebookF /></a>
-            <a href="#" className="hover:opacity-80 transition-opacity" style={{ color: '#FFFFFF' }}><FaTwitter /></a>
-            <a href="#" className="hover:opacity-80 transition-opacity" style={{ color: '#FFFFFF' }}><FaLinkedinIn /></a>
-            <a href="#" className="hover:opacity-80 transition-opacity" style={{ color: '#FFFFFF' }}><FaInstagram /></a>
-          </div>
-        </div>
-      </div>
-
       {/* Main Navigation */}
       <motion.header
         initial={{ y: -100 }}
@@ -64,8 +46,14 @@ export default function Navigation() {
           <div className="flex items-center justify-between">
             {/* Logo */}
             <Link href="/" className="flex items-center gap-3">
-              <div className="w-12 h-12 rounded-lg flex items-center justify-center" style={{ backgroundColor: '#0598CE' }}>
-                <span className="text-white font-bold text-xl">U</span>
+              <div className="w-16 h-16 relative">
+                <Image 
+                  src="/Generated Image November 20, 2025 - 3_53PM.png"
+                  alt="Uhai WashWise Logo"
+                  fill
+                  className="object-contain"
+                  priority
+                />
               </div>
               <div>
                 <span className="font-display font-bold text-xl" style={{ color: '#1A1A1A' }}>
@@ -97,13 +85,6 @@ export default function Navigation() {
                 </Link>
               ))}
             </nav>
-
-            {/* CTA Button */}
-            <div className="hidden lg:flex items-center gap-4">
-              <Link href="/contact" className="btn-donate">
-                Donate Now
-              </Link>
-            </div>
 
             {/* Mobile Menu Button */}
             <button
@@ -145,13 +126,6 @@ export default function Navigation() {
                   {link.name}
                 </Link>
               ))}
-              <Link
-                href="/contact"
-                onClick={() => setIsMobileOpen(false)}
-                className="btn-donate mt-4 text-center"
-              >
-                Donate Now
-              </Link>
             </nav>
           </motion.div>
         )}

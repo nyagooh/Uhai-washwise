@@ -1,6 +1,7 @@
 'use client'
 
 import Link from 'next/link'
+import Image from 'next/image'
 import { FaFacebookF, FaTwitter, FaLinkedinIn, FaInstagram, FaYoutube } from 'react-icons/fa'
 import { FiMapPin, FiPhone, FiMail, FiArrowRight } from 'react-icons/fi'
 
@@ -29,8 +30,13 @@ export default function Footer() {
           {/* About */}
           <div>
             <Link href="/" className="flex items-center gap-3 mb-6">
-              <div className="w-12 h-12 bg-white rounded-lg flex items-center justify-center">
-                <span className="font-bold text-xl" style={{ color: '#0598CE' }}>U</span>
+              <div className="w-16 h-16 relative bg-white rounded-lg p-2">
+                <Image 
+                  src="/Generated Image November 20, 2025 - 3_53PM.png"
+                  alt="Uhai WashWise Logo"
+                  fill
+                  className="object-contain"
+                />
               </div>
               <span className="font-display font-bold text-xl">
                 Uhai<span style={{ color: '#FFFFFF' }}>WashWise</span>
