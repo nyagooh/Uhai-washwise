@@ -80,8 +80,8 @@ export default function Home() {
           {/* Hero Background */}
           <div className="absolute inset-0">
             <Image
-              src="/lakevictoria.webp"
-              alt="Lake Victoria"
+              src="/ChatGPT Image Feb 6, 2026, 12_40_42 PM.png"
+              alt="Hero Background"
               fill
               className="object-cover"
               priority

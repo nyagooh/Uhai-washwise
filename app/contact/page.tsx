@@ -39,8 +39,8 @@ export default function ContactPage() {
         <section className="relative py-32 bg-secondary-900">
           <div className="absolute inset-0">
             <Image
-              src="/lakevictoria.webp"
-              alt="Lake Victoria"
+              src="/ChatGPT Image Feb 6, 2026, 12_40_42 PM.png"
+              alt="Hero Background"
               fill
               className="object-cover opacity-40"
             />
