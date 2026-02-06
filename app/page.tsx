@@ -648,7 +648,7 @@ export default function Home() {
         <section ref={impactRef} className="py-24" style={{ backgroundColor: '#FFFFFF' }}>
           <div className="container-main">
             <div className="grid lg:grid-cols-2 gap-16 items-center">
-              {/* Images */}
+              {/* Images - Waste Management */}
               <motion.div
                 initial={{ opacity: 0, x: -30 }}
                 animate={impactInView ? { opacity: 1, x: 0 } : {}}
@@ -656,16 +656,16 @@ export default function Home() {
               >
                 <div className="relative h-80 rounded-2xl overflow-hidden shadow-lg">
                   <Image
-                    src="https://images.unsplash.com/photo-1597733336794-12d05021d510?q=80&w=600"
-                    alt="Impact"
+                    src="/waste management/IMG_0582.png"
+                    alt="Waste Management Impact"
                     fill
                     className="object-cover"
                   />
                 </div>
                 <div className="relative h-80 rounded-2xl overflow-hidden shadow-lg mt-12">
                   <Image
-                    src="https://images.unsplash.com/photo-1541252260730-0412e8e2108e?q=80&w=600"
-                    alt="Impact"
+                    src="/waste management/IMG_0583.png"
+                    alt="Waste Management Impact"
                     fill
                     className="object-cover"
                   />
@@ -716,6 +716,109 @@ export default function Home() {
                 </Link>
               </motion.div>
             </div>
+          </div>
+        </section>
+
+        {/* ============================================
+            MEDIA GALLERY SECTION
+        ============================================ */}
+        <section className="py-32" style={{ backgroundColor: '#F9FAFB' }}>
+          <div className="container-main">
+            {/* Section Header */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="text-center mb-16"
+            >
+              <div className="section-label justify-center mb-6">
+                Our Work in Action
+              </div>
+              <h2 className="heading-lg mb-6">
+                Media Gallery
+              </h2>
+              <p className="text-xl max-w-2xl mx-auto" style={{ color: '#6B7280' }}>
+                Capturing moments of impact and transformation across our communities
+              </p>
+            </motion.div>
+
+            {/* Waste Management Section */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="mb-16"
+            >
+              <h3 className="text-2xl font-bold mb-8" style={{ color: '#1A1A1A' }}>
+                Waste Management Initiatives
+              </h3>
+              <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                {[
+                  '/waste management/IMG_0582.png',
+                  '/waste management/IMG_0583.png',
+                  '/waste management/IMG_0585(1).png',
+                  '/waste management/IMG_0594.png',
+                  '/waste management/IMG_0595.png',
+                  '/waste management/IMG_0596.png',
+                  '/waste management/IMG_0597.png',
+                  '/waste management/IMG_0598.png',
+                ].map((image, index) => (
+                  <motion.div
+                    key={index}
+                    initial={{ opacity: 0, scale: 0.9 }}
+                    whileInView={{ opacity: 1, scale: 1 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: index * 0.1 }}
+                    className="relative h-64 rounded-xl overflow-hidden shadow-lg group cursor-pointer"
+                  >
+                    <Image
+                      src={image}
+                      alt={`Waste Management ${index + 1}`}
+                      fill
+                      className="object-cover transition-transform duration-500 group-hover:scale-110"
+                    />
+                    <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300" />
+                  </motion.div>
+                ))}
+              </div>
+            </motion.div>
+
+            {/* KEWASNET Coffee Connect Section */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.2 }}
+            >
+              <h3 className="text-2xl font-bold mb-8" style={{ color: '#1A1A1A' }}>
+                KEWASNET Coffee Connect
+              </h3>
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+                {[
+                  '/KEWASNET COFFE CONNECT/WhatsApp Image 2026-01-26 at 23.31.27.jpeg',
+                  '/KEWASNET COFFE CONNECT/WhatsApp Image 2026-01-26 at 23.31.27(1).jpeg',
+                  '/KEWASNET COFFE CONNECT/WhatsApp Image 2026-01-26 at 23.31.28.jpeg',
+                  '/KEWASNET COFFE CONNECT/WhatsApp Image 2026-01-26 at 23.31.28(1).jpeg',
+                ].map((image, index) => (
+                  <motion.div
+                    key={index}
+                    initial={{ opacity: 0, scale: 0.9 }}
+                    whileInView={{ opacity: 1, scale: 1 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: index * 0.1 }}
+                    className="relative h-64 rounded-xl overflow-hidden shadow-lg group cursor-pointer"
+                  >
+                    <Image
+                      src={image}
+                      alt={`KEWASNET Coffee Connect ${index + 1}`}
+                      fill
+                      className="object-cover transition-transform duration-500 group-hover:scale-110"
+                    />
+                    <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300" />
+                  </motion.div>
+                ))}
+              </div>
+            </motion.div>
           </div>
         </section>
 
