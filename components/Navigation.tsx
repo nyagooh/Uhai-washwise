@@ -48,7 +48,7 @@ export default function Navigation() {
             <Link href="/" className="flex items-center gap-3">
               <div className="w-16 h-16 relative">
                 <Image 
-                  src="/Generated Image November 20, 2025 - 3_53PM.png"
+                  src="/ChatGPT Image Feb 6, 2026, 11_23_47 AM.png"
                   alt="Uhai WashWise Logo"
                   fill
                   className="object-contain"

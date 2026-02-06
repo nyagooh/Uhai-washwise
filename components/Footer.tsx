@@ -32,7 +32,7 @@ export default function Footer() {
             <Link href="/" className="flex items-center gap-3 mb-6">
               <div className="w-16 h-16 relative bg-white rounded-lg p-2">
                 <Image 
-                  src="/Generated Image November 20, 2025 - 3_53PM.png"
+                  src="/ChatGPT Image Feb 6, 2026, 11_23_47 AM.png"
                   alt="Uhai WashWise Logo"
                   fill
                   className="object-contain"
