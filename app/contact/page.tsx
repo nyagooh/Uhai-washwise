@@ -17,7 +17,6 @@ export default function ContactPage() {
   const [formState, setFormState] = useState({
     name: '',
     email: '',
-    organization: '',
     subject: '',
     message: '',
   })
@@ -175,36 +174,22 @@ export default function ContactPage() {
                       </div>
                     </div>
 
-                    <div className="grid md:grid-cols-2 gap-6">
-                      <div>
-                        <label className="block text-sm font-semibold text-secondary-700 mb-2">
-                          Organization
-                        </label>
-                        <input
-                          type="text"
-                          value={formState.organization}
-                          onChange={(e) => setFormState({ ...formState, organization: e.target.value })}
-                          className="w-full px-4 py-3 rounded-xl border border-secondary-200 focus:border-primary-500 focus:ring-2 focus:ring-primary-100 outline-none transition-all"
-                          placeholder="Your organization"
-                        />
-                      </div>
-                      <div>
-                        <label className="block text-sm font-semibold text-secondary-700 mb-2">
-                          Subject *
-                        </label>
-                        <select
-                          required
-                          value={formState.subject}
-                          onChange={(e) => setFormState({ ...formState, subject: e.target.value })}
-                          className="w-full px-4 py-3 rounded-xl border border-secondary-200 focus:border-primary-500 focus:ring-2 focus:ring-primary-100 outline-none transition-all bg-white"
-                        >
-                          <option value="">Select a subject</option>
-                          <option value="partnership">Partnership Inquiry</option>
-                          <option value="donation">Donation</option>
-                          <option value="volunteer">Volunteer</option>
-                          <option value="general">General Inquiry</option>
-                        </select>
-                      </div>
+                    <div>
+                      <label className="block text-sm font-semibold text-secondary-700 mb-2">
+                        Subject *
+                      </label>
+                      <select
+                        required
+                        value={formState.subject}
+                        onChange={(e) => setFormState({ ...formState, subject: e.target.value })}
+                        className="w-full px-4 py-3 rounded-xl border border-secondary-200 focus:border-primary-500 focus:ring-2 focus:ring-primary-100 outline-none transition-all bg-white"
+                      >
+                        <option value="">Select a subject</option>
+                        <option value="partnership">Partnership Inquiry</option>
+                        <option value="donation">Donation</option>
+                        <option value="volunteer">Volunteer</option>
+                        <option value="general">General Inquiry</option>
+                      </select>
                     </div>
 
                     <div>

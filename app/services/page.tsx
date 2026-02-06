@@ -137,7 +137,7 @@ export default function ServicesPage() {
         </section>
 
         {/* Services List */}
-        <section className="py-32" style={{ backgroundColor: '#FFFFFF' }}>
+        <section className="py-32" style={{ backgroundColor: '#F9FAFB' }}>
           <div className="container-main">
             {services.map((service, index) => (
               <motion.div
@@ -146,34 +146,35 @@ export default function ServicesPage() {
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                className={`grid lg:grid-cols-2 gap-20 items-center mb-32 last:mb-0`}
+                className={`grid lg:grid-cols-2 gap-16 items-center mb-20 last:mb-0 p-10 rounded-3xl bg-white shadow-2xl`}
               >
                 <div className={index % 2 === 1 ? 'lg:order-2' : ''}>
-                  <div className="relative h-[500px] overflow-hidden" style={{ boxShadow: '0 4px 16px rgba(0, 0, 0, 0.1)' }}>
+                  <div className="relative h-[420px] rounded-3xl overflow-hidden">
                     <Image
                       src={service.image}
                       alt={service.title}
                       fill
-                      className="object-cover hover:scale-105 transition-transform duration-500"
+                      className="object-cover hover:scale-105 transition-transform duration-700"
                     />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
                   </div>
                 </div>
 
                 <div className={index % 2 === 1 ? 'lg:order-1' : ''}>
-                  <div className="w-16 h-16 flex items-center justify-center mb-6" style={{ backgroundColor: '#E6F5F9' }}>
-                    <service.icon className="text-3xl" style={{ color: '#0598CE' }} />
+                  <div className="w-14 h-14 flex items-center justify-center mb-6 rounded-xl" style={{ backgroundColor: '#E6F5F9' }}>
+                    <service.icon className="text-2xl" style={{ color: '#0598CE' }} />
                   </div>
                   <div className="section-label mb-4">{service.subtitle}</div>
                   <h2 className="heading-md mb-6" style={{ lineHeight: '1.2' }}>{service.title}</h2>
                   <p className="text-body mb-8" style={{ fontSize: '18px', lineHeight: '1.8' }}>{service.description}</p>
                   
-                  <ul className="space-y-4 mb-10">
+                  <ul className="grid sm:grid-cols-2 gap-4 mb-8">
                     {service.features.map((feature, idx) => (
-                      <li key={idx} className="flex items-start gap-4">
+                      <li key={idx} className="flex items-start gap-3">
                         <div className="w-6 h-6 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5" style={{ backgroundColor: '#E6F5F9' }}>
                           <FiCheck className="text-sm" style={{ color: '#0598CE' }} />
                         </div>
-                        <span style={{ color: '#6B7280', fontSize: '16px', lineHeight: '1.6' }}>{feature}</span>
+                        <span style={{ color: '#64748B', fontSize: '15px', lineHeight: '1.6' }}>{feature}</span>
                       </li>
                     ))}
                   </ul>
@@ -189,82 +190,79 @@ export default function ServicesPage() {
         </section>
 
         {/* Contact Section */}
-        <section className="py-32" style={{ backgroundColor: '#FFFFFF' }}>
+        <section className="py-32" style={{ backgroundColor: '#F1F7FB' }}>
           <div className="container-main">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="text-center mb-20"
+              className="text-center mb-16"
             >
               <div className="section-label justify-center mb-6">Contact Us</div>
-              <h2 className="heading-lg mb-8" style={{ lineHeight: '1.2' }}>
+              <h2 className="heading-lg mb-6" style={{ lineHeight: '1.2' }}>
                 Get in <span style={{ color: '#0598CE' }}>Touch</span>
               </h2>
-              <p className="text-xl max-w-2xl mx-auto leading-relaxed" style={{ color: '#6B7280' }}>
-                Have questions or ready to partner with us? We'd love to hear from you.
+              <p className="text-xl max-w-2xl mx-auto leading-relaxed" style={{ color: '#64748B' }}>
+                Have questions or ready to partner with us? We’d love to hear from you.
               </p>
             </motion.div>
 
-            <div className="grid md:grid-cols-3 gap-10 max-w-5xl mx-auto">
-              <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                className="text-center p-8 transition-all duration-300"
-                style={{ backgroundColor: '#FFFFFF', boxShadow: '0 2px 8px rgba(0, 0, 0, 0.08)' }}
-              >
-                <div className="w-16 h-16 mx-auto mb-6 flex items-center justify-center" style={{ backgroundColor: '#E6F5F9' }}>
-                  <FiMapPin className="text-2xl" style={{ color: '#0598CE' }} />
+            <div className="grid lg:grid-cols-2 gap-12 items-center">
+              <div className="relative h-[420px] rounded-3xl overflow-hidden shadow-2xl">
+                <Image
+                  src="/ocean-with-some-islands.jpg"
+                  alt="Contact"
+                  fill
+                  className="object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
+                <div className="absolute bottom-6 left-6 right-6 text-white">
+                  <div className="text-sm uppercase tracking-wider mb-2">Let’s Talk</div>
+                  <div className="text-2xl font-bold">Partner with Uhai WashWise</div>
                 </div>
-                <h3 className="font-bold text-lg mb-3" style={{ color: '#1A1A1A' }}>Address</h3>
-                <p className="leading-relaxed" style={{ color: '#6B7280', fontSize: '16px' }}>
-                  Posta Flats, Ondiek Road<br />
-                  Kisumu, Kenya<br />
-                  P.O. Box 865-40123, Kisumu
-                </p>
-              </motion.div>
+              </div>
 
-              <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: 0.1 }}
-                className="text-center p-8 transition-all duration-300"
-                style={{ backgroundColor: '#FFFFFF', boxShadow: '0 2px 8px rgba(0, 0, 0, 0.08)' }}
-              >
-                <div className="w-16 h-16 mx-auto mb-6 flex items-center justify-center" style={{ backgroundColor: '#E6F5F9' }}>
-                  <FiMail className="text-2xl" style={{ color: '#0598CE' }} />
+              <div className="grid gap-6">
+                {[
+                  { icon: FiMapPin, title: 'Address', content: 'Posta Flats, Ondiek Road, Kisumu, Kenya\nP.O. Box 865-40123' },
+                  { icon: FiMail, title: 'Email', content: 'info@uhaiwashwise.org', href: 'mailto:info@uhaiwashwise.org' },
+                ].map((item, index) => (
+                  <motion.div
+                    key={item.title}
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: index * 0.1 }}
+                    className="p-8 rounded-2xl"
+                    style={{ backgroundColor: '#FFFFFF', boxShadow: '0 8px 24px rgba(5, 152, 206, 0.12)' }}
+                  >
+                    <div className="flex items-start gap-4">
+                      <div className="w-12 h-12 rounded-xl flex items-center justify-center" style={{ backgroundColor: '#E6F5F9' }}>
+                        <item.icon size={20} style={{ color: '#0598CE' }} />
+                      </div>
+                      <div>
+                        <div className="font-bold text-lg mb-1" style={{ color: '#0F172A' }}>{item.title}</div>
+                        {item.href ? (
+                          <a href={item.href} className="text-sm hover:underline" style={{ color: '#0598CE' }}>
+                            {item.content}
+                          </a>
+                        ) : (
+                          <div className="text-sm whitespace-pre-line" style={{ color: '#64748B' }}>
+                            {item.content}
+                          </div>
+                        )}
+                      </div>
+                    </div>
+                  </motion.div>
+                ))}
+
+                <div>
+                  <Link href="/contact" className="btn-primary">
+                    Send Us a Message
+                    <FiArrowRight />
+                  </Link>
                 </div>
-                <h3 className="font-bold text-lg mb-3" style={{ color: '#1A1A1A' }}>Email</h3>
-                <a href="mailto:info@uhaiwashwise.org" className="leading-relaxed" style={{ color: '#0598CE', fontSize: '16px' }}>
-                  info@uhaiwashwise.org
-                </a>
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: 0.2 }}
-                className="text-center p-8 transition-all duration-300"
-                style={{ backgroundColor: '#FFFFFF', boxShadow: '0 2px 8px rgba(0, 0, 0, 0.08)' }}
-              >
-                <div className="w-16 h-16 mx-auto mb-6 flex items-center justify-center" style={{ backgroundColor: '#E6F5F9' }}>
-                  <FiArrowRight className="text-2xl" style={{ color: '#0598CE' }} />
-                </div>
-                <h3 className="font-bold text-lg mb-3" style={{ color: '#1A1A1A' }}>Website</h3>
-                <a href="http://www.uhaiwashwise.org" target="_blank" rel="noopener noreferrer" className="leading-relaxed" style={{ color: '#0598CE', fontSize: '16px' }}>
-                  www.uhaiwashwise.org
-                </a>
-              </motion.div>
-            </div>
-
-            <div className="text-center mt-12">
-              <Link href="/contact" className="btn-primary">
-                Send Us a Message
-                <FiArrowRight />
-              </Link>
+              </div>
             </div>
           </div>
         </section>

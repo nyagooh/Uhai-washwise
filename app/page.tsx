@@ -136,26 +136,6 @@ export default function Home() {
               </motion.div>
             </div>
 
-            {/* Floating Stats Card */}
-            <motion.div
-              initial={{ opacity: 0, x: 50 }}
-              animate={heroInView ? { opacity: 1, x: 0 } : {}}
-              transition={{ delay: 0.5, duration: 0.6 }}
-              className="hidden lg:block absolute bottom-20 right-8 bg-white rounded-2xl p-6 shadow-2xl max-w-xs"
-            >
-              <div className="flex items-center gap-4 mb-4">
-                <div className="w-14 h-14 rounded-lg flex items-center justify-center" style={{ backgroundColor: '#E6F5F9' }}>
-                  <FaHandHoldingHeart className="text-2xl" style={{ color: '#0598CE' }} />
-                </div>
-                <div>
-                  <div className="text-3xl font-bold" style={{ color: '#0F172A' }}>75,958</div>
-                  <div className="text-sm" style={{ color: '#6B7280' }}>People Helped</div>
-                </div>
-              </div>
-              <p className="text-sm" style={{ color: '#6B7280' }}>
-                Supporting growth through community-driven water initiatives.
-              </p>
-            </motion.div>
           </div>
 
           {/* Scroll Indicator */}
