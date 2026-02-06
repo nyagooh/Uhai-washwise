@@ -19,7 +19,7 @@ export default function AboutPage() {
       
       <main>
         {/* Hero */}
-        <section className="relative py-20 md:py-32" style={{ backgroundColor: '#0598CE' }}>
+        <section className="relative py-20 md:py-32 overflow-hidden" style={{ backgroundColor: '#0598CE' }}>
           <div className="absolute inset-0">
             <Image
               src="/ChatGPT Image Feb 6, 2026, 12_40_42 PM.png"
@@ -29,17 +29,17 @@ export default function AboutPage() {
             />
             <div className="absolute inset-0 bg-black/45" />
           </div>
-          <div className="container-main relative z-10 text-center px-4">
+          <div className="container-main relative z-10 text-center">
             <motion.div initial="hidden" animate="visible" variants={fadeUp}>
               <div className="section-label justify-center mb-4 md:mb-6 text-xs md:text-sm" style={{ color: 'rgba(255, 255, 255, 0.9)' }}>
                 <span className="w-2 h-2 rounded-full bg-white inline-block mr-2"></span>
                 About Us
               </div>
-              <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold mb-4 md:mb-6 leading-tight" style={{ color: '#FFFFFF' }}>
+              <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold mb-4 md:mb-6 leading-tight px-2" style={{ color: '#FFFFFF' }}>
                 Protecting Water as a{' '}
                 <span style={{ color: '#FFFFFF' }}>Living System</span>
               </h1>
-              <p className="text-base md:text-xl max-w-2xl mx-auto leading-relaxed" style={{ color: 'rgba(255, 255, 255, 0.95)' }}>
+              <p className="text-base md:text-xl max-w-2xl mx-auto leading-relaxed px-2" style={{ color: 'rgba(255, 255, 255, 0.95)' }}>
                 A social enterprise working at the intersection of water, sanitation, climate action, and technology.
               </p>
             </motion.div>
