@@ -73,10 +73,10 @@ export default function PortfolioPage() {
         <section className="relative py-32 bg-secondary-900">
           <div className="absolute inset-0">
             <Image
-              src="https://images.unsplash.com/photo-1541252260730-0412e8e2108e?q=80&w=1920"
-              alt="Portfolio"
+              src="/lakevictoria.webp"
+              alt="Lake Victoria"
               fill
-              className="object-cover opacity-30"
+              className="object-cover opacity-40"
             />
           </div>
           <div className="container-main relative z-10 text-center">

@@ -59,10 +59,10 @@ export default function ImpactsPage() {
         <section className="relative py-32" style={{ backgroundColor: '#0598CE' }}>
           <div className="absolute inset-0">
             <Image
-              src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?q=80&w=1920"
-              alt="Our Impact"
+              src="/lakevictoria.webp"
+              alt="Lake Victoria"
               fill
-              className="object-cover opacity-20"
+              className="object-cover opacity-40"
             />
           </div>
           <div className="container-main relative z-10 text-center">

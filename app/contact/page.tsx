@@ -39,10 +39,10 @@ export default function ContactPage() {
         <section className="relative py-32 bg-secondary-900">
           <div className="absolute inset-0">
             <Image
-              src="https://images.unsplash.com/photo-1423666639041-f56000c27a9a?q=80&w=1920"
-              alt="Contact Us"
+              src="/lakevictoria.webp"
+              alt="Lake Victoria"
               fill
-              className="object-cover opacity-30"
+              className="object-cover opacity-40"
             />
           </div>
           <div className="container-main relative z-10 text-center">

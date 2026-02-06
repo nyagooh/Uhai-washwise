@@ -233,7 +233,7 @@
 
   .video-hero-overlay {
     @apply absolute inset-0;
-    background-color: rgba(5, 152, 206, 0.7);
+    background-color: rgba(0, 0, 0, 0.45);
   }
 }
 

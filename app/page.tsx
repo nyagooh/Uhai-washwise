@@ -77,17 +77,16 @@ export default function Home() {
             HERO SECTION - VIDEO BACKGROUND
         ============================================ */}
         <section ref={heroRef} className="video-hero">
-          {/* Video Background */}
-          <video
-            autoPlay
-            muted
-            loop
-            playsInline
-            className="absolute inset-0 w-full h-full object-cover"
-            poster="https://images.unsplash.com/photo-1541252260730-0412e8e2108e?q=80&w=2048"
-          >
-            <source src="https://cdn.coverr.co/videos/coverr-waves-on-a-beach-4744/1080p.mp4" type="video/mp4" />
-          </video>
+          {/* Hero Background */}
+          <div className="absolute inset-0">
+            <Image
+              src="/lakevictoria.webp"
+              alt="Lake Victoria"
+              fill
+              className="object-cover"
+              priority
+            />
+          </div>
           
           {/* Overlay */}
           <div className="video-hero-overlay" />
@@ -823,23 +822,24 @@ export default function Home() {
               </p>
             </motion.div>
 
-            <div className="grid md:grid-cols-3 gap-10 max-w-5xl mx-auto">
+            <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto mb-16">
               <motion.div
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                className="text-center p-8 transition-all duration-300"
-                style={{ backgroundColor: '#FFFFFF', boxShadow: '0 2px 8px rgba(0, 0, 0, 0.08)' }}
+                className="group"
               >
-                <div className="w-16 h-16 mx-auto mb-6 flex items-center justify-center" style={{ backgroundColor: '#E6F5F9' }}>
-                  <FiMapPin className="text-2xl" style={{ color: '#0598CE' }} />
+                <div className="h-full p-10 rounded-3xl transition-all duration-500 hover:scale-105 hover:shadow-2xl" style={{ backgroundColor: '#FFFFFF', boxShadow: '0 8px 32px rgba(0, 0, 0, 0.3)' }}>
+                  <div className="w-20 h-20 mx-auto mb-6 rounded-2xl flex items-center justify-center transition-all duration-300" style={{ backgroundColor: '#E6F5F9' }}>
+                    <FiMapPin size={32} style={{ color: '#0598CE' }} />
+                  </div>
+                  <h3 className="font-bold text-2xl mb-4 text-center" style={{ color: '#0F172A' }}>Address</h3>
+                  <p className="leading-relaxed text-center text-lg" style={{ color: '#475569' }}>
+                    Posta Flats, Ondiek Road<br />
+                    Kisumu, Kenya<br />
+                    P.O. Box 865-40123
+                  </p>
                 </div>
-                <h3 className="font-bold text-lg mb-3" style={{ color: '#1A1A1A' }}>Address</h3>
-                <p className="leading-relaxed" style={{ color: '#6B7280', fontSize: '16px' }}>
-                  Posta Flats, Ondiek Road<br />
-                  Kisumu, Kenya<br />
-                  P.O. Box 865-40123, Kisumu
-                </p>
               </motion.div>
 
               <motion.div
@@ -847,16 +847,17 @@ export default function Home() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: 0.1 }}
-                className="text-center p-8 transition-all duration-300"
-                style={{ backgroundColor: '#FFFFFF', boxShadow: '0 2px 8px rgba(0, 0, 0, 0.08)' }}
+                className="group"
               >
-                <div className="w-16 h-16 mx-auto mb-6 flex items-center justify-center" style={{ backgroundColor: '#E6F5F9' }}>
-                  <FiMail className="text-2xl" style={{ color: '#0598CE' }} />
+                <div className="h-full p-10 rounded-3xl transition-all duration-500 hover:scale-105 hover:shadow-2xl" style={{ backgroundColor: '#FFFFFF', boxShadow: '0 8px 32px rgba(0, 0, 0, 0.3)' }}>
+                  <div className="w-20 h-20 mx-auto mb-6 rounded-2xl flex items-center justify-center transition-all duration-300" style={{ backgroundColor: '#E6F5F9' }}>
+                    <FiMail size={32} style={{ color: '#0598CE' }} />
+                  </div>
+                  <h3 className="font-bold text-2xl mb-4 text-center" style={{ color: '#0F172A' }}>Email</h3>
+                  <a href="mailto:info@uhaiwashwise.org" className="leading-relaxed text-center block text-lg hover:underline" style={{ color: '#0598CE' }}>
+                    info@uhaiwashwise.org
+                  </a>
                 </div>
-                <h3 className="font-bold text-lg mb-3" style={{ color: '#1A1A1A' }}>Email</h3>
-                <a href="mailto:info@uhaiwashwise.org" className="leading-relaxed" style={{ color: '#0598CE', fontSize: '16px' }}>
-                  info@uhaiwashwise.org
-                </a>
               </motion.div>
 
               <motion.div
@@ -864,20 +865,21 @@ export default function Home() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: 0.2 }}
-                className="text-center p-8 transition-all duration-300"
-                style={{ backgroundColor: '#FFFFFF', boxShadow: '0 2px 8px rgba(0, 0, 0, 0.08)' }}
+                className="group"
               >
-                <div className="w-16 h-16 mx-auto mb-6 flex items-center justify-center" style={{ backgroundColor: '#E6F5F9' }}>
-                  <FiArrowRight className="text-2xl" style={{ color: '#0598CE' }} />
+                <div className="h-full p-10 rounded-3xl transition-all duration-500 hover:scale-105 hover:shadow-2xl" style={{ backgroundColor: '#FFFFFF', boxShadow: '0 8px 32px rgba(0, 0, 0, 0.3)' }}>
+                  <div className="w-20 h-20 mx-auto mb-6 rounded-2xl flex items-center justify-center transition-all duration-300" style={{ backgroundColor: '#E6F5F9' }}>
+                    <FiArrowRight size={32} style={{ color: '#0598CE' }} />
+                  </div>
+                  <h3 className="font-bold text-2xl mb-4 text-center" style={{ color: '#0F172A' }}>Website</h3>
+                  <a href="http://www.uhaiwashwise.org" target="_blank" rel="noopener noreferrer" className="leading-relaxed text-center block text-lg hover:underline" style={{ color: '#0598CE' }}>
+                    www.uhaiwashwise.org
+                  </a>
                 </div>
-                <h3 className="font-bold text-lg mb-3" style={{ color: '#1A1A1A' }}>Website</h3>
-                <a href="http://www.uhaiwashwise.org" target="_blank" rel="noopener noreferrer" className="leading-relaxed" style={{ color: '#0598CE', fontSize: '16px' }}>
-                  www.uhaiwashwise.org
-                </a>
               </motion.div>
             </div>
 
-            <div className="text-center mt-12">
+            <div className="text-center">
               <Link href="/contact" className="btn-primary">
                 Send Us a Message
                 <FiArrowRight />

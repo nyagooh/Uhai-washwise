@@ -112,10 +112,10 @@ export default function ServicesPage() {
         <section className="relative py-32" style={{ backgroundColor: '#0598CE' }}>
           <div className="absolute inset-0">
             <Image
-              src="https://images.unsplash.com/photo-1559027615-cd4628902d4a?q=80&w=1920"
-              alt="Services"
+              src="/lakevictoria.webp"
+              alt="Lake Victoria"
               fill
-              className="object-cover opacity-20"
+              className="object-cover opacity-40"
             />
           </div>
           <div className="container-main relative z-10 text-center">

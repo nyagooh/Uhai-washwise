@@ -61,10 +61,10 @@ export default function TeamPage() {
         <section className="relative py-32" style={{ backgroundColor: '#0598CE' }}>
           <div className="absolute inset-0">
             <Image
-              src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=1920"
-              alt="Our Team"
+              src="/lakevictoria.webp"
+              alt="Lake Victoria"
               fill
-              className="object-cover opacity-20"
+              className="object-cover opacity-40"
             />
           </div>
           <div className="container-main relative z-10 text-center">
