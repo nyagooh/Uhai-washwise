@@ -200,7 +200,7 @@ export default function ServicesPage() {
                 Get in <span style={{ color: '#0598CE' }}>Touch</span>
               </h2>
               <p className="text-base md:text-xl max-w-2xl mx-auto leading-relaxed" style={{ color: '#64748B' }}>
-                Have questions or ready to partner with us? We'd love to hear from you.
+                Have questions or ready to partner with us? We&apos;d love to hear from you.
               </p>
             </motion.div>
 
