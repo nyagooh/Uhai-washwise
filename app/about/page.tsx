@@ -19,7 +19,7 @@ export default function AboutPage() {
       
       <main>
         {/* Hero */}
-        <section className="relative py-32" style={{ backgroundColor: '#0598CE' }}>
+        <section className="relative py-20 md:py-32" style={{ backgroundColor: '#0598CE' }}>
           <div className="absolute inset-0">
             <Image
               src="/ChatGPT Image Feb 6, 2026, 12_40_42 PM.png"
@@ -29,17 +29,17 @@ export default function AboutPage() {
             />
             <div className="absolute inset-0 bg-black/45" />
           </div>
-          <div className="container-main relative z-10 text-center">
+          <div className="container-main relative z-10 text-center px-4">
             <motion.div initial="hidden" animate="visible" variants={fadeUp}>
-              <div className="section-label justify-center mb-6" style={{ color: 'rgba(255, 255, 255, 0.9)' }}>
+              <div className="section-label justify-center mb-4 md:mb-6 text-xs md:text-sm" style={{ color: 'rgba(255, 255, 255, 0.9)' }}>
                 <span className="w-2 h-2 rounded-full bg-white inline-block mr-2"></span>
                 About Us
               </div>
-              <h1 className="heading-xl mb-6" style={{ color: '#FFFFFF' }}>
+              <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold mb-4 md:mb-6 leading-tight" style={{ color: '#FFFFFF' }}>
                 Protecting Water as a{' '}
                 <span style={{ color: '#FFFFFF' }}>Living System</span>
               </h1>
-              <p className="text-xl max-w-2xl mx-auto leading-relaxed" style={{ color: 'rgba(255, 255, 255, 0.95)' }}>
+              <p className="text-base md:text-xl max-w-2xl mx-auto leading-relaxed" style={{ color: 'rgba(255, 255, 255, 0.95)' }}>
                 A social enterprise working at the intersection of water, sanitation, climate action, and technology.
               </p>
             </motion.div>
@@ -47,15 +47,15 @@ export default function AboutPage() {
         </section>
 
         {/* About Content */}
-        <section className="py-32" style={{ backgroundColor: '#FFFFFF' }}>
-          <div className="container-main">
-            <div className="grid lg:grid-cols-2 gap-20 items-center">
+        <section className="py-16 md:py-32" style={{ backgroundColor: '#FFFFFF' }}>
+          <div className="container-main px-4">
+            <div className="grid lg:grid-cols-2 gap-10 md:gap-20 items-center">
               <motion.div
                 initial={{ opacity: 0, x: -30 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
               >
-                <div className="relative h-[520px] rounded-3xl overflow-hidden shadow-2xl">
+                <div className="relative h-80 md:h-[520px] rounded-2xl md:rounded-3xl overflow-hidden shadow-2xl">
                   <Image
                     src="/AI wATER PREDICTING TOOL/Dashboard2.png"
                     alt="Our story"
@@ -70,11 +70,11 @@ export default function AboutPage() {
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
               >
-                <div className="section-label mb-6">Our Story</div>
-                <h2 className="heading-lg mb-8" style={{ lineHeight: '1.2' }}>
+                <div className="section-label mb-4 md:mb-6 text-xs md:text-sm">Our Story</div>
+                <h2 className="text-2xl md:text-4xl lg:text-5xl font-bold mb-6 md:mb-8" style={{ lineHeight: '1.2' }}>
                   Closing the Loop Between <span style={{ color: '#0598CE' }}>Waste, Water & Ecosystems</span>
                 </h2>
-                <p className="text-body mb-6" style={{ fontSize: '18px', lineHeight: '1.8' }}>
+                <p className="text-sm md:text-lg leading-relaxed mb-4 md:mb-6" style={{ color: '#64748B' }}>
                   Uhai WashWise is a social enterprise working at the intersection of water, sanitation, climate action, and technology. 
                   We design and implement solutions that close the loop between waste, water, and ecosystems, with a strong focus on 
                   circular economy principles, data-driven decision-making, and community-grounded action.
