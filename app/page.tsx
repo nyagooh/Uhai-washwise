@@ -46,31 +46,17 @@ export default function Home() {
 
   const projects = [
     {
-      title: 'Water Quality Dashboard',
+      title: 'AI Water Quality Monitoring',
       description: 'AI-powered platform for real-time water quality monitoring and prediction across East African communities.',
       image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1920',
       tags: ['AI/ML', 'Water Tech', 'Dashboard'],
       link: '/portfolio'
     },
     {
-      title: 'Community Sanitation App',
-      description: 'Mobile application connecting communities with sanitation services and waste management solutions.',
-      image: 'https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?q=80&w=1920',
-      tags: ['Mobile', 'IoT', 'Community'],
-      link: '/portfolio'
-    },
-    {
-      title: 'Climate Resilience Platform',
-      description: 'Data-driven platform helping communities adapt to climate change through predictive analytics.',
-      image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1920',
-      tags: ['Climate Tech', 'Analytics', 'Web'],
-      link: '/portfolio'
-    },
-    {
-      title: 'Waste-to-Resource System',
+      title: 'Waste Management Solutions',
       description: 'Circular economy platform transforming waste into valuable resources for sustainable communities.',
-      image: 'https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?q=80&w=1920',
-      tags: ['Circular Economy', 'Web', 'IoT'],
+      image: '/waste management/IMG_0582.png',
+      tags: ['Waste Management', 'Sustainability', 'Community'],
       link: '/portfolio'
     }
   ]
