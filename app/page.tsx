@@ -638,32 +638,62 @@ export default function Home() {
               <motion.div
                 initial={{ opacity: 0, x: -30 }}
                 animate={impactInView ? { opacity: 1, x: 0 } : {}}
-                className="grid gap-6"
+                className="grid grid-cols-2 gap-5"
               >
-                <div className="relative h-[320px] rounded-3xl overflow-hidden shadow-2xl">
-                  <Image
-                    src="/waste management/IMG_0582.png"
-                    alt="Waste Management Impact"
-                    fill
-                    className="object-cover hover:scale-105 transition-transform duration-700"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
-                  <div className="absolute bottom-6 left-6 right-6">
-                    <h3 className="text-2xl font-bold text-white mb-2">Waste Management</h3>
-                    <p className="text-white/90">Cleaner neighborhoods and circular recovery systems</p>
+                <div className="space-y-5">
+                  <div className="relative h-[360px] rounded-3xl overflow-hidden shadow-2xl">
+                    <Image
+                      src="/waste management/hand-african-american-man-picking-up-bottle-into-garbage-bags-while-cleaning-area-park-africa-volunteering-charity-people-ecology-concept.jpg"
+                      alt="Waste Management Impact"
+                      fill
+                      className="object-cover hover:scale-105 transition-transform duration-700"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
+                    <div className="absolute bottom-6 left-6 right-6">
+                      <h3 className="text-2xl font-bold text-white mb-2">Waste Management</h3>
+                      <p className="text-white/90">Cleaner neighborhoods and circular recovery systems</p>
+                    </div>
+                  </div>
+                  <div className="relative h-[260px] rounded-3xl overflow-hidden shadow-2xl">
+                    <Image
+                      src="/SWA Accountability and Commitments Forum/WhatsApp Image 2026-02-06 at 14.05.51.jpeg"
+                      alt="SWA Accountability and Commitments Forum"
+                      fill
+                      className="object-cover hover:scale-105 transition-transform duration-700"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
+                    <div className="absolute bottom-6 left-6 right-6">
+                      <h3 className="text-2xl font-bold text-white mb-2">SWA Forum</h3>
+                      <p className="text-white/90">Accountability and commitments for sustainable WASH</p>
+                    </div>
                   </div>
                 </div>
-                <div className="relative h-[320px] rounded-3xl overflow-hidden shadow-2xl">
-                  <Image
-                    src="/AI wATER PREDICTING TOOL/human-ai-touch-connection-technology-innovation.jpg"
-                    alt="AI Water Quality Impact"
-                    fill
-                    className="object-cover hover:scale-105 transition-transform duration-700"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
-                  <div className="absolute bottom-6 left-6 right-6">
-                    <h3 className="text-2xl font-bold text-white mb-2">AI Water Quality</h3>
-                    <p className="text-white/90">Real-time insights that protect health and ecosystems</p>
+                <div className="space-y-5 pt-10">
+                  <div className="relative h-[280px] rounded-3xl overflow-hidden shadow-2xl">
+                    <Image
+                      src="/AI wATER PREDICTING TOOL/human-ai-touch-connection-technology-innovation.jpg"
+                      alt="AI Water Quality Impact"
+                      fill
+                      className="object-cover hover:scale-105 transition-transform duration-700"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
+                    <div className="absolute bottom-6 left-6 right-6">
+                      <h3 className="text-2xl font-bold text-white mb-2">AI Water Quality</h3>
+                      <p className="text-white/90">Real-time insights that protect health and ecosystems</p>
+                    </div>
+                  </div>
+                  <div className="relative h-[340px] rounded-3xl overflow-hidden shadow-2xl">
+                    <Image
+                      src="/WETLANDS/green-grass-growing-near-lake.jpg"
+                      alt="Ecosystem Protection"
+                      fill
+                      className="object-cover hover:scale-105 transition-transform duration-700"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
+                    <div className="absolute bottom-6 left-6 right-6">
+                      <h3 className="text-2xl font-bold text-white mb-2">Ecosystem Protection</h3>
+                      <p className="text-white/90">Wetland restoration and biodiversity protection</p>
+                    </div>
                   </div>
                 </div>
               </motion.div>
@@ -785,6 +815,7 @@ export default function Home() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.2 }}
+              className="mb-16"
             >
               <h3 className="text-2xl font-bold mb-8" style={{ color: '#0598CE' }}>
                 KEWASNET Coffee Connect
@@ -807,6 +838,42 @@ export default function Home() {
                     <Image
                       src={image}
                       alt={`KEWASNET Coffee Connect ${index + 1}`}
+                      fill
+                      className="object-cover transition-transform duration-500 group-hover:scale-110"
+                    />
+                    <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300" />
+                  </motion.div>
+                ))}
+              </div>
+            </motion.div>
+
+            {/* SWA Accountability and Commitments Forum Section */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.3 }}
+            >
+              <h3 className="text-2xl font-bold mb-8" style={{ color: '#0598CE' }}>
+                SWA Accountability and Commitments Forum
+              </h3>
+              <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+                {[
+                  '/SWA Accountability and Commitments Forum/WhatsApp Image 2026-02-06 at 14.05.50(1).jpeg',
+                  '/SWA Accountability and Commitments Forum/WhatsApp Image 2026-02-06 at 14.05.51.jpeg',
+                  '/SWA Accountability and Commitments Forum/WhatsApp Image 2026-02-06 at 14.05.51(1).jpeg',
+                ].map((image, index) => (
+                  <motion.div
+                    key={index}
+                    initial={{ opacity: 0, scale: 0.9 }}
+                    whileInView={{ opacity: 1, scale: 1 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: index * 0.1 }}
+                    className="relative h-64 rounded-xl overflow-hidden shadow-lg group cursor-pointer"
+                  >
+                    <Image
+                      src={image}
+                      alt={`SWA Accountability Forum ${index + 1}`}
                       fill
                       className="object-cover transition-transform duration-500 group-hover:scale-110"
                     />
