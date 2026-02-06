@@ -52,11 +52,11 @@ export default function ContactPage() {
                 Contact Us
               </div>
               <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold text-white mb-4 md:mb-6 px-4 md:px-0">
-                Let's Work{' '}
+                Let&apos;s Work{' '}
                 <span className="text-primary-500">Together</span>
               </h1>
               <p className="text-secondary-300 text-base md:text-xl max-w-2xl mx-auto px-4 md:px-0">
-                Have questions or ready to partner with us? We'd love to hear from you.
+                Have questions or ready to partner with us? We&apos;d love to hear from you.
               </p>
             </motion.div>
           </div>
@@ -146,7 +146,7 @@ export default function ContactPage() {
               >
                 <div className="bg-secondary-50 rounded-2xl p-8 lg:p-12">
                   <h2 className="heading-md mb-2">Send Us a Message</h2>
-                  <p className="text-body-sm mb-8">Fill out the form below and we'll get back to you shortly.</p>
+                  <p className="text-body-sm mb-8">Fill out the form below and we&apos;ll get back to you shortly.</p>
 
                   <form onSubmit={handleSubmit} className="space-y-6">
                     <div className="grid md:grid-cols-2 gap-6">

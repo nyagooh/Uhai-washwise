@@ -89,7 +89,7 @@ export default function ImpactsPage() {
                 <span style={{ color: '#FFFFFF' }}>Change</span>
               </h1>
               <p className="text-base md:text-xl max-w-3xl mx-auto leading-relaxed px-2" style={{ color: 'rgba(255, 255, 255, 0.95)' }}>
-                Through innovation and community partnership, we're transforming lives and protecting our environment for future generations.
+                Through innovation and community partnership, we&apos;re transforming lives and protecting our environment for future generations.
               </p>
             </motion.div>
           </div>

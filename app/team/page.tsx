@@ -145,7 +145,7 @@ export default function TeamPage() {
                   Be Part of Our <span style={{ color: '#0598CE' }}>Mission</span>
                 </h2>
                 <p className="text-body mb-6" style={{ fontSize: '18px', lineHeight: '1.8' }}>
-                  We're always looking for passionate individuals who share our vision for 
+                  We&apos;re always looking for passionate individuals who share our vision for 
                   a sustainable future. Whether as a team member, volunteer, or partner, 
                   there's a place for you at Uhai WashWise.
                 </p>

@@ -89,7 +89,7 @@ export default function AIWaterQualityProject() {
                   The system analyzes over 1 million data points to provide accurate predictions and early warnings about water contamination, helping communities take proactive measures to protect their water sources and health.
                 </p>
                 <p className="text-body">
-                  By combining cutting-edge AI technology with local knowledge and community engagement, we're creating a sustainable approach to water quality management that can be scaled across the region.
+                  By combining cutting-edge AI technology with local knowledge and community engagement, we&apos;re creating a sustainable approach to water quality management that can be scaled across the region.
                 </p>
               </motion.div>
 

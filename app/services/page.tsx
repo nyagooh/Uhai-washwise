@@ -214,7 +214,7 @@ export default function ServicesPage() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
                 <div className="absolute bottom-4 md:bottom-6 left-4 md:left-6 right-4 md:right-6 text-white">
-                  <div className="text-xs md:text-sm uppercase tracking-wider mb-1 md:mb-2">Let's Talk</div>
+                  <div className="text-xs md:text-sm uppercase tracking-wider mb-1 md:mb-2">Let&apos;s Talk</div>
                   <div className="text-lg md:text-2xl font-bold">Partner with Uhai WashWise</div>
                 </div>
               </div>
