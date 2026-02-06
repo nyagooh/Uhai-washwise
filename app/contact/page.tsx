@@ -42,8 +42,9 @@ export default function ContactPage() {
               src="/ChatGPT Image Feb 6, 2026, 12_40_42 PM.png"
               alt="Hero Background"
               fill
-              className="object-cover opacity-40"
+              className="object-cover"
             />
+            <div className="absolute inset-0 bg-black/45" />
           </div>
           <div className="container-main relative z-10 text-center">
             <motion.div initial="hidden" animate="visible" variants={fadeUp}>

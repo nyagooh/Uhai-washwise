@@ -340,7 +340,7 @@ export default function Home() {
                 <div className="space-y-5">
                   <div className="relative h-56 overflow-hidden" style={{ boxShadow: '0 4px 16px rgba(0, 0, 0, 0.1)' }}>
                     <Image
-                      src="/WETLANDS/green-grass-growing-near-lake.jpg"
+                      src="/waste management/IMG_0596.png"
                       alt="Community"
                       fill
                       className="object-cover hover:scale-105 transition-transform duration-500"
@@ -348,7 +348,7 @@ export default function Home() {
                   </div>
                   <div className="relative h-72 overflow-hidden" style={{ boxShadow: '0 4px 16px rgba(0, 0, 0, 0.1)' }}>
                     <Image
-                      src="/ocean-with-some-islands.jpg"
+                      src="/AI wATER PREDICTING TOOL/unrecognizable-ecologist-standing-where-sewage-waste-water-meets-river-taking-samples-determine-level-contamination-pollution.jpg"
                       alt="Water access"
                       fill
                       className="object-cover hover:scale-105 transition-transform duration-500"
@@ -358,7 +358,7 @@ export default function Home() {
                 <div className="space-y-5 pt-12">
                   <div className="relative h-72 overflow-hidden" style={{ boxShadow: '0 4px 16px rgba(0, 0, 0, 0.1)' }}>
                     <Image
-                      src="/WETLANDS/ducks-pond.jpg"
+                      src="/ocean-with-some-islands.jpg"
                       alt="Children"
                       fill
                       className="object-cover hover:scale-105 transition-transform duration-500"

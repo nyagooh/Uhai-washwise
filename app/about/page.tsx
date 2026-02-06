@@ -25,8 +25,9 @@ export default function AboutPage() {
               src="/ChatGPT Image Feb 6, 2026, 12_40_42 PM.png"
               alt="Hero Background"
               fill
-              className="object-cover opacity-40"
+              className="object-cover"
             />
+            <div className="absolute inset-0 bg-black/45" />
           </div>
           <div className="container-main relative z-10 text-center">
             <motion.div initial="hidden" animate="visible" variants={fadeUp}>
@@ -56,7 +57,7 @@ export default function AboutPage() {
               >
                 <div className="relative h-[500px] overflow-hidden" style={{ boxShadow: '0 4px 16px rgba(0, 0, 0, 0.1)' }}>
                   <Image
-                    src="/WETLANDS/green-grass-growing-near-lake.jpg"
+                    src="/AI wATER PREDICTING TOOL/human-ai-touch-connection-technology-innovation.jpg"
                     alt="Our story"
                     fill
                     className="object-cover"
@@ -204,7 +205,7 @@ export default function AboutPage() {
                 style={{ boxShadow: '0 4px 16px rgba(0, 0, 0, 0.1)' }}
               >
                 <Image
-                  src="/waste management/IMG_0594.png"
+                  src="/WETLANDS/ducks-pond.jpg"
                   alt="Contact"
                   fill
                   className="object-cover"

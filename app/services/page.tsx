@@ -18,7 +18,7 @@ const services = [
     icon: FiDatabase,
     title: 'Knowledge Management & Learning Systems',
     subtitle: 'Data-Driven Insights',
-    image: '/AI wATER PREDICTING TOOL/human-ai-touch-connection-technology-innovation.jpg',
+    image: '/AI wATER PREDICTING TOOL/unrecognizable-ecologist-standing-where-sewage-waste-water-meets-river-taking-samples-determine-level-contamination-pollution.jpg',
     description: 'We support organizations, governments, and programs to generate, manage, and use knowledge effectively.',
     features: [
       'Knowledge Generation & Documentation: Studies, assessments, action research, policy briefs, technical guidelines',
@@ -89,7 +89,7 @@ const services = [
     icon: FiSearch,
     title: 'Water Research, Innovation & Digital Solutions',
     subtitle: 'Evidence-Based Solutions',
-    image: '/WETLANDS/green-grass-growing-near-lake.jpg',
+    image: '/AI wATER PREDICTING TOOL/human-ai-touch-connection-technology-innovation.jpg',
     description: 'Cutting-edge research and innovation driving sustainable environmental solutions.',
     features: [
       'Water quality research and monitoring',
@@ -115,8 +115,9 @@ export default function ServicesPage() {
               src="/ChatGPT Image Feb 6, 2026, 12_40_42 PM.png"
               alt="Hero Background"
               fill
-              className="object-cover opacity-40"
+              className="object-cover"
             />
+            <div className="absolute inset-0 bg-black/45" />
           </div>
           <div className="container-main relative z-10 text-center">
             <motion.div initial="hidden" animate="visible" variants={fadeUp}>
