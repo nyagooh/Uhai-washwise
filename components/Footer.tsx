@@ -2,7 +2,8 @@
 
 import Link from 'next/link'
 import Image from 'next/image'
-import { FaFacebookF, FaTwitter, FaLinkedinIn, FaInstagram, FaYoutube } from 'react-icons/fa'
+import { FaLinkedinIn } from 'react-icons/fa'
+import { FaXTwitter } from 'react-icons/fa6'
 import { FiMapPin, FiPhone, FiMail, FiArrowRight } from 'react-icons/fi'
 
 const quickLinks = [
@@ -43,14 +44,17 @@ export default function Footer() {
               Empowering communities through sustainable water management and climate resilience solutions across East Africa.
             </p>
             <div className="flex gap-3">
-              {[FaFacebookF, FaTwitter, FaLinkedinIn, FaInstagram, FaYoutube].map((Icon, i) => (
+              {[
+                { icon: FaXTwitter, href: '#' },
+                { icon: FaLinkedinIn, href: '#' },
+              ].map((item, i) => (
                 <a
                   key={i}
-                  href="#"
+                  href={item.href}
                   className="w-10 h-10 rounded-full flex items-center justify-center transition-colors hover:opacity-80"
                   style={{ backgroundColor: 'rgba(255, 255, 255, 0.2)', color: '#FFFFFF' }}
                 >
-                  <Icon size={16} />
+                  <item.icon size={16} />
                 </a>
               ))}
             </div>

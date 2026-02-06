@@ -5,7 +5,8 @@ import Image from 'next/image'
 import Link from 'next/link'
 import Navigation from '@/components/Navigation'
 import Footer from '@/components/Footer'
-import { FiArrowRight, FiLinkedin, FiTwitter, FiMail, FiAward, FiMapPin } from 'react-icons/fi'
+import { FiArrowRight, FiLinkedin, FiAward, FiMapPin } from 'react-icons/fi'
+import { FaXTwitter } from 'react-icons/fa6'
 
 const fadeUp = {
   hidden: { opacity: 0, y: 30 },
@@ -20,7 +21,7 @@ const team = [
     bio: 'Pauline holds a BSc in Community Development and Environmental Science with over five years of experience in community-based environmental programs, sanitation, and governance.',
     education: 'BSc in Community Development and Environmental Science',
     linkedin: '#',
-    twitter: '#',
+    x: '#',
   },
   {
     name: 'William Nyambeka Magwa',
@@ -29,7 +30,7 @@ const team = [
     bio: 'William is a hydrologist with over nine years of experience in watershed management, water conservation, climate-resilient interventions, and policy support across Kenya and the Horn of Africa. He specializes in surface and groundwater hydrology, GIS and remote sensing, MEAL frameworks, and participatory project implementation.',
     education: 'BSc in Earth Science with IT, Maseno University | Certification in Monitoring, Evaluation, Learning & Accountability, University of Nairobi',
     linkedin: '#',
-    twitter: '#',
+    x: '#',
   },
   {
     name: 'Anne Nyaguthii',
@@ -38,7 +39,7 @@ const team = [
     bio: 'Specialist in digital systems, AI-enabled solutions, and communications for environmental and social impact.',
     education: '',
     linkedin: '#',
-    twitter: '#',
+    x: '#',
   },
   {
     name: 'Bella',
@@ -47,7 +48,7 @@ const team = [
     bio: 'Expert in solid and liquid waste systems, resource recovery, and community-based waste solutions.',
     education: '',
     linkedin: '#',
-    twitter: '#',
+    x: '#',
   },
 ]
 
@@ -110,11 +111,8 @@ export default function TeamPage() {
                       <a href={member.linkedin} className="w-12 h-12 bg-white rounded-full flex items-center justify-center hover:bg-gray-100 transition-colors">
                         <FiLinkedin className="text-xl" style={{ color: '#0598CE' }} />
                       </a>
-                      <a href={member.twitter} className="w-12 h-12 bg-white rounded-full flex items-center justify-center hover:bg-gray-100 transition-colors">
-                        <FiTwitter className="text-xl" style={{ color: '#0598CE' }} />
-                      </a>
-                      <a href="#" className="w-12 h-12 bg-white rounded-full flex items-center justify-center hover:bg-gray-100 transition-colors">
-                        <FiMail className="text-xl" style={{ color: '#0598CE' }} />
+                      <a href={member.x} className="w-12 h-12 bg-white rounded-full flex items-center justify-center hover:bg-gray-100 transition-colors">
+                        <FaXTwitter className="text-xl" style={{ color: '#0598CE' }} />
                       </a>
                     </div>
                   </div>

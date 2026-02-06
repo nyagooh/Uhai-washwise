@@ -6,7 +6,6 @@ import Image from 'next/image'
 import { usePathname } from 'next/navigation'
 import { motion, AnimatePresence } from 'framer-motion'
 import { FiMenu, FiX, FiPhone, FiChevronDown } from 'react-icons/fi'
-import { FaFacebookF, FaTwitter, FaLinkedinIn, FaInstagram } from 'react-icons/fa'
 
 const navLinks = [
   { name: 'Home', href: '/' },

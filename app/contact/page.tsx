@@ -6,7 +6,8 @@ import Image from 'next/image'
 import Navigation from '@/components/Navigation'
 import Footer from '@/components/Footer'
 import { FiMapPin, FiPhone, FiMail, FiClock, FiSend, FiCheck } from 'react-icons/fi'
-import { FaFacebookF, FaTwitter, FaLinkedinIn, FaInstagram } from 'react-icons/fa'
+import { FaLinkedinIn } from 'react-icons/fa'
+import { FaXTwitter } from 'react-icons/fa6'
 
 const fadeUp = {
   hidden: { opacity: 0, y: 30 },
@@ -120,13 +121,16 @@ export default function ContactPage() {
                 <div>
                   <h4 className="font-bold text-secondary-900 mb-4">Follow Us</h4>
                   <div className="flex gap-3">
-                    {[FaFacebookF, FaTwitter, FaLinkedinIn, FaInstagram].map((Icon, i) => (
+                    {[
+                      { icon: FaXTwitter, href: '#' },
+                      { icon: FaLinkedinIn, href: '#' },
+                    ].map((item, i) => (
                       <a
                         key={i}
-                        href="#"
+                        href={item.href}
                         className="w-10 h-10 bg-secondary-100 hover:bg-primary-500 text-secondary-600 hover:text-white rounded-full flex items-center justify-center transition-colors"
                       >
-                        <Icon size={16} />
+                        <item.icon size={16} />
                       </a>
                     ))}
                   </div>

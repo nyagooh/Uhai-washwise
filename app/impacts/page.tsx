@@ -5,7 +5,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import Navigation from '@/components/Navigation'
 import Footer from '@/components/Footer'
-import { FiArrowRight, FiUsers, FiTrendingUp, FiCheckCircle } from 'react-icons/fi'
+import { FiArrowRight, FiCheckCircle, FiMapPin, FiMail } from 'react-icons/fi'
 
 const fadeUp = {
   hidden: { opacity: 0, y: 30 },
@@ -17,6 +17,7 @@ const impactProjects = [
     title: 'AI Water Quality Monitoring',
     description: 'Our flagship innovation uses AI-powered technology to monitor and predict water quality in real-time across East African communities. This tool translates scientific and environmental data into actionable insights, enabling early warning systems, rapid response, ecosystem protection, and long-term biodiversity restoration.',
     image: '/AI wATER PREDICTING TOOL/Dashboard.png',
+    link: '/projects/ai-water-quality',
     gallery: [
       '/AI wATER PREDICTING TOOL/Dashboard.png',
       '/AI wATER PREDICTING TOOL/Dashboard2.png',
@@ -39,6 +40,7 @@ const impactProjects = [
     title: 'Waste Management Solutions',
     description: 'We design and implement circular economy solutions that transform waste into valuable resources. Our waste management initiatives close the loop between waste, water, and ecosystems, with a strong focus on community-grounded action and sustainable practices.',
     image: '/waste management/hand-african-american-man-picking-up-bottle-into-garbage-bags-while-cleaning-area-park-africa-volunteering-charity-people-ecology-concept.jpg',
+    link: '/projects/waste-management',
     gallery: [
       '/waste management/hand-african-american-man-picking-up-bottle-into-garbage-bags-while-cleaning-area-park-africa-volunteering-charity-people-ecology-concept.jpg',
       '/waste management/IMG_0596.png',
@@ -72,7 +74,7 @@ export default function ImpactsPage() {
               src="/ChatGPT Image Feb 6, 2026, 12_40_42 PM.png"
               alt="Hero Background"
               fill
-              className="object-cover"
+              className="object-cover opacity-40"
             />
             <div className="absolute inset-0 bg-black/45" />
           </div>
@@ -191,8 +193,8 @@ export default function ImpactsPage() {
                     ))}
                   </div>
 
-                  <Link href="/portfolio" className="btn-primary">
-                    View Project Details
+                  <Link href={project.link} className="btn-primary">
+                    Learn More
                     <FiArrowRight />
                   </Link>
                 </motion.div>
@@ -201,51 +203,6 @@ export default function ImpactsPage() {
           </section>
         ))}
 
-        {/* Overall Impact Stats */}
-        <section className="py-32" style={{ backgroundColor: '#0598CE' }}>
-          <div className="container-main text-center">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="mb-16"
-            >
-              <h2 className="heading-lg mb-6" style={{ color: '#FFFFFF' }}>
-                Impact by the Numbers
-              </h2>
-              <p className="text-xl max-w-2xl mx-auto" style={{ color: 'rgba(255, 255, 255, 0.9)' }}>
-                Measurable results across our programs
-              </p>
-            </motion.div>
-
-            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
-              {[
-                { icon: FiUsers, value: '75,000+', label: 'People Reached' },
-                { icon: FiTrendingUp, value: '85%', label: 'Improvement Rate' },
-                { icon: FiCheckCircle, value: '80+', label: 'Projects Completed' },
-                { icon: FiArrowRight, value: '30+', label: 'Communities' }
-              ].map((stat, index) => (
-                <motion.div
-                  key={stat.label}
-                  initial={{ opacity: 0, scale: 0.8 }}
-                  whileInView={{ opacity: 1, scale: 1 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: index * 0.1 }}
-                  className="p-8 rounded-2xl"
-                  style={{ backgroundColor: 'rgba(255, 255, 255, 0.1)' }}
-                >
-                  <stat.icon size={40} className="mx-auto mb-4" style={{ color: '#FFFFFF' }} />
-                  <div className="text-5xl font-bold mb-2" style={{ color: '#FFFFFF' }}>
-                    {stat.value}
-                  </div>
-                  <div className="text-lg" style={{ color: 'rgba(255, 255, 255, 0.8)' }}>
-                    {stat.label}
-                  </div>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-        </section>
 
         {/* Get in Touch */}
         <section className="py-32" style={{ backgroundColor: '#F1F7FB' }}>
@@ -282,8 +239,8 @@ export default function ImpactsPage() {
 
               <div className="grid gap-6">
                 {[
-                  { icon: FiUsers, title: 'Partnerships', content: 'Explore collaboration and program delivery opportunities.' },
-                  { icon: FiCheckCircle, title: 'Email', content: 'info@uhaiwashwise.org', href: 'mailto:info@uhaiwashwise.org' },
+                  { icon: FiMapPin, title: 'Address', content: 'Posta Flats, Ondiek Road, Kisumu, Kenya\nP.O. Box 865-40123' },
+                  { icon: FiMail, title: 'Email', content: 'info@uhaiwashwise.org', href: 'mailto:info@uhaiwashwise.org' },
                 ].map((item, index) => (
                   <motion.div
                     key={item.title}

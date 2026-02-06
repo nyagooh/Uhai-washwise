@@ -55,7 +55,7 @@ export default function Home() {
         '/AI wATER PREDICTING TOOL/unrecognizable-ecologist-standing-where-sewage-waste-water-meets-river-taking-samples-determine-level-contamination-pollution.jpg',
       ],
       tags: ['AI/ML', 'Water Tech', 'Dashboard'],
-      link: '/portfolio'
+      link: '/projects/ai-water-quality'
     },
     {
       title: 'Waste Management Solutions',
@@ -67,7 +67,7 @@ export default function Home() {
         '/waste management/pollution-concept-water-with-garbage.jpg',
       ],
       tags: ['Waste Management', 'Sustainability', 'Community'],
-      link: '/portfolio'
+      link: '/projects/waste-management'
     }
   ]
 

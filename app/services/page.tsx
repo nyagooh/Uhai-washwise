@@ -89,7 +89,7 @@ const services = [
     icon: FiSearch,
     title: 'Water Research, Innovation & Digital Solutions',
     subtitle: 'Evidence-Based Solutions',
-    image: '/AI wATER PREDICTING TOOL/human-ai-touch-connection-technology-innovation.jpg',
+    image: '/AI wATER PREDICTING TOOL/Dashboard2.png',
     description: 'Cutting-edge research and innovation driving sustainable environmental solutions.',
     features: [
       'Water quality research and monitoring',
@@ -109,27 +109,27 @@ export default function ServicesPage() {
       
       <main>
         {/* Hero */}
-        <section className="relative py-32" style={{ backgroundColor: '#0598CE' }}>
+        <section className="relative py-24 md:py-32" style={{ backgroundColor: '#0598CE' }}>
           <div className="absolute inset-0">
             <Image
               src="/ChatGPT Image Feb 6, 2026, 12_40_42 PM.png"
               alt="Hero Background"
               fill
-              className="object-cover"
+              className="object-cover opacity-40"
             />
             <div className="absolute inset-0 bg-black/45" />
           </div>
-          <div className="container-main relative z-10 text-center">
+          <div className="container-main relative z-10 text-center px-4">
             <motion.div initial="hidden" animate="visible" variants={fadeUp}>
-              <div className="section-label justify-center mb-6" style={{ color: 'rgba(255, 255, 255, 0.9)' }}>
+              <div className="section-label justify-center mb-4 md:mb-6" style={{ color: 'rgba(255, 255, 255, 0.9)' }}>
                 <span className="w-2 h-2 rounded-full bg-white inline-block mr-2"></span>
                 Our Services
               </div>
-              <h1 className="heading-xl mb-6" style={{ color: '#FFFFFF' }}>
+              <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold mb-4 md:mb-6" style={{ color: '#FFFFFF' }}>
                 Comprehensive Solutions for{' '}
                 <span style={{ color: '#FFFFFF' }}>Water Security</span>
               </h1>
-              <p className="text-xl max-w-2xl mx-auto leading-relaxed" style={{ color: 'rgba(255, 255, 255, 0.95)' }}>
+              <p className="text-base md:text-xl max-w-2xl mx-auto leading-relaxed" style={{ color: 'rgba(255, 255, 255, 0.95)' }}>
                 Locally grounded, scalable, and investable solutions supporting sustainable water security and climate resilience.
               </p>
             </motion.div>
@@ -137,78 +137,74 @@ export default function ServicesPage() {
         </section>
 
         {/* Services List */}
-        <section className="py-32" style={{ backgroundColor: '#F9FAFB' }}>
+        <section className="py-20 md:py-32" style={{ backgroundColor: '#F9FAFB' }}>
           <div className="container-main">
-            {services.map((service, index) => (
-              <motion.div
-                key={service.id}
-                id={service.id}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                className={`grid lg:grid-cols-2 gap-16 items-center mb-20 last:mb-0 p-10 rounded-3xl bg-white shadow-2xl`}
-              >
-                <div className={index % 2 === 1 ? 'lg:order-2' : ''}>
-                  <div className="relative h-[420px] rounded-3xl overflow-hidden">
+            <div className="grid md:grid-cols-2 gap-6 md:gap-10">
+              {services.map((service, index) => (
+                <motion.div
+                  key={service.id}
+                  id={service.id}
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: index * 0.05 }}
+                  className="bg-white rounded-2xl md:rounded-3xl overflow-hidden shadow-xl"
+                >
+                  <div className="relative h-56 md:h-72">
                     <Image
                       src={service.image}
                       alt={service.title}
                       fill
                       className="object-cover hover:scale-105 transition-transform duration-700"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent" />
                   </div>
-                </div>
-
-                <div className={index % 2 === 1 ? 'lg:order-1' : ''}>
-                  <div className="w-14 h-14 flex items-center justify-center mb-6 rounded-xl" style={{ backgroundColor: '#E6F5F9' }}>
-                    <service.icon className="text-2xl" style={{ color: '#0598CE' }} />
+                  <div className="p-6 md:p-10">
+                    <div className="w-10 h-10 md:w-12 md:h-12 flex items-center justify-center mb-3 md:mb-4 rounded-xl" style={{ backgroundColor: '#E6F5F9' }}>
+                      <service.icon className="text-lg md:text-xl" style={{ color: '#0598CE' }} />
+                    </div>
+                    <div className="section-label mb-2 md:mb-3 text-xs md:text-sm">{service.subtitle}</div>
+                    <h3 className="text-lg md:text-xl font-bold mb-2 md:mb-3" style={{ color: '#0F172A' }}>{service.title}</h3>
+                    <p className="text-sm leading-relaxed mb-3 md:mb-4" style={{ color: '#64748B' }}>{service.description}</p>
+                    <ul className="space-y-2 mb-4 md:mb-6">
+                      {service.features.slice(0, 3).map((feature, idx) => (
+                        <li key={idx} className="flex items-start gap-2 text-xs md:text-sm" style={{ color: '#64748B' }}>
+                          <FiCheck className="mt-0.5 flex-shrink-0" style={{ color: '#0598CE' }} />
+                          <span>{feature}</span>
+                        </li>
+                      ))}
+                    </ul>
+                    <Link href="/contact" className="inline-flex items-center gap-2 text-sm font-semibold" style={{ color: '#0598CE' }}>
+                      Learn More
+                      <FiArrowRight />
+                    </Link>
                   </div>
-                  <div className="section-label mb-4">{service.subtitle}</div>
-                  <h2 className="heading-md mb-6" style={{ lineHeight: '1.2' }}>{service.title}</h2>
-                  <p className="text-body mb-8" style={{ fontSize: '18px', lineHeight: '1.8' }}>{service.description}</p>
-                  
-                  <ul className="grid sm:grid-cols-2 gap-4 mb-8">
-                    {service.features.map((feature, idx) => (
-                      <li key={idx} className="flex items-start gap-3">
-                        <div className="w-6 h-6 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5" style={{ backgroundColor: '#E6F5F9' }}>
-                          <FiCheck className="text-sm" style={{ color: '#0598CE' }} />
-                        </div>
-                        <span style={{ color: '#64748B', fontSize: '15px', lineHeight: '1.6' }}>{feature}</span>
-                      </li>
-                    ))}
-                  </ul>
-
-                  <Link href="/contact" className="btn-primary">
-                    Learn More
-                    <FiArrowRight />
-                  </Link>
-                </div>
-              </motion.div>
-            ))}
+                </motion.div>
+              ))}
+            </div>
           </div>
         </section>
 
         {/* Contact Section */}
-        <section className="py-32" style={{ backgroundColor: '#F1F7FB' }}>
-          <div className="container-main">
+        <section className="py-20 md:py-32" style={{ backgroundColor: '#F1F7FB' }}>
+          <div className="container-main px-4">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="text-center mb-16"
+              className="text-center mb-12 md:mb-16"
             >
-              <div className="section-label justify-center mb-6">Contact Us</div>
-              <h2 className="heading-lg mb-6" style={{ lineHeight: '1.2' }}>
+              <div className="section-label justify-center mb-4 md:mb-6">Contact Us</div>
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 md:mb-6" style={{ lineHeight: '1.2' }}>
                 Get in <span style={{ color: '#0598CE' }}>Touch</span>
               </h2>
-              <p className="text-xl max-w-2xl mx-auto leading-relaxed" style={{ color: '#64748B' }}>
-                Have questions or ready to partner with us? We’d love to hear from you.
+              <p className="text-base md:text-xl max-w-2xl mx-auto leading-relaxed" style={{ color: '#64748B' }}>
+                Have questions or ready to partner with us? We'd love to hear from you.
               </p>
             </motion.div>
 
-            <div className="grid lg:grid-cols-2 gap-12 items-center">
-              <div className="relative h-[420px] rounded-3xl overflow-hidden shadow-2xl">
+            <div className="grid lg:grid-cols-2 gap-8 md:gap-12 items-center">
+              <div className="relative h-64 md:h-[420px] rounded-2xl md:rounded-3xl overflow-hidden shadow-2xl">
                 <Image
                   src="/ocean-with-some-islands.jpg"
                   alt="Contact"
@@ -216,13 +212,13 @@ export default function ServicesPage() {
                   className="object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
-                <div className="absolute bottom-6 left-6 right-6 text-white">
-                  <div className="text-sm uppercase tracking-wider mb-2">Let’s Talk</div>
-                  <div className="text-2xl font-bold">Partner with Uhai WashWise</div>
+                <div className="absolute bottom-4 md:bottom-6 left-4 md:left-6 right-4 md:right-6 text-white">
+                  <div className="text-xs md:text-sm uppercase tracking-wider mb-1 md:mb-2">Let's Talk</div>
+                  <div className="text-lg md:text-2xl font-bold">Partner with Uhai WashWise</div>
                 </div>
               </div>
 
-              <div className="grid gap-6">
+              <div className="grid gap-4 md:gap-6">
                 {[
                   { icon: FiMapPin, title: 'Address', content: 'Posta Flats, Ondiek Road, Kisumu, Kenya\nP.O. Box 865-40123' },
                   { icon: FiMail, title: 'Email', content: 'info@uhaiwashwise.org', href: 'mailto:info@uhaiwashwise.org' },
@@ -233,21 +229,21 @@ export default function ServicesPage() {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ delay: index * 0.1 }}
-                    className="p-8 rounded-2xl"
+                    className="p-6 md:p-8 rounded-xl md:rounded-2xl"
                     style={{ backgroundColor: '#FFFFFF', boxShadow: '0 8px 24px rgba(5, 152, 206, 0.12)' }}
                   >
-                    <div className="flex items-start gap-4">
-                      <div className="w-12 h-12 rounded-xl flex items-center justify-center" style={{ backgroundColor: '#E6F5F9' }}>
-                        <item.icon size={20} style={{ color: '#0598CE' }} />
+                    <div className="flex items-start gap-3 md:gap-4">
+                      <div className="w-10 h-10 md:w-12 md:h-12 rounded-lg md:rounded-xl flex items-center justify-center" style={{ backgroundColor: '#E6F5F9' }}>
+                        <item.icon size={18} className="md:w-5 md:h-5" style={{ color: '#0598CE' }} />
                       </div>
                       <div>
-                        <div className="font-bold text-lg mb-1" style={{ color: '#0F172A' }}>{item.title}</div>
+                        <div className="font-bold text-base md:text-lg mb-1" style={{ color: '#0F172A' }}>{item.title}</div>
                         {item.href ? (
-                          <a href={item.href} className="text-sm hover:underline" style={{ color: '#0598CE' }}>
+                          <a href={item.href} className="text-xs md:text-sm hover:underline" style={{ color: '#0598CE' }}>
                             {item.content}
                           </a>
                         ) : (
-                          <div className="text-sm whitespace-pre-line" style={{ color: '#64748B' }}>
+                          <div className="text-xs md:text-sm whitespace-pre-line" style={{ color: '#64748B' }}>
                             {item.content}
                           </div>
                         )}
@@ -257,7 +253,7 @@ export default function ServicesPage() {
                 ))}
 
                 <div>
-                  <Link href="/contact" className="btn-primary">
+                  <Link href="/contact" className="btn-primary w-full md:w-auto text-sm md:text-base">
                     Send Us a Message
                     <FiArrowRight />
                   </Link>
