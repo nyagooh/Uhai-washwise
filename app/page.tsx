@@ -477,8 +477,15 @@ export default function Home() {
         {/* ============================================
             MISSION / VISION / VALUES
         ============================================ */}
-        <section className="py-32" style={{ backgroundColor: '#FFFFFF' }}>
+        <section className="py-32" style={{ backgroundColor: '#EEF6FB' }}>
           <div className="container-main">
+            <div className="text-center mb-16">
+              <div className="section-label justify-center mb-4">Our Foundations</div>
+              <h2 className="heading-lg mb-4">Purpose, Mission & Vision</h2>
+              <p className="text-xl max-w-2xl mx-auto" style={{ color: '#64748B' }}>
+                A clear direction that guides every partnership and every project we deliver.
+              </p>
+            </div>
             <div className="grid md:grid-cols-3 gap-10">
               {[
                 { 
@@ -503,49 +510,20 @@ export default function Home() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: index * 0.1 }}
-                  className="p-10 text-center transition-all duration-300"
-                  style={{ backgroundColor: '#FFFFFF', boxShadow: '0 2px 8px rgba(0, 0, 0, 0.08)' }}
+                  className="p-10 text-left transition-all duration-300 rounded-2xl"
+                  style={{ backgroundColor: '#FFFFFF', boxShadow: '0 10px 30px rgba(5, 152, 206, 0.12)', borderTop: '4px solid #0598CE' }}
                 >
-                  <div className="w-20 h-20 mx-auto mb-8 flex items-center justify-center" style={{ backgroundColor: '#E6F5F9' }}>
-                    <item.icon className="text-3xl" style={{ color: '#0598CE' }} />
+                  <div className="w-16 h-16 mb-6 flex items-center justify-center rounded-xl" style={{ backgroundColor: '#E6F5F9' }}>
+                    <item.icon className="text-2xl" style={{ color: '#0598CE' }} />
                   </div>
-                  <h3 className="text-2xl font-bold mb-4" style={{ color: '#1A1A1A' }}>{item.title}</h3>
-                  <p className="leading-relaxed" style={{ color: '#6B7280', fontSize: '16px' }}>{item.desc}</p>
+                  <h3 className="text-2xl font-bold mb-3" style={{ color: '#0F172A' }}>{item.title}</h3>
+                  <p className="leading-relaxed" style={{ color: '#64748B', fontSize: '16px' }}>{item.desc}</p>
                 </motion.div>
               ))}
             </div>
           </div>
         </section>
 
-        {/* ============================================
-            STATS SECTION
-        ============================================ */}
-        <section className="py-32" style={{ backgroundColor: '#0598CE' }}>
-          <div className="container-main">
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-12">
-              {[
-                { value: '25+', label: 'Years Experience' },
-                { value: '230+', label: 'Volunteers' },
-                { value: '400+', label: 'Projects Done' },
-                { value: '50+', label: 'Communities Served' },
-              ].map((stat, index) => (
-                <motion.div
-                  key={stat.label}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: index * 0.1 }}
-                  className="text-center"
-                >
-                  <div className="text-6xl md:text-7xl font-display text-white mb-4" style={{ fontWeight: 800 }}>
-                    {stat.value}
-                  </div>
-                  <div className="text-white/90 text-lg" style={{ fontWeight: 500 }}>{stat.label}</div>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-        </section>
 
         {/* ============================================
             SERVICES / HOW WE HELP
@@ -631,7 +609,7 @@ export default function Home() {
         {/* ============================================
             IMPACT SECTION - Progress Bars
         ============================================ */}
-        <section ref={impactRef} className="py-32" style={{ backgroundColor: '#FFFFFF' }}>
+        <section ref={impactRef} className="py-32" style={{ backgroundColor: '#F9FAFB' }}>
           <div className="container-main">
             <div className="grid lg:grid-cols-2 gap-20 items-center">
               {/* Images - Impact Highlights */}
@@ -748,7 +726,7 @@ export default function Home() {
         {/* ============================================
             MEDIA GALLERY SECTION
         ============================================ */}
-        <section className="py-32" style={{ backgroundColor: '#F9FAFB' }}>
+        <section className="py-32" style={{ backgroundColor: '#FFFFFF' }}>
           <div className="container-main">
             {/* Section Header */}
             <motion.div
@@ -888,85 +866,80 @@ export default function Home() {
         {/* ============================================
             CONTACT SECTION
         ============================================ */}
-        <section className="py-32" style={{ backgroundColor: '#FFFFFF' }}>
+        <section className="py-32" style={{ backgroundColor: '#F1F7FB' }}>
           <div className="container-main">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="text-center mb-20"
+              className="text-center mb-16"
             >
               <div className="section-label justify-center mb-6">Contact Us</div>
-              <h2 className="heading-lg mb-8" style={{ lineHeight: '1.2' }}>
+              <h2 className="heading-lg mb-6" style={{ lineHeight: '1.2' }}>
                 Get in <span style={{ color: '#0598CE' }}>Touch</span>
               </h2>
-              <p className="text-xl max-w-2xl mx-auto leading-relaxed" style={{ color: '#6B7280' }}>
-                Have questions or ready to partner with us? We'd love to hear from you.
+              <p className="text-xl max-w-2xl mx-auto leading-relaxed" style={{ color: '#64748B' }}>
+                Have questions or ready to partner with us? We’d love to hear from you.
               </p>
             </motion.div>
 
-            <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto mb-16">
-              <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                className="group"
-              >
-                <div className="h-full p-10 rounded-3xl transition-all duration-500 hover:scale-105 hover:shadow-2xl" style={{ backgroundColor: '#FFFFFF', boxShadow: '0 8px 32px rgba(0, 0, 0, 0.3)' }}>
-                  <div className="w-20 h-20 mx-auto mb-6 rounded-2xl flex items-center justify-center transition-all duration-300" style={{ backgroundColor: '#E6F5F9' }}>
-                    <FiMapPin size={32} style={{ color: '#0598CE' }} />
-                  </div>
-                  <h3 className="font-bold text-2xl mb-4 text-center" style={{ color: '#0F172A' }}>Address</h3>
-                  <p className="leading-relaxed text-center text-lg" style={{ color: '#475569' }}>
-                    Posta Flats, Ondiek Road<br />
-                    Kisumu, Kenya<br />
-                    P.O. Box 865-40123
-                  </p>
+            <div className="grid lg:grid-cols-2 gap-12 items-center">
+              <div className="relative h-[420px] rounded-3xl overflow-hidden shadow-2xl">
+                <Image
+                  src="/ocean-with-some-islands.jpg"
+                  alt="Contact"
+                  fill
+                  className="object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
+                <div className="absolute bottom-6 left-6 right-6 text-white">
+                  <div className="text-sm uppercase tracking-wider mb-2">Let’s Talk</div>
+                  <div className="text-2xl font-bold">Partner with Uhai WashWise</div>
                 </div>
-              </motion.div>
+              </div>
 
-              <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: 0.1 }}
-                className="group"
-              >
-                <div className="h-full p-10 rounded-3xl transition-all duration-500 hover:scale-105 hover:shadow-2xl" style={{ backgroundColor: '#FFFFFF', boxShadow: '0 8px 32px rgba(0, 0, 0, 0.3)' }}>
-                  <div className="w-20 h-20 mx-auto mb-6 rounded-2xl flex items-center justify-center transition-all duration-300" style={{ backgroundColor: '#E6F5F9' }}>
-                    <FiMail size={32} style={{ color: '#0598CE' }} />
-                  </div>
-                  <h3 className="font-bold text-2xl mb-4 text-center" style={{ color: '#0F172A' }}>Email</h3>
-                  <a href="mailto:info@uhaiwashwise.org" className="leading-relaxed text-center block text-lg hover:underline" style={{ color: '#0598CE' }}>
-                    info@uhaiwashwise.org
-                  </a>
+              <div className="grid gap-6">
+                {[
+                  { icon: FiMapPin, title: 'Address', content: 'Posta Flats, Ondiek Road, Kisumu, Kenya\nP.O. Box 865-40123' },
+                  { icon: FiMail, title: 'Email', content: 'info@uhaiwashwise.org', href: 'mailto:info@uhaiwashwise.org' },
+                  { icon: FiArrowRight, title: 'Website', content: 'www.uhaiwashwise.org', href: 'http://www.uhaiwashwise.org' },
+                ].map((item, index) => (
+                  <motion.div
+                    key={item.title}
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: index * 0.1 }}
+                    className="p-8 rounded-2xl"
+                    style={{ backgroundColor: '#FFFFFF', boxShadow: '0 8px 24px rgba(5, 152, 206, 0.12)' }}
+                  >
+                    <div className="flex items-start gap-4">
+                      <div className="w-12 h-12 rounded-xl flex items-center justify-center" style={{ backgroundColor: '#E6F5F9' }}>
+                        <item.icon size={20} style={{ color: '#0598CE' }} />
+                      </div>
+                      <div>
+                        <div className="font-bold text-lg mb-1" style={{ color: '#0F172A' }}>{item.title}</div>
+                        {item.href ? (
+                          <a href={item.href} className="text-sm hover:underline" style={{ color: '#0598CE' }}>
+                            {item.content}
+                          </a>
+                        ) : (
+                          <div className="text-sm whitespace-pre-line" style={{ color: '#64748B' }}>
+                            {item.content}
+                          </div>
+                        )}
+                      </div>
+                    </div>
+                  </motion.div>
+                ))}
+
+                <div>
+                  <Link href="/contact" className="btn-primary">
+                    Send Us a Message
+                    <FiArrowRight />
+                  </Link>
                 </div>
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: 0.2 }}
-                className="group"
-              >
-                <div className="h-full p-10 rounded-3xl transition-all duration-500 hover:scale-105 hover:shadow-2xl" style={{ backgroundColor: '#FFFFFF', boxShadow: '0 8px 32px rgba(0, 0, 0, 0.3)' }}>
-                  <div className="w-20 h-20 mx-auto mb-6 rounded-2xl flex items-center justify-center transition-all duration-300" style={{ backgroundColor: '#E6F5F9' }}>
-                    <FiArrowRight size={32} style={{ color: '#0598CE' }} />
-                  </div>
-                  <h3 className="font-bold text-2xl mb-4 text-center" style={{ color: '#0F172A' }}>Website</h3>
-                  <a href="http://www.uhaiwashwise.org" target="_blank" rel="noopener noreferrer" className="leading-relaxed text-center block text-lg hover:underline" style={{ color: '#0598CE' }}>
-                    www.uhaiwashwise.org
-                  </a>
-                </div>
-              </motion.div>
-            </div>
-
-            <div className="text-center">
-              <Link href="/contact" className="btn-primary">
-                Send Us a Message
-                <FiArrowRight />
-              </Link>
+              </div>
             </div>
           </div>
         </section>
