@@ -29,18 +29,15 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           {/* About */}
           <div>
-            <Link href="/" className="flex items-center gap-3 mb-6">
-              <div className="w-16 h-16 relative bg-white rounded-lg p-2">
+            <Link href="/" className="flex items-center mb-6">
+              <div className="w-20 h-20 relative bg-white rounded-lg p-1">
                 <Image 
                   src="/ChatGPT Image Feb 6, 2026, 11_23_47 AM.png"
                   alt="Uhai WashWise Logo"
                   fill
-                  className="object-contain"
+                  className="object-contain scale-110"
                 />
               </div>
-              <span className="font-display font-bold text-xl">
-                Uhai<span style={{ color: '#FFFFFF' }}>WashWise</span>
-              </span>
             </Link>
             <p className="mb-6 leading-relaxed" style={{ color: 'rgba(255, 255, 255, 0.9)' }}>
               Empowering communities through sustainable water management and climate resilience solutions across East Africa.

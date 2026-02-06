@@ -34,8 +34,8 @@ export default function Navigation() {
         animate={{ y: 0 }}
         className={`sticky top-0 z-50 transition-all duration-300 ${
           isScrolled 
-            ? 'shadow-lg py-2' 
-            : 'backdrop-blur-sm py-4'
+            ? 'shadow-lg py-1' 
+            : 'backdrop-blur-sm py-2'
         }`}
         style={{ 
           backgroundColor: isScrolled ? '#FFFFFF' : 'rgba(255, 255, 255, 0.95)',
@@ -45,20 +45,15 @@ export default function Navigation() {
         <div className="container-main">
           <div className="flex items-center justify-between">
             {/* Logo */}
-            <Link href="/" className="flex items-center gap-3">
+            <Link href="/" className="flex items-center">
               <div className="w-16 h-16 relative">
                 <Image 
                   src="/ChatGPT Image Feb 6, 2026, 11_23_47 AM.png"
                   alt="Uhai WashWise Logo"
                   fill
-                  className="object-contain"
+                  className="object-contain scale-125"
                   priority
                 />
-              </div>
-              <div>
-                <span className="font-display font-bold text-xl" style={{ color: '#1A1A1A' }}>
-                  Uhai<span style={{ color: '#0598CE' }}>WashWise</span>
-                </span>
               </div>
             </Link>
 
