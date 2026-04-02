@@ -219,49 +219,57 @@ export default function Home() {
         </section>
 
         {/* ================================================================
-            5. WHAT WE DO — White with video backgrounds for each capability
+            5. WHAT WE DO — Image cards (2x2 grid) with clear overlays
         ================================================================ */}
         <section className="py-24 lg:py-36 bg-white">
           <div className="container-full">
-            <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="max-w-3xl mb-16">
+            <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="max-w-3xl mb-12">
               <div className="label mb-5">What We Do</div>
               <h2 className="h-xl text-[#0F172A] mb-4">
-                Water Quality Intelligence, <span style={{ color: '#0598CE' }}>Predictive Analytics & Data Visualization</span>
+                Water Quality Intelligence & <span style={{ color: '#0598CE' }}>Community Solutions</span>
               </h2>
               <p className="body-lg max-w-xl">
-                Real-time monitoring with installed sensors, predictive intelligence systems, and waste management solutions powering water security and environmental resilience across East African communities.
+                Practical, field-led programs combining sensor monitoring, predictive analytics, and circular waste solutions to protect water and support resilient communities.
               </p>
             </motion.div>
 
-            <div className="grid lg:grid-cols-3 gap-8">
+            <div className="grid sm:grid-cols-2 gap-8">
               {[
                 {
                   title: 'Water Quality Intelligence',
-                  desc: 'Real-time water quality monitoring that tracks contamination levels, predicts changes, and delivers early warnings to protect communities and ecosystems.',
-                  imageSrc: '/waste management/WhatsApp Image 2026-04-02 at 09.48.37.jpeg',
+                  desc: 'Field and sensor-led monitoring that generates real-time contamination alerts and trend insights for rapid response.',
+                  imageSrc: '/WETLANDS/green-grass-growing-near-lake.jpg',
                   accent: '#0598CE'
                 },
                 {
-                  title: 'Predictive Intelligence',
-                  desc: 'Installing sensor monitoring systems for continuous water quality assessment and predictive analytics to identify risks before they impact communities.',
-                  imageSrc: '/waste management/WhatsApp Image 2026-04-02 at 09.48.35.jpeg',
+                  title: 'Predictive Analytics',
+                  desc: 'Models that use historical and sensor data to forecast risks and help target interventions before issues escalate.',
+                  imageSrc: '/AI wATER PREDICTING TOOL/Dashboard2.png',
                   accent: '#0598CE'
+                },
+                {
+                  title: 'Installed Sensor Monitoring',
+                  desc: 'Robust, low-cost sensors deployed in the field for continuous water quality tracking and community alerts.',
+                  imageSrc: '/waste management/WhatsApp Image 2026-04-02 at 09.48.37.jpeg',
+                  accent: '#22ADD8'
                 },
                 {
                   title: 'Waste Management Solutions',
-                  desc: 'Circular economy programs that transform waste into resources, creating green livelihoods while diverting pollutants from water bodies.',
-                  imageSrc: '/waste management/IMG_0594.png',
+                  desc: 'Community-driven circular programs that convert waste to resources, reducing pollution and creating livelihoods.',
+                  imageSrc: '/waste management/IMG_0582.png',
                   accent: '#2F6F4E'
                 },
               ].map((item, i) => (
-                <motion.div key={item.title} initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.1 }}
+                <motion.div key={item.title} initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.08 }}
                   className="rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-500 group">
-                  <div className="relative h-[400px] overflow-hidden bg-gray-900">
-                    <Image src={item.imageSrc} alt={item.title} fill className="object-cover group-hover:scale-105 transition-transform duration-500" />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/60 to-black/30" />
-                    <div className="absolute bottom-0 left-0 right-0 p-8 text-white">
-                      <h3 className="h-md mb-3 font-bold">{item.title}</h3>
-                      <p className="body-light text-white/95 leading-relaxed">{item.desc}</p>
+                  <div className="relative h-[360px] overflow-hidden bg-gray-100">
+                    <Image src={item.imageSrc} alt={item.title} fill className="object-cover transition-transform duration-700 group-hover:scale-105" />
+                    {/* stronger overlay for readability */}
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
+                    {/* bottom panel for clear text */}
+                    <div className="absolute left-6 right-6 bottom-6 p-4 rounded-md bg-black/60 backdrop-blur-sm">
+                      <h3 className="h-md text-white mb-2">{item.title}</h3>
+                      <p className="text-sm text-white/90">{item.desc}</p>
                     </div>
                   </div>
                 </motion.div>
