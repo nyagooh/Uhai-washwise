@@ -287,12 +287,12 @@ export default function Home() {
 
             <div className="grid md:grid-cols-3 gap-6">
               {[
-                { src: '/waste management/IMG_0582.png', title: 'Waste Collection' },
+                { src: '/KEWASNET COFFE CONNECT/IMG_2464.JPG.jpeg', title: 'Water Governance Forum' },
+                { src: '/waste management/WhatsApp Image 2026-04-02 at 09.48.35.jpeg', title: 'Wetland Assessment' },
                 { src: '/waste management/IMG_0583.png', title: 'Community Champions' },
-                { src: '/waste management/IMG_0594.png', title: 'Waste Sorting' },
-                { src: '/waste management/IMG_0595.png', title: 'Community Engagement' },
-                { src: '/waste management/IMG_0596.png', title: 'Material Recovery' },
-                { src: '/waste management/IMG_0597.png', title: 'Environmental Education' },
+                { src: '/KEWASNET COFFE CONNECT/IMG_2471.JPG.jpeg', title: 'Stakeholder Partnership' },
+                { src: '/waste management/IMG_0594.png', title: 'Waste Sorting Operations' },
+                { src: '/WETLANDS/ducks-pond.jpg', title: 'Wetland Restoration' },
               ].map((item, i) => (
                 <motion.div key={item.title} initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.1 }}
                   className="rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-500 group">
