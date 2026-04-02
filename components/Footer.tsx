@@ -4,75 +4,87 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { FaLinkedinIn } from 'react-icons/fa'
 import { FaXTwitter } from 'react-icons/fa6'
-import { FiMapPin, FiPhone, FiMail, FiArrowRight } from 'react-icons/fi'
+import { FiArrowRight, FiArrowUpRight, FiMail, FiPhone, FiMapPin } from 'react-icons/fi'
 
-const quickLinks = [
+const navLinks = [
   { name: 'About Us', href: '/about' },
-  { name: 'Our Services', href: '/services' },
-  { name: 'Our Team', href: '/team' },
-  { name: 'Portfolio', href: '/portfolio' },
-  { name: 'Contact Us', href: '/contact' },
+  { name: 'What We Do', href: '/services' },
+  { name: 'Our Impact', href: '/impacts' },
+  { name: 'Contact', href: '/contact' },
 ]
 
 const services = [
-  'Knowledge Management',
-  'Environmental Monitoring',
-  'Water Resources',
+  'AI Data Visualization',
+  'Water Quality Intelligence',
   'Waste Management',
+  'Environmental Assessments',
   'Research & Innovation',
 ]
 
 export default function Footer() {
   return (
-    <footer style={{ backgroundColor: '#0598CE', color: '#FFFFFF' }}>
+    <footer style={{ backgroundColor: '#0B1F33' }}>
+      {/* CTA Band */}
+      <div className="container-full py-16 lg:py-20" style={{ borderBottom: '1px solid rgba(255,255,255,0.08)' }}>
+        <div className="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-8">
+          <div className="max-w-xl">
+            <h3 className="font-display text-2xl sm:text-3xl lg:text-4xl font-bold text-white leading-tight">
+              Ready to make an impact together?
+            </h3>
+            <p className="mt-3 text-sm" style={{ color: 'rgba(255,255,255,0.45)' }}>
+              Partner with us to build water security and climate resilience across East Africa.
+            </p>
+          </div>
+          <Link href="/contact" className="btn-primary flex-shrink-0">
+            Get in Touch <FiArrowRight size={15} />
+          </Link>
+        </div>
+      </div>
+
       {/* Main Footer */}
-      <div className="container-main py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
-          {/* About */}
-          <div>
-            <Link href="/" className="flex items-center mb-6">
-              <div className="w-20 h-20 relative bg-white rounded-lg p-1">
-                <Image 
+      <div className="container-full py-16 lg:py-20">
+        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-10 lg:gap-8">
+          {/* Brand */}
+          <div className="col-span-2 md:col-span-4 lg:col-span-2">
+            <Link href="/" className="inline-block mb-5">
+              <div className="w-16 h-16 relative bg-white rounded-lg p-1">
+                <Image
                   src="/ChatGPT Image Feb 6, 2026, 11_23_47 AM.png"
-                  alt="Uhai WashWise Logo"
+                  alt="Uhai WashWise"
                   fill
-                  className="object-contain scale-110"
+                  className="object-contain"
                 />
               </div>
             </Link>
-            <p className="mb-6 leading-relaxed" style={{ color: 'rgba(255, 255, 255, 0.9)' }}>
-              Empowering communities through sustainable water management and climate resilience solutions across East Africa.
+            <p className="text-sm leading-relaxed max-w-xs mb-6" style={{ color: 'rgba(255,255,255,0.4)' }}>
+              AI-powered water quality intelligence and climate resilience solutions for East Africa.
             </p>
-            <div className="flex gap-3">
+            <div className="flex gap-2">
               {[
                 { icon: FaXTwitter, href: '#' },
-                { icon: FaLinkedinIn, href: '#' },
+                { icon: FaLinkedinIn, href: 'https://www.linkedin.com/company/uhai-washwise' },
               ].map((item, i) => (
                 <a
                   key={i}
                   href={item.href}
-                  className="w-10 h-10 rounded-full flex items-center justify-center transition-colors hover:opacity-80"
-                  style={{ backgroundColor: 'rgba(255, 255, 255, 0.2)', color: '#FFFFFF' }}
+                  className="w-9 h-9 rounded-lg flex items-center justify-center transition-all duration-300 hover:bg-white/10"
+                  style={{ backgroundColor: 'rgba(255,255,255,0.06)', color: 'rgba(255,255,255,0.5)' }}
                 >
-                  <item.icon size={16} />
+                  <item.icon size={13} />
                 </a>
               ))}
             </div>
           </div>
 
-          {/* Quick Links */}
+          {/* Navigation */}
           <div>
-            <h3 className="font-display font-bold text-lg mb-6">Quick Links</h3>
-            <ul className="space-y-3">
-              {quickLinks.map((link) => (
+            <h4 className="text-[11px] uppercase tracking-[0.15em] font-bold text-white mb-5">Navigate</h4>
+            <ul className="space-y-2.5">
+              {navLinks.map((link) => (
                 <li key={link.href}>
-                  <Link
-                    href={link.href}
-                    className="transition-colors flex items-center gap-2 group hover:opacity-80"
-                    style={{ color: 'rgba(255, 255, 255, 0.8)' }}
-                  >
-                    <FiArrowRight className="opacity-0 -ml-4 group-hover:opacity-100 group-hover:ml-0 transition-all" style={{ color: '#0598CE' }} />
+                  <Link href={link.href} className="text-sm transition-colors duration-300 hover:text-white flex items-center gap-1 group" style={{ color: 'rgba(255,255,255,0.4)' }}>
                     {link.name}
+                    <FiArrowUpRight className="opacity-0 group-hover:opacity-100 transition-opacity" size={10} />
                   </Link>
                 </li>
               ))}
@@ -81,16 +93,12 @@ export default function Footer() {
 
           {/* Services */}
           <div>
-            <h3 className="font-display font-bold text-lg mb-6">Our Services</h3>
-            <ul className="space-y-3">
-              {services.map((service) => (
-                <li key={service}>
-                  <Link
-                    href="/services"
-                    className="text-white/80 hover:text-accent transition-colors flex items-center gap-2 group"
-                  >
-                    <FiArrowRight className="opacity-0 -ml-4 group-hover:opacity-100 group-hover:ml-0 transition-all" />
-                    {service}
+            <h4 className="text-[11px] uppercase tracking-[0.15em] font-bold text-white mb-5">Services</h4>
+            <ul className="space-y-2.5">
+              {services.map((s) => (
+                <li key={s}>
+                  <Link href="/services" className="text-sm transition-colors duration-300 hover:text-white" style={{ color: 'rgba(255,255,255,0.4)' }}>
+                    {s}
                   </Link>
                 </li>
               ))}
@@ -99,42 +107,34 @@ export default function Footer() {
 
           {/* Contact */}
           <div>
-            <h3 className="font-display font-bold text-lg mb-6">Contact Us</h3>
-            <ul className="space-y-4">
-              <li className="flex items-start gap-3">
-                <FiMapPin className="mt-1 flex-shrink-0" size={20} style={{ color: '#FFFFFF' }} />
-                <span style={{ color: 'rgba(255, 255, 255, 0.9)' }}>
-                  Posta Flats, Ondiek Road<br />
-                  Kisumu, Kenya<br />
-                  P.O. Box 865–40123, Kisumu
-                </span>
+            <h4 className="text-[11px] uppercase tracking-[0.15em] font-bold text-white mb-5">Contact</h4>
+            <ul className="space-y-3 text-sm" style={{ color: 'rgba(255,255,255,0.4)' }}>
+              <li className="flex items-start gap-2">
+                <FiMapPin size={14} className="mt-0.5 flex-shrink-0" style={{ color: 'rgba(255,255,255,0.25)' }} />
+                <span>Posta Flats, Ondiek Road<br/>Kisumu, Kenya</span>
               </li>
-              <li className="flex items-center gap-3">
-                <FiMail className="flex-shrink-0" size={20} style={{ color: '#FFFFFF' }} />
-                <a href="mailto:info@uhaiwashwise.org" style={{ color: 'rgba(255, 255, 255, 0.9)' }}>info@uhaiwashwise.org</a>
+              <li className="flex items-center gap-2">
+                <FiPhone size={14} className="flex-shrink-0" style={{ color: 'rgba(255,255,255,0.25)' }} />
+                <span>0710433161 / 0724318117</span>
               </li>
-              <li className="flex items-center gap-3">
-                <FiArrowRight className="flex-shrink-0" size={20} style={{ color: '#FFFFFF' }} />
-                <a href="http://www.uhaiwashwise.org" target="_blank" rel="noopener noreferrer" style={{ color: 'rgba(255, 255, 255, 0.9)' }}>www.uhaiwashwise.org</a>
+              <li className="flex items-center gap-2">
+                <FiMail size={14} className="flex-shrink-0" style={{ color: 'rgba(255,255,255,0.25)' }} />
+                <a href="mailto:uhaiwashwise@outlook.com" className="hover:text-white transition-colors">uhaiwashwise@outlook.com</a>
               </li>
             </ul>
           </div>
         </div>
       </div>
 
-      {/* Bottom Bar */}
-      <div className="border-t" style={{ borderColor: 'rgba(255, 255, 255, 0.2)' }}>
-        <div className="container-main py-6 flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="text-sm" style={{ color: 'rgba(255, 255, 255, 0.8)' }}>
-            © {new Date().getFullYear()} Uhai WashWise. All rights reserved.
+      {/* Bottom */}
+      <div style={{ borderTop: '1px solid rgba(255,255,255,0.06)' }}>
+        <div className="container-full py-5 flex flex-col md:flex-row justify-between items-center gap-3">
+          <p className="text-xs" style={{ color: 'rgba(255,255,255,0.25)' }}>
+            &copy; {new Date().getFullYear()} Uhai WashWise. All rights reserved.
           </p>
-          <div className="flex gap-6 text-sm">
-            <Link href="#" className="hover:opacity-80 transition-opacity" style={{ color: 'rgba(255, 255, 255, 0.8)' }}>
-              Privacy Policy
-            </Link>
-            <Link href="#" className="hover:opacity-80 transition-opacity" style={{ color: 'rgba(255, 255, 255, 0.8)' }}>
-              Terms of Service
-            </Link>
+          <div className="flex gap-5 text-xs" style={{ color: 'rgba(255,255,255,0.25)' }}>
+            <Link href="#" className="hover:text-white/50 transition-colors">Privacy</Link>
+            <Link href="#" className="hover:text-white/50 transition-colors">Terms</Link>
           </div>
         </div>
       </div>
