@@ -100,34 +100,46 @@ export default function AboutPage() {
         </section>
 
         {/* ================================================================
-            HOW IT WORKS — Our Process
+            HOW IT WORKS — Dark, step-by-step process (matching homepage)
         ================================================================ */}
-        <section className="py-24 lg:py-36 bg-white">
+        <section className="py-24 lg:py-36" style={{ backgroundColor: '#0B1F33' }}>
           <div className="container-full">
-            <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="max-w-3xl mb-16">
-              <div className="label mb-5">Our Process</div>
-              <h2 className="h-xl text-[#0F172A] mb-4">
-                How We <span style={{ color: '#0598CE' }}>Create Impact</span>
+            <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center max-w-3xl mx-auto mb-20">
+              <div className="label-light justify-center mb-5">The Process</div>
+              <h2 className="h-xl text-white mb-4">
+                How Our <span style={{ color: '#0598CE' }}>System</span> Works
               </h2>
-              <p className="body-lg max-w-xl">
-                Our proven methodology combines research, technology, community engagement, and policy support to create lasting environmental and social change.
+              <p className="body-light max-w-xl mx-auto">
+                From raw environmental data to actionable intelligence — a seamless pipeline that transforms information into impact.
               </p>
             </motion.div>
 
-            <div className="grid md:grid-cols-4 gap-6">
-              {[
-                { step: '01', title: 'Research & Assessment', desc: 'Deep-dive environmental and social research to understand local context, challenges, and opportunities.' },
-                { step: '02', title: 'Technology Design', desc: 'Co-design AI solutions and digital tools with communities and stakeholders for real-world applicability.' },
-                { step: '03', title: 'Implementation', desc: 'Deploy solutions through community-grounded programs, training, and ongoing technical support.' },
-                { step: '04', title: 'Impact Tracking', desc: 'Monitor, measure, and report on outcomes using data-driven frameworks and community feedback.' },
-              ].map((item, i) => (
-                <motion.div key={item.step} initial={{ opacity: 0, y: 25 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.1 }}
-                  className="p-6 lg:p-8 rounded-2xl" style={{ backgroundColor: '#F8FAFC', border: '1px solid #E8EDF2' }}>
-                  <div className="text-4xl font-bold text-[#0598CE] mb-4">{item.step}</div>
-                  <h4 className="text-lg font-bold text-[#0F172A] mb-3">{item.title}</h4>
-                  <p className="text-sm text-[#94A3B8]">{item.desc}</p>
-                </motion.div>
-              ))}
+            {/* Steps */}
+            <div className="relative">
+              {/* Connection line */}
+              <div className="hidden lg:block absolute top-[60px] left-[10%] right-[10%] h-px" style={{ background: 'linear-gradient(90deg, transparent, rgba(5,152,206,0.2), rgba(5,152,206,0.5), rgba(5,152,206,0.2), transparent)' }} />
+
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-10 lg:gap-4">
+                {[
+                  { step: '01', title: 'Collect Data', desc: 'Sensors and field teams gather water quality parameters, environmental conditions, and waste metrics from target sites.' },
+                  { step: '02', title: 'Input to System', desc: 'Raw data is ingested into our cloud platform, cleaned, and structured for analysis across multiple variables.' },
+                  { step: '03', title: 'Analysis', desc: 'Machine learning models process the data, identifying patterns, anomalies, and predictive contamination signals.' },
+                  { step: '04', title: 'Visualize Insights', desc: 'Results are displayed on intuitive dashboards with maps, charts, and trend analysis for decision-makers.' },
+                  { step: '05', title: 'Alerts & Action', desc: 'The system generates real-time alerts, quality reports, and actionable recommendations for rapid response.' },
+                ].map((item, i) => (
+                  <motion.div key={item.step} initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.1 }}
+                    className="relative text-center group">
+                    <div className="relative z-10 w-[110px] h-[110px] mx-auto mb-6 rounded-full flex flex-col items-center justify-center transition-all duration-500 group-hover:scale-110"
+                      style={{ backgroundColor: i === 4 ? 'rgba(47,111,78,0.15)' : 'rgba(5,152,206,0.15)', border: i === 4 ? '2px solid rgba(47,111,78,0.4)' : '2px solid rgba(5,152,206,0.4)' }}>
+                      <span className="text-[13px] uppercase tracking-widest font-bold" style={{ color: i === 4 ? '#2F6F4E' : '#0598CE' }}>
+                        Step {item.step}
+                      </span>
+                    </div>
+                    <h4 className="text-base font-bold text-white mb-3">{item.title}</h4>
+                    <p className="text-sm leading-relaxed text-white/70 max-w-[200px] mx-auto">{item.desc}</p>
+                  </motion.div>
+                ))}
+              </div>
             </div>
           </div>
         </section>
@@ -141,14 +153,18 @@ export default function AboutPage() {
             </motion.div>
             <div className="grid md:grid-cols-3 gap-8">
               {[
-                { name: 'Pauline Wambui Maina', role: 'Director | Community Development & Environmental Management', image: '/WhatsApp Image 2026-02-06 at 14.05.50.jpeg' },
-                { name: 'William Nyambeka Magwa', role: 'Hydrology & Water Resources Management Expert', image: '/SWA Accountability and Commitments Forum/WhatsApp Image 2026-02-06 at 14.05.50(1).jpeg' },
-                { name: 'Anne Nyaguthii', role: 'AI, ICT & Communications Lead', image: '/Our team/IMG_2684.JPG.jpeg' },
+                { name: 'Pauline Wambui Maina', role: 'Director | Community Development & Environmental Management', image: '/Our team/IMG_2684.JPG.jpeg' },
+                { name: 'William Nyambeka Magwa', role: 'Hydrology & Water Resources Management Expert', image: null },
+                { name: 'Anne Nyaguthii', role: 'AI, ICT & Communications Lead', image: null },
               ].map((m, i) => (
                 <motion.div key={m.name} initial={{ opacity: 0, y: 25 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.08 }} className="group">
-                  <div className="relative h-[400px] rounded-2xl overflow-hidden mb-5">
-                    <Image src={m.image} alt={m.name} fill className="object-cover transition-transform duration-700 group-hover:scale-105" />
-                  </div>
+                  {m.image ? (
+                    <div className="relative h-[400px] rounded-2xl overflow-hidden mb-5">
+                      <Image src={m.image} alt={m.name} fill className="object-cover transition-transform duration-700 group-hover:scale-105" />
+                    </div>
+                  ) : (
+                    <div className="relative h-[400px] rounded-2xl overflow-hidden mb-5 bg-gray-200" />
+                  )}
                   <h3 className="text-lg font-bold text-[#0F172A] mb-1">{m.name}</h3>
                   <p className="text-sm text-[#94A3B8]">{m.role}</p>
                 </motion.div>
