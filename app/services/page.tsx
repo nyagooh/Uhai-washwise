@@ -3,7 +3,7 @@
 import { motion } from 'framer-motion'
 import Image from 'next/image'
 import Link from 'next/link'
-import { FiArrowRight, FiArrowUpRight, FiBarChart2, FiDroplet, FiRefreshCw, FiCheck } from 'react-icons/fi'
+import { FiArrowRight, FiArrowUpRight, FiBarChart2, FiDroplet, FiRefreshCw, FiCheck, FiMail, FiPhone, FiMapPin, FiActivity } from 'react-icons/fi'
 
 const fade = {
   hidden: { opacity: 0, y: 30 },
@@ -15,7 +15,7 @@ const capabilities = [
     icon: FiBarChart2,
     title: 'AI Data Visualization',
     subtitle: 'Insights at a Glance',
-    image: '/AI wATER PREDICTING TOOL/Dashboard.png',
+    media: { type: 'video', src: '/ai.MP4' },
     desc: 'We build interactive dashboards that transform complex environmental datasets into clear, actionable visual intelligence. Our platform enables policymakers, researchers, and community leaders to understand water quality patterns at a glance.',
     features: ['Real-time data dashboards', 'Geospatial mapping & visualization', 'Predictive trend analytics', 'Automated reporting & exports', 'Multi-stakeholder access levels'],
     accent: '#0598CE',
@@ -24,7 +24,7 @@ const capabilities = [
     icon: FiDroplet,
     title: 'Water Quality Intelligence',
     subtitle: 'Early Warning Systems',
-    image: '/AI wATER PREDICTING TOOL/Dashboard2.png',
+    media: { type: 'image', src: '/AI wATER PREDICTING TOOL/Dashboard2.png' },
     desc: 'Our AI-powered monitoring tracks contamination levels, predicts water quality changes, and delivers early warnings to protect communities and ecosystems. From source water to distribution, we provide end-to-end intelligence.',
     features: ['Water quality scoring & grading', 'Contamination detection & alerts', 'Biodiversity impact tracking', 'Source water protection plans', 'Regulatory compliance reporting'],
     accent: '#0598CE',
@@ -33,7 +33,7 @@ const capabilities = [
     icon: FiRefreshCw,
     title: 'Waste Management Solutions',
     subtitle: 'Circular Economy',
-    image: '/waste management/IMG_0582.png',
+    media: { type: 'video', src: '/UHAI SEQ.mp4' },
     desc: 'We design and implement circular economy programs that transform waste into valuable resources. Our community-grounded systems create green livelihoods while diverting pollutants from water bodies and critical ecosystems.',
     features: ['Integrated solid waste management', 'Recycling & material recovery', 'Community collection cooperatives', 'Organic waste & composting', 'Impact measurement & reporting'],
     accent: '#2F6F4E',
@@ -75,11 +75,21 @@ export default function ServicesPage() {
             <div className="container-full">
               <div className="grid lg:grid-cols-12 gap-10 lg:gap-20 items-center">
                 <motion.div initial={{ opacity: 0, x: i % 2 === 0 ? -25 : 25 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}
-                  className={`lg:col-span-5 relative h-[300px] lg:h-[420px] rounded-2xl overflow-hidden ${i % 2 === 1 ? 'lg:order-2' : ''}`}>
-                  <Image src={s.image} alt={s.title} fill className="object-cover" />
+                  className={`lg:col-span-6 relative h-[500px] lg:h-[650px] rounded-2xl overflow-hidden ${i % 2 === 1 ? 'lg:order-2' : ''}`}>
+                  {s.media.type === 'video' ? (
+                    <video
+                      autoPlay muted loop playsInline
+                      className="absolute inset-0 w-full h-full object-cover"
+                      poster="/ChatGPT Image Feb 6, 2026, 12_40_42 PM.png"
+                    >
+                      <source src={s.media.src} type="video/mp4" />
+                    </video>
+                  ) : (
+                    <Image src={s.media.src} alt={s.title} fill className="object-cover" />
+                  )}
                 </motion.div>
                 <motion.div initial={{ opacity: 0, x: i % 2 === 0 ? 25 : -25 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}
-                  className={`lg:col-span-7 ${i % 2 === 1 ? 'lg:order-1' : ''}`}>
+                  className={`lg:col-span-6 ${i % 2 === 1 ? 'lg:order-1' : ''}`}>
                   <div className="flex items-center gap-2.5 mb-4">
                     <s.icon size={18} style={{ color: s.accent }} />
                     <span className="text-[11px] uppercase tracking-[0.15em] font-bold" style={{ color: s.accent }}>{s.subtitle}</span>
@@ -103,17 +113,71 @@ export default function ServicesPage() {
           </section>
         ))}
 
-        {/* Let's Discuss Projects — Dark */}
-        <section className="py-20 lg:py-28" style={{ backgroundColor: '#0B1F33' }}>
+        {/* ================================================================
+            CONTACT — Get in Touch (Light background)
+        ================================================================ */}
+        <section className="py-24 lg:py-36" style={{ backgroundColor: '#F8FAFC' }}>
           <div className="container-full">
-            <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center">
-              <div className="label-light mb-5">Next Steps</div>
-              <h2 className="h-xl text-white mb-6 max-w-2xl mx-auto">Let&apos;s Discuss <span style={{ color: '#0598CE' }}>Your Project</span></h2>
-              <p className="body-light text-white/70 max-w-xl mx-auto mb-12">Whether you need water quality monitoring, waste management solutions, or environmental assessments, our team is ready to collaborate on innovations that make a real impact.</p>
-              <Link href="/contact" className="btn-primary inline-flex items-center gap-2">
-                Start the Conversation <FiArrowRight size={15} />
-              </Link>
-            </motion.div>
+            <div className="grid lg:grid-cols-12 gap-12 lg:gap-20">
+              <motion.div initial={{ opacity: 0, x: -25 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} className="lg:col-span-5">
+                <div className="label mb-5">Get in Touch</div>
+                <h2 className="h-xl text-[#0F172A] mb-6">
+                  Let&apos;s Build a Resilient Future <span style={{ color: '#0598CE' }}>Together</span>
+                </h2>
+                <p className="body-lg mb-10 max-w-lg">
+                  Whether you are an investor, government partner, researcher, or community leader — we are ready to collaborate on meaningful impact.
+                </p>
+
+                <div className="flex flex-wrap gap-3 mb-12">
+                  <a href="mailto:uhaiwashwise@outlook.com" className="btn-primary">
+                    Partner With Us <FiMail size={15} />
+                  </a>
+                  <Link href="/contact" className="btn-outline-dark">
+                    Send a Message <FiArrowRight size={15} />
+                  </Link>
+                </div>
+
+                <div className="pt-8" style={{ borderTop: '1px solid #E8EDF2' }}>
+                  <p className="text-[11px] uppercase tracking-[0.15em] font-bold text-[#0F172A] mb-4">Quick Contact</p>
+                  <div className="space-y-3">
+                    {[
+                      { icon: FiMail, text: 'uhaiwashwise@outlook.com', href: 'mailto:uhaiwashwise@outlook.com' },
+                      { icon: FiPhone, text: '0710433161 / 0724318117' },
+                      { icon: FiMapPin, text: 'Posta Flats, Ondiek Road, Kisumu, Kenya' },
+                    ].map((item) => (
+                      <div key={item.text} className="flex items-center gap-3">
+                        <div className="w-9 h-9 rounded-lg flex items-center justify-center" style={{ backgroundColor: '#E8F6FC' }}>
+                          <item.icon size={14} style={{ color: '#0598CE' }} />
+                        </div>
+                        {item.href ? (
+                          <a href={item.href} className="text-sm hover:underline" style={{ color: '#0598CE' }}>{item.text}</a>
+                        ) : (
+                          <span className="text-sm text-[#475569]">{item.text}</span>
+                        )}
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </motion.div>
+
+              <motion.div initial={{ opacity: 0, x: 25 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} className="lg:col-span-7">
+                <div className="relative h-[500px] rounded-2xl overflow-hidden">
+                  <Image src="/AI wATER PREDICTING TOOL/unrecognizable-ecologist-standing-where-sewage-waste-water-meets-river-taking-samples-determine-level-contamination-pollution.jpg" alt="Field work" fill className="object-cover" />
+                  <div className="absolute inset-0" style={{ background: 'linear-gradient(135deg, rgba(11,31,51,0.4) 0%, transparent 100%)' }} />
+                  <div className="absolute bottom-6 left-6 right-6 p-6 rounded-xl backdrop-blur-md" style={{ backgroundColor: 'rgba(255,255,255,0.95)', border: '1px solid rgba(0,0,0,0.05)' }}>
+                    <div className="flex items-start gap-4">
+                      <div className="w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0" style={{ backgroundColor: '#E8F6FC' }}>
+                        <FiActivity size={20} style={{ color: '#0598CE' }} />
+                      </div>
+                      <div>
+                        <h4 className="text-sm font-bold text-[#0F172A] mb-1">Active Across East Africa</h4>
+                        <p className="text-xs text-[#94A3B8]">Working with 50+ communities across Kenya, deploying monitoring tools and building local capacity for water security.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </motion.div>
+            </div>
           </div>
         </section>
       </main>
