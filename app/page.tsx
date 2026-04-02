@@ -356,21 +356,41 @@ export default function Home() {
         </section>
 
         {/* ================================================================
-            7b. PARTNER WITH US — CTA Section
+            7b. GALLERY — White section with Varied Community & Impact Images
         ================================================================ */}
-        <section className="py-24 lg:py-36" style={{ backgroundColor: '#0598CE' }}>
+        <section className="py-24 lg:py-36 bg-white">
           <div className="container-full">
-            <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center max-w-3xl mx-auto">
-              <h2 className="h-xl text-white mb-6">
-                Ready to Partner With Us?
+            <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="max-w-3xl mb-16">
+              <div className="label mb-5">Community Impact</div>
+              <h2 className="h-xl text-[#0F172A] mb-4">
+                Stories From The <span style={{ color: '#0598CE' }}>Ground</span>
               </h2>
-              <p className="body-light mb-10 max-w-2xl mx-auto">
-                Whether you are an investor, government partner, researcher, or community leader — we are ready to collaborate on meaningful impact for water security and environmental resilience across East Africa.
+              <p className="body-lg max-w-xl">
+                Real moments of transformation, partnership, and environmental action across East African communities.
               </p>
-              <Link href="/contact" className="btn-primary">
-                Let's Discuss <FiArrowRight size={15} />
-              </Link>
             </motion.div>
+
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {[
+                { src: '/KEWASNET COFFE CONNECT/IMG_2464.JPG.jpeg', title: 'Water Governance Forum' },
+                { src: '/KEWASNET COFFE CONNECT/IMG_2471.JPG.jpeg', title: 'Stakeholder Partnership' },
+                { src: '/waste management/WhatsApp Image 2026-04-02 at 09.48.35.jpeg', title: 'Wetland Assessment' },
+                { src: '/waste management/WhatsApp Image 2026-04-02 at 09.48.37.jpeg', title: 'Water Monitoring' },
+                { src: '/waste management/IMG_0582.png', title: 'Waste Collection Operations' },
+                { src: '/waste management/IMG_0594.png', title: 'Waste Sorting & Recovery' },
+              ].map((item, i) => (
+                <motion.div key={item.title} initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.1 }}
+                  className="rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-500 group">
+                  <div className="relative h-[300px] overflow-hidden bg-gray-200">
+                    <Image src={item.src} alt={item.title} fill className="object-cover group-hover:scale-105 transition-transform duration-500" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+                    <div className="absolute bottom-0 left-0 right-0 p-4">
+                      <h4 className="text-white font-bold">{item.title}</h4>
+                    </div>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
           </div>
         </section>
 
