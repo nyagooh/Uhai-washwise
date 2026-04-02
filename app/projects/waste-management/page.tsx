@@ -3,9 +3,7 @@
 import { motion } from 'framer-motion'
 import Image from 'next/image'
 import Link from 'next/link'
-import Navigation from '@/components/Navigation'
-import Footer from '@/components/Footer'
-import { FiArrowRight, FiCheckCircle, FiClock, FiMapPin, FiUsers } from 'react-icons/fi'
+import { FiArrowRight, FiCheckCircle, FiTrendingUp, FiTarget, FiHeart, FiMapPin, FiUsers, FiClock } from 'react-icons/fi'
 
 const fadeUp = {
   hidden: { opacity: 0, y: 30 },
@@ -15,32 +13,26 @@ const fadeUp = {
 export default function WasteManagementProject() {
   return (
     <>
-      <Navigation />
-      
       <main>
-        {/* Hero */}
-        <section className="relative py-20 md:py-32 overflow-hidden" style={{ backgroundColor: '#0598CE' }}>
-          <div className="absolute inset-0">
-            <Image
-              src="/waste management/hand-african-american-man-picking-up-bottle-into-garbage-bags-while-cleaning-area-park-africa-volunteering-charity-people-ecology-concept.jpg"
-              alt="Waste Management Solutions"
-              fill
-              className="object-cover opacity-30"
-            />
-            <div className="absolute inset-0 bg-black/50" />
-          </div>
-          <div className="container-main relative z-10 text-center">
-            <motion.div initial="hidden" animate="visible" variants={fadeUp}>
-              <div className="section-label mb-4 md:mb-6 justify-center text-xs md:text-sm" style={{ color: 'rgba(255, 255, 255, 0.9)' }}>
-                <span className="w-2 h-2 rounded-full bg-white inline-block mr-2"></span>
-                Community Project
-              </div>
-              <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold mb-4 md:mb-6 px-4 md:px-0" style={{ color: '#FFFFFF' }}>
-                Waste Management Solutions
-              </h1>
-              <p className="text-base md:text-xl max-w-3xl mx-auto leading-relaxed px-4 md:px-0" style={{ color: 'rgba(255, 255, 255, 0.95)' }}>
+        {/* Hero — Dark with Video */}
+        <section className="relative min-h-[70vh] flex items-end overflow-hidden">
+          <video
+            autoPlay muted loop playsInline
+            className="absolute inset-0 w-full h-full object-cover"
+            poster="/ChatGPT Image Feb 6, 2026, 12_40_42 PM.png"
+          >
+            <source src="/UHAI SEQ.mp4" type="video/mp4" />
+          </video>
+          <div className="absolute inset-0" style={{ background: 'linear-gradient(180deg, rgba(11,31,51,0.6) 0%, rgba(11,31,51,0.4) 40%, rgba(11,31,51,0.92) 100%)' }} />
+          <div className="container-full relative z-10 pb-16 lg:pb-24 pt-40">
+            <motion.div initial="hidden" animate="visible" variants={{ visible: { transition: { staggerChildren: 0.1 } } }}>
+              <motion.div variants={fadeUp} className="label-light mb-5">Community Project</motion.div>
+              <motion.h1 variants={fadeUp} className="h-display text-white max-w-4xl">
+                Waste <span style={{ color: '#2F6F4E' }}>Management</span> Solutions
+              </motion.h1>
+              <motion.p variants={fadeUp} className="body-light max-w-xl mt-5">
                 Transforming waste into valuable resources through circular economy solutions and community-grounded action.
-              </p>
+              </motion.p>
             </motion.div>
           </div>
         </section>
@@ -244,8 +236,6 @@ export default function WasteManagementProject() {
           </div>
         </section>
       </main>
-
-      <Footer />
     </>
   )
 }
