@@ -5,74 +5,73 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { usePathname } from 'next/navigation'
 import { motion, AnimatePresence } from 'framer-motion'
-import { FiMenu, FiX, FiPhone, FiChevronDown } from 'react-icons/fi'
+import { FiMenu, FiX, FiArrowRight } from 'react-icons/fi'
 
 const navLinks = [
   { name: 'Home', href: '/' },
-  { name: 'Services', href: '/services' },
   { name: 'About', href: '/about' },
+  { name: 'What We Do', href: '/services' },
   { name: 'Impacts', href: '/impacts' },
+  { name: 'Contact', href: '/contact' },
 ]
 
 export default function Navigation() {
-  const [isScrolled, setIsScrolled] = useState(false)
-  const [isMobileOpen, setIsMobileOpen] = useState(false)
+  const [scrolled, setScrolled] = useState(false)
+  const [mobileOpen, setMobileOpen] = useState(false)
   const pathname = usePathname()
 
   useEffect(() => {
-    const handleScroll = () => setIsScrolled(window.scrollY > 50)
-    window.addEventListener('scroll', handleScroll)
-    return () => window.removeEventListener('scroll', handleScroll)
+    const onScroll = () => setScrolled(window.scrollY > 60)
+    window.addEventListener('scroll', onScroll)
+    return () => window.removeEventListener('scroll', onScroll)
   }, [])
 
   return (
     <>
-      {/* Main Navigation */}
       <motion.header
         initial={{ y: -100 }}
         animate={{ y: 0 }}
-        className={`sticky top-0 z-50 transition-all duration-300 ${
-          isScrolled 
-            ? 'shadow-lg py-1' 
-            : 'backdrop-blur-sm py-2'
-        }`}
-        style={{ 
-          backgroundColor: isScrolled ? '#FFFFFF' : 'rgba(255, 255, 255, 0.95)',
-          boxShadow: isScrolled ? '0 4px 6px rgba(27, 95, 122, 0.08)' : 'none'
+        transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
+        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${scrolled ? 'py-2' : 'py-4'}`}
+        style={{
+          backgroundColor: scrolled ? 'rgba(255,255,255,0.97)' : 'transparent',
+          backdropFilter: scrolled ? 'blur(16px)' : 'none',
+          boxShadow: scrolled ? '0 1px 0 rgba(15,23,42,0.06)' : 'none',
         }}
       >
-        <div className="container-main">
+        <div className="container-full">
           <div className="flex items-center justify-between">
             {/* Logo */}
             <Link href="/" className="flex items-center">
-              <div className="w-16 h-16 relative">
-                <Image 
+              <div className="w-14 h-14 sm:w-16 sm:h-16 relative">
+                <Image
                   src="/ChatGPT Image Feb 6, 2026, 11_23_47 AM.png"
-                  alt="Uhai WashWise Logo"
+                  alt="Uhai WashWise"
                   fill
-                  className="object-contain scale-125"
+                  className="object-contain"
                   priority
                 />
               </div>
             </Link>
 
             {/* Desktop Nav */}
-            <nav className="hidden lg:flex items-center gap-8">
+            <nav className="hidden lg:flex items-center gap-9">
               {navLinks.map((link) => (
                 <Link
                   key={link.href}
                   href={link.href}
-                  className="transition-colors relative"
-                  style={{ 
-                    color: pathname === link.href ? '#0598CE' : '#1A1A1A',
-                    fontWeight: pathname === link.href ? 600 : 500
+                  className="relative text-[13px] font-medium transition-colors duration-300"
+                  style={{
+                    color: pathname === link.href
+                      ? '#0598CE'
+                      : scrolled ? '#475569' : 'rgba(255,255,255,0.8)',
                   }}
                 >
                   {link.name}
                   {pathname === link.href && (
                     <motion.span
-                      layoutId="navIndicator"
-                      className="absolute -bottom-1 left-0 right-0 h-0.5"
+                      layoutId="activeNav"
+                      className="absolute -bottom-1 left-0 right-0 h-[2px] rounded-full"
                       style={{ backgroundColor: '#0598CE' }}
                     />
                   )}
@@ -80,47 +79,72 @@ export default function Navigation() {
               ))}
             </nav>
 
-            {/* Mobile Menu Button */}
-            <button
-              onClick={() => setIsMobileOpen(!isMobileOpen)}
-              className="lg:hidden p-2"
-              style={{ color: '#1A1A1A' }}
-            >
-              {isMobileOpen ? <FiX size={28} /> : <FiMenu size={28} />}
-            </button>
+            {/* CTA */}
+            <div className="flex items-center gap-3">
+              <Link
+                href="/contact"
+                className="hidden lg:inline-flex items-center gap-2 px-6 py-2.5 text-[13px] font-semibold rounded-lg transition-all duration-300"
+                style={{ backgroundColor: '#0598CE', color: '#FFFFFF' }}
+              >
+                Partner With Us
+                <FiArrowRight size={14} />
+              </Link>
+              <button
+                onClick={() => setMobileOpen(!mobileOpen)}
+                className="lg:hidden p-2 rounded-lg"
+                style={{ color: scrolled ? '#0B1F33' : '#FFFFFF' }}
+              >
+                {mobileOpen ? <FiX size={24} /> : <FiMenu size={24} />}
+              </button>
+            </div>
           </div>
         </div>
       </motion.header>
 
       {/* Mobile Menu */}
       <AnimatePresence>
-        {isMobileOpen && (
+        {mobileOpen && (
           <motion.div
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: 'auto' }}
-            exit={{ opacity: 0, height: 0 }}
-            className="fixed top-[72px] left-0 right-0 shadow-xl z-40 lg:hidden overflow-hidden"
-            style={{ backgroundColor: '#FFFFFF', boxShadow: '0 4px 6px rgba(27, 95, 122, 0.08)' }}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="fixed inset-0 z-40 lg:hidden flex flex-col"
+            style={{ backgroundColor: '#0B1F33' }}
           >
-            <nav className="container-main py-6 flex flex-col gap-2">
-              {navLinks.map((link) => (
-                <Link
-                  key={link.href}
-                  href={link.href}
-                  onClick={() => setIsMobileOpen(false)}
-                  className={`py-3 px-4 rounded-lg transition-colors ${
-                    pathname === link.href ? '' : 'hover:opacity-80'
-                  }`}
-                  style={{ 
-                    backgroundColor: pathname === link.href ? '#E6F5F9' : 'transparent',
-                    color: pathname === link.href ? '#0598CE' : '#1A1A1A',
-                    fontWeight: pathname === link.href ? 600 : 500
-                  }}
-                >
-                  {link.name}
-                </Link>
-              ))}
-            </nav>
+            <div className="flex-1 flex flex-col justify-center container-full">
+              <nav className="space-y-1">
+                {navLinks.map((link, i) => (
+                  <motion.div
+                    key={link.href}
+                    initial={{ opacity: 0, x: -20 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ delay: i * 0.06 }}
+                  >
+                    <Link
+                      href={link.href}
+                      onClick={() => setMobileOpen(false)}
+                      className="block py-4 font-display text-3xl sm:text-4xl font-bold transition-colors"
+                      style={{
+                        color: pathname === link.href ? '#0598CE' : 'rgba(255,255,255,0.6)',
+                        borderBottom: '1px solid rgba(255,255,255,0.08)',
+                      }}
+                    >
+                      {link.name}
+                    </Link>
+                  </motion.div>
+                ))}
+              </nav>
+              <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: 0.4 }}
+                className="mt-10 space-y-2 text-sm"
+                style={{ color: 'rgba(255,255,255,0.4)' }}
+              >
+                <p>0710433161 / 0724318117</p>
+                <p>uhaiwashwise@outlook.com</p>
+              </motion.div>
+            </div>
           </motion.div>
         )}
       </AnimatePresence>
