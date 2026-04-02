@@ -238,21 +238,18 @@ export default function Home() {
                 {
                   title: 'Water Quality Intelligence',
                   desc: 'Real-time water quality monitoring that tracks contamination levels, predicts changes, and delivers early warnings to protect communities and ecosystems.',
-                  videoSrc: '/waste management/IMG_3153.MP4',
                   imageSrc: '/AI wATER PREDICTING TOOL/Dashboard.png',
                   accent: '#0598CE'
                 },
                 {
                   title: 'Predictive Intelligence',
                   desc: 'Installing sensor monitoring systems for continuous water quality assessment and predictive analytics to identify risks before they impact communities.',
-                  videoSrc: '/waste management/IMG_3153.MP4',
                   imageSrc: '/AI wATER PREDICTING TOOL/Dashboard2.png',
                   accent: '#0598CE'
                 },
                 {
                   title: 'Waste Management Solutions',
                   desc: 'Circular economy programs that transform waste into resources, creating green livelihoods while diverting pollutants from water bodies.',
-                  videoSrc: '/waste management/IMG_3153.MP4',
                   imageSrc: '/waste management/IMG_0582.png',
                   accent: '#2F6F4E'
                 },
@@ -260,9 +257,7 @@ export default function Home() {
                 <motion.div key={item.title} initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.1 }}
                   className="rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-500 group">
                   <div className="relative h-[400px] overflow-hidden bg-gray-900">
-                    <video className="w-full h-full object-cover" autoPlay muted loop playsInline>
-                      <source src={item.videoSrc} type="video/mp4" />
-                    </video>
+                    <Image src={item.imageSrc} alt={item.title} fill className="object-cover group-hover:scale-105 transition-transform duration-500" />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
                     <div className="absolute bottom-0 left-0 right-0 p-8 text-white">
                       <h3 className="h-md mb-3">{item.title}</h3>
