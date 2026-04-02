@@ -34,9 +34,9 @@ export default function Navigation() {
         transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${scrolled ? 'py-2' : 'py-4'}`}
         style={{
-          backgroundColor: scrolled ? 'rgba(255,255,255,0.97)' : 'transparent',
-          backdropFilter: scrolled ? 'blur(16px)' : 'none',
-          boxShadow: scrolled ? '0 1px 0 rgba(15,23,42,0.06)' : 'none',
+          backgroundColor: 'transparent',
+          backdropFilter: 'none',
+          boxShadow: 'none',
         }}
       >
         <div className="container-full">
@@ -64,7 +64,7 @@ export default function Navigation() {
                   style={{
                     color: pathname === link.href
                       ? '#0598CE'
-                      : scrolled ? '#475569' : 'rgba(255,255,255,0.8)',
+                      : 'rgba(255,255,255,0.9)',
                   }}
                 >
                   {link.name}
@@ -92,7 +92,7 @@ export default function Navigation() {
               <button
                 onClick={() => setMobileOpen(!mobileOpen)}
                 className="lg:hidden p-2 rounded-lg"
-                style={{ color: scrolled ? '#0B1F33' : '#FFFFFF' }}
+                style={{ color: '#FFFFFF' }}
               >
                 {mobileOpen ? <FiX size={24} /> : <FiMenu size={24} />}
               </button>
