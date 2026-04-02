@@ -3,8 +3,6 @@
 import { motion } from 'framer-motion'
 import Image from 'next/image'
 import Link from 'next/link'
-import Navigation from '@/components/Navigation'
-import Footer from '@/components/Footer'
 import { FiArrowRight, FiLinkedin, FiAward, FiMapPin } from 'react-icons/fi'
 import { FaXTwitter } from 'react-icons/fa6'
 
@@ -55,20 +53,17 @@ const team = [
 export default function TeamPage() {
   return (
     <>
-      <Navigation />
-      
       <main>
-        {/* Hero */}
-        <section className="relative py-20 md:py-32 overflow-hidden" style={{ backgroundColor: '#0598CE' }}>
-          <div className="absolute inset-0">
-            <Image
-              src="/ChatGPT Image Feb 6, 2026, 12_40_42 PM.png"
-              alt="Hero Background"
-              fill
-              className="object-cover"
-            />
-            <div className="absolute inset-0 bg-black/45" />
-          </div>
+        {/* Hero with Video */}
+        <section className="relative py-20 md:py-32 overflow-hidden min-h-[60vh] flex items-center">
+          <video
+            autoPlay muted loop playsInline
+            className="absolute inset-0 w-full h-full object-cover"
+            poster="/ChatGPT Image Feb 6, 2026, 12_40_42 PM.png"
+          >
+            <source src="/UHAI SEQ.mp4" type="video/mp4" />
+          </video>
+          <div className="absolute inset-0 bg-black/45" />
           <div className="container-main relative z-10 text-center">
             <motion.div initial="hidden" animate="visible" variants={fadeUp}>
               <div className="section-label justify-center mb-4 md:mb-6 text-xs md:text-sm" style={{ color: 'rgba(255, 255, 255, 0.9)' }}>
@@ -207,8 +202,6 @@ export default function TeamPage() {
           </div>
         </section>
       </main>
-
-      <Footer />
     </>
   )
 }
