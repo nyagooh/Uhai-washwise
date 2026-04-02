@@ -9,42 +9,57 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        // Premium Primary - Bright Blue #0598CE
-        primary: {
-          DEFAULT: '#0598CE', // Premium Bright Blue - Main brand color
-          light: '#E6F5F9', // Very light blue for backgrounds
-          dark: '#047A9F', // Darker blue for depth
-          darker: '#035C70', // Darkest for text
-          50: '#E6F5F9',
-          100: '#CCEBF3',
-          200: '#99D7E7',
-          300: '#66C3DB',
-          400: '#33AFCF',
+        brand: {
+          DEFAULT: '#0598CE',
+          50: '#E8F6FC',
+          100: '#D1EDFA',
+          200: '#A3DBF5',
+          300: '#5DC2E8',
+          400: '#22ADD8',
           500: '#0598CE',
-          600: '#047A9F',
-          700: '#035C70',
-          800: '#023E41',
-          900: '#012012',
+          600: '#0480AE',
+          700: '#036A90',
+          800: '#025472',
+          900: '#013D54',
         },
-        // Premium Neutrals - Timeless & Clean
-        neutral: {
-          DEFAULT: '#1A1A1A', // Primary text
-          light: '#6B7280', // Secondary text
-          lighter: '#9CA3AF', // Tertiary text
-          bg: '#FFFFFF', // Pure white background
-          subtle: '#F9FAFB', // Subtle background
+        dark: {
+          DEFAULT: '#0B1F33',
+          50: '#E8EDF2',
+          100: '#C5D1DE',
+          200: '#8FA3B8',
+          300: '#5A7591',
+          400: '#2E4D6B',
+          500: '#0B1F33',
+          600: '#091A2B',
+          700: '#071523',
+          800: '#05101B',
+          900: '#030B13',
+        },
+        surface: {
+          DEFAULT: '#F8FAFC',
+          white: '#FFFFFF',
+        },
+        text: {
+          DEFAULT: '#0F172A',
+          secondary: '#475569',
+          muted: '#94A3B8',
+        },
+        green: {
+          accent: '#2F6F4E',
+          light: '#F0FDF4',
+          50: '#F0FDF4',
+          100: '#DCFCE7',
+          200: '#BBF7D0',
         },
       },
       fontFamily: {
         sans: ['var(--font-inter)', 'system-ui', 'sans-serif'],
-        display: ['var(--font-inter)', 'system-ui', 'sans-serif'],
+        display: ['var(--font-playfair)', 'Georgia', 'serif'],
       },
       animation: {
-        'fade-up': 'fadeUp 0.6s ease-out forwards',
+        'fade-up': 'fadeUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards',
         'fade-in': 'fadeIn 0.6s ease-out forwards',
-        'slide-in': 'slideIn 0.6s ease-out forwards',
-        'scale-in': 'scaleIn 0.4s ease-out forwards',
-        'float': 'float 3s ease-in-out infinite',
+        'slide-up': 'slideUp 1s cubic-bezier(0.16, 1, 0.3, 1) forwards',
       },
       keyframes: {
         fadeUp: {
@@ -55,17 +70,9 @@ const config: Config = {
           '0%': { opacity: '0' },
           '100%': { opacity: '1' },
         },
-        slideIn: {
-          '0%': { opacity: '0', transform: 'translateX(-30px)' },
-          '100%': { opacity: '1', transform: 'translateX(0)' },
-        },
-        scaleIn: {
-          '0%': { opacity: '0', transform: 'scale(0.9)' },
-          '100%': { opacity: '1', transform: 'scale(1)' },
-        },
-        float: {
-          '0%, 100%': { transform: 'translateY(0)' },
-          '50%': { transform: 'translateY(-10px)' },
+        slideUp: {
+          '0%': { opacity: '0', transform: 'translateY(60px)' },
+          '100%': { opacity: '1', transform: 'translateY(0)' },
         },
       },
     },
