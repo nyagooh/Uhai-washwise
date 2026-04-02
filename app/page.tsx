@@ -209,8 +209,8 @@ export default function Home() {
                         Step {item.step}
                       </span>
                     </div>
-                    <h4 className="text-sm font-bold text-white mb-2">{item.title}</h4>
-                    <p className="text-xs leading-relaxed text-white/40 max-w-[190px] mx-auto">{item.desc}</p>
+                    <h4 className="text-base font-bold text-white mb-3">{item.title}</h4>
+                    <p className="text-sm leading-relaxed text-white/70 max-w-[200px] mx-auto">{item.desc}</p>
                   </motion.div>
                 ))}
               </div>
