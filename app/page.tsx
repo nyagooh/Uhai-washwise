@@ -238,19 +238,19 @@ export default function Home() {
                 {
                   title: 'Water Quality Intelligence',
                   desc: 'Real-time water quality monitoring that tracks contamination levels, predicts changes, and delivers early warnings to protect communities and ecosystems.',
-                  imageSrc: '/AI wATER PREDICTING TOOL/Dashboard.png',
+                  imageSrc: '/waste management/WhatsApp Image 2026-04-02 at 09.48.37.jpeg',
                   accent: '#0598CE'
                 },
                 {
                   title: 'Predictive Intelligence',
                   desc: 'Installing sensor monitoring systems for continuous water quality assessment and predictive analytics to identify risks before they impact communities.',
-                  imageSrc: '/AI wATER PREDICTING TOOL/Dashboard2.png',
+                  imageSrc: '/waste management/WhatsApp Image 2026-04-02 at 09.48.35.jpeg',
                   accent: '#0598CE'
                 },
                 {
                   title: 'Waste Management Solutions',
                   desc: 'Circular economy programs that transform waste into resources, creating green livelihoods while diverting pollutants from water bodies.',
-                  imageSrc: '/waste management/IMG_0582.png',
+                  imageSrc: '/waste management/IMG_0594.png',
                   accent: '#2F6F4E'
                 },
               ].map((item, i) => (
@@ -258,49 +258,10 @@ export default function Home() {
                   className="rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-500 group">
                   <div className="relative h-[400px] overflow-hidden bg-gray-900">
                     <Image src={item.imageSrc} alt={item.title} fill className="object-cover group-hover:scale-105 transition-transform duration-500" />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/60 to-black/30" />
                     <div className="absolute bottom-0 left-0 right-0 p-8 text-white">
-                      <h3 className="h-md mb-3">{item.title}</h3>
-                      <p className="body-light">{item.desc}</p>
-                    </div>
-                  </div>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* ================================================================
-            5b. GALLERY — White section with Waste Management Pictures
-        ================================================================ */}
-        <section className="py-24 lg:py-36 bg-white">
-          <div className="container-full">
-            <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="max-w-3xl mb-16">
-              <div className="label mb-5">Our Work</div>
-              <h2 className="h-xl text-[#0F172A] mb-4">
-                Waste Management & Community <span style={{ color: '#0598CE' }}>Impact</span>
-              </h2>
-              <p className="body-lg max-w-xl">
-                Real moments of transformation and environmental action across East African communities.
-              </p>
-            </motion.div>
-
-            <div className="grid md:grid-cols-3 gap-6">
-              {[
-                { src: '/KEWASNET COFFE CONNECT/IMG_2464.JPG.jpeg', title: 'Water Governance Forum' },
-                { src: '/waste management/WhatsApp Image 2026-04-02 at 09.48.35.jpeg', title: 'Wetland Assessment' },
-                { src: '/waste management/IMG_0583.png', title: 'Community Champions' },
-                { src: '/KEWASNET COFFE CONNECT/IMG_2471.JPG.jpeg', title: 'Stakeholder Partnership' },
-                { src: '/waste management/IMG_0594.png', title: 'Waste Sorting Operations' },
-                { src: '/WETLANDS/ducks-pond.jpg', title: 'Wetland Restoration' },
-              ].map((item, i) => (
-                <motion.div key={item.title} initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.1 }}
-                  className="rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-500 group">
-                  <div className="relative h-[250px] overflow-hidden bg-gray-200">
-                    <Image src={item.src} alt={item.title} fill className="object-cover group-hover:scale-105 transition-transform duration-500" />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
-                    <div className="absolute bottom-0 left-0 right-0 p-4">
-                      <h4 className="text-white font-bold">{item.title}</h4>
+                      <h3 className="h-md mb-3 font-bold">{item.title}</h3>
+                      <p className="body-light text-white/95 leading-relaxed">{item.desc}</p>
                     </div>
                   </div>
                 </motion.div>
@@ -372,20 +333,21 @@ export default function Home() {
 
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
               {[
-                { src: '/KEWASNET COFFE CONNECT/IMG_2464.JPG.jpeg', title: 'Water Governance Forum' },
-                { src: '/KEWASNET COFFE CONNECT/IMG_2471.JPG.jpeg', title: 'Stakeholder Partnership' },
-                { src: '/waste management/WhatsApp Image 2026-04-02 at 09.48.35.jpeg', title: 'Wetland Assessment' },
-                { src: '/waste management/WhatsApp Image 2026-04-02 at 09.48.37.jpeg', title: 'Water Monitoring' },
-                { src: '/waste management/IMG_0582.png', title: 'Waste Collection Operations' },
-                { src: '/waste management/IMG_0594.png', title: 'Waste Sorting & Recovery' },
+                { src: '/KEWASNET COFFE CONNECT/IMG_2464.JPG.jpeg', title: 'Water Governance Forum', desc: 'Stakeholders convening at the Kenya Water and Sanitation Network forum to align strategies for improved water governance.' },
+                { src: '/KEWASNET COFFE CONNECT/IMG_2471.JPG.jpeg', title: 'Collaborative Partnerships', desc: 'Water sector professionals sharing insights and building partnerships for sustainable water management in East Africa.' },
+                { src: '/waste management/WhatsApp Image 2026-04-02 at 09.48.35.jpeg', title: 'Wetland Assessment Work', desc: 'Our team conducting on-site water body assessments, identifying pollution entry points and mapping contamination patterns.' },
+                { src: '/waste management/WhatsApp Image 2026-04-02 at 09.48.37.jpeg', title: 'Water Monitoring', desc: 'Field teams documenting water quality conditions in urban settlements to drive our monitoring and advocacy work.' },
+                { src: '/waste management/IMG_0582.png', title: 'Waste Collection Impact', desc: 'Organized waste collection operations transforming community waste management through systematic circular economy solutions.' },
+                { src: '/waste management/IMG_0594.png', title: 'Waste Sorting & Recovery', desc: 'Processing operations that are the backbone of circular economy programs turning waste into valuable resources.' },
               ].map((item, i) => (
                 <motion.div key={item.title} initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.1 }}
                   className="rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-500 group">
                   <div className="relative h-[300px] overflow-hidden bg-gray-200">
                     <Image src={item.src} alt={item.title} fill className="object-cover group-hover:scale-105 transition-transform duration-500" />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
-                    <div className="absolute bottom-0 left-0 right-0 p-4">
-                      <h4 className="text-white font-bold">{item.title}</h4>
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500" />
+                    <div className="absolute bottom-0 left-0 right-0 p-4 translate-y-2 group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-500">
+                      <h4 className="text-white font-bold text-sm mb-2">{item.title}</h4>
+                      <p className="text-white/80 text-xs leading-relaxed">{item.desc}</p>
                     </div>
                   </div>
                 </motion.div>
@@ -395,17 +357,17 @@ export default function Home() {
         </section>
 
         {/* ================================================================
-            8. GALLERY — Dark editorial, masonry grid with hover + lightbox
+            8. GALLERY — White editorial, masonry grid with hover + lightbox
         ================================================================ */}
-        <section className="py-24 lg:py-36" style={{ backgroundColor: '#0B1F33' }}>
+        <section className="py-24 lg:py-36 bg-white">
           <div className="container-full">
             <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}
               className="flex flex-col lg:flex-row lg:items-end lg:justify-between mb-14 gap-6">
               <div>
-                <div className="label-light mb-5">Our Work in Action</div>
-                <h2 className="h-xl text-white">Gallery</h2>
+                <div className="label mb-5">Our Work in Action</div>
+                <h2 className="h-xl text-[#0F172A]">Gallery</h2>
               </div>
-              <p className="text-sm max-w-sm text-white/40">
+              <p className="text-sm max-w-sm text-[#475569]">
                 Real moments of impact and transformation. Click any image to explore the story behind it.
               </p>
             </motion.div>
@@ -430,10 +392,10 @@ export default function Home() {
                     className="w-full h-auto object-cover transition-transform duration-700 group-hover:scale-105"
                   />
                   {/* Hover overlay */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#0B1F33]/90 via-[#0B1F33]/20 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-white/90 via-white/20 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500" />
                   <div className="absolute inset-0 flex flex-col justify-end p-4 lg:p-5 translate-y-4 group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-500">
-                    <h4 className="text-sm font-bold text-white mb-1">{img.title}</h4>
-                    <p className="text-[11px] text-white/50 line-clamp-2 hidden sm:block">{img.desc}</p>
+                    <h4 className="text-sm font-bold text-[#0F172A] mb-1">{img.title}</h4>
+                    <p className="text-[11px] text-[#475569] line-clamp-2 hidden sm:block">{img.desc}</p>
                     <div className="flex items-center gap-1.5 mt-2">
                       <span className="text-[10px] uppercase tracking-wider font-bold" style={{ color: '#0598CE' }}>View Story</span>
                       <FiArrowUpRight size={11} style={{ color: '#0598CE' }} />
