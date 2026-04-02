@@ -226,10 +226,10 @@ export default function Home() {
             <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="max-w-3xl mb-12">
               <div className="label mb-5">What We Do</div>
               <h2 className="h-xl text-[#0F172A] mb-4">
-                <span style={{ color: '#0598CE' }}>Water Quality,</span> Predictive Intelligence, Waste Management & <span style={{ color: '#0598CE' }}>Integrated Solutions</span>
+                <span style={{ color: '#0598CE' }}>Water Quality,</span> Predictive Water Quality, Waste Management & <span style={{ color: '#0598CE' }}>Integrated Water Resource Management</span>
               </h2>
               <p className="body-lg max-w-xl">
-                We combine water data visualization, predictive intelligence, and integrated waste management to protect water systems and build resilient communities across East Africa.
+                We combine water data visualization, predictive water quality modeling, and integrated waste management to protect water systems and build resilient communities across East Africa.
               </p>
             </motion.div>
 
@@ -258,8 +258,8 @@ export default function Home() {
                           <span className="text-white font-bold">2</span>
                         </div>
                         <div>
-                          <h4 className="text-lg font-bold text-white mb-1">Predictive Intelligence</h4>
-                          <p className="text-sm text-white/80">Models that forecast contamination risks and guide targeted interventions before crises emerge.</p>
+                          <h4 className="text-lg font-bold text-white mb-1">Predictive Water Quality</h4>
+                          <p className="text-sm text-white/80">Predictive models that forecast contamination risks and guide targeted interventions before crises emerge.</p>
                         </div>
                       </div>
                       <div className="flex items-start gap-4">
@@ -267,8 +267,8 @@ export default function Home() {
                           <span className="text-white font-bold">3</span>
                         </div>
                         <div>
-                          <h4 className="text-lg font-bold text-white mb-1">Integrated Waste Management</h4>
-                          <p className="text-sm text-white/80">Community-driven circular programs that reduce pollution sources while creating green livelihoods.</p>
+                          <h4 className="text-lg font-bold text-white mb-1">Integrated Water Resource Management</h4>
+                          <p className="text-sm text-white/80">Holistic water management combining waste reduction, ecosystem restoration, and community-driven circular economy programs.</p>
                         </div>
                       </div>
                     </div>
@@ -417,7 +417,32 @@ export default function Home() {
         </section>
 
         {/* ================================================================
-            9. CONTACT — Surface, clean structured
+            9. READY TO DISCUSS PROJECT — Engagement CTA
+        ================================================================ */}
+        <section className="py-24 lg:py-36" style={{ backgroundColor: '#0B1F33' }}>
+          <div className="container-full">
+            <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="max-w-3xl mx-auto text-center">
+              <div className="label-light justify-center mb-6">Next Step</div>
+              <h2 className="h-xl text-white mb-6">
+                Ready to <span style={{ color: '#0598CE' }}>Discuss Your Project</span>?
+              </h2>
+              <p className="body-light max-w-xl mx-auto mb-10">
+                Whether you&apos;re interested in deploying our water quality platform, exploring waste management solutions, or partnering on environmental research — let&apos;s find the right fit for your community or organization.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="mailto:uhaiwashwise@outlook.com" className="btn-primary">
+                  Start a Conversation <FiMail size={15} />
+                </a>
+                <Link href="/contact" className="btn-outline">
+                  Schedule a Call <FiArrowRight size={15} />
+                </Link>
+              </div>
+            </motion.div>
+          </div>
+        </section>
+
+        {/* ================================================================
+            10. CONTACT — Surface, clean structured (GET IN TOUCH)
         ================================================================ */}
         <section className="py-24 lg:py-36" style={{ backgroundColor: '#F8FAFC' }}>
           <div className="container-full">
