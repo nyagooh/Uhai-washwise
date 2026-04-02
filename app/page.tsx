@@ -226,7 +226,7 @@ export default function Home() {
             <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="max-w-3xl mb-12">
               <div className="label mb-5">What We Do</div>
               <h2 className="h-xl text-[#0F172A] mb-4">
-                Integrated Water Management & <span style={{ color: '#0598CE' }}>Community Solutions</span>
+                <span style={{ color: '#0598CE' }}>Water Quality,</span> Predictive Intelligence, Waste Management & <span style={{ color: '#0598CE' }}>Integrated Solutions</span>
               </h2>
               <p className="body-lg max-w-xl">
                 We combine water data visualization, predictive intelligence, and integrated waste management to protect water systems and build resilient communities across East Africa.
