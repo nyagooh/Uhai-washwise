@@ -235,7 +235,7 @@ export default function Home() {
 
             <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.1 }}
               className="rounded-3xl overflow-hidden shadow-2xl hover:shadow-3xl transition-all duration-500 group">
-              <div className="relative h-[500px] overflow-hidden bg-gray-900">
+              <div className="relative h-[600px] overflow-hidden bg-gray-900">
                 <Image src="/WETLANDS/green-grass-growing-near-lake.jpg" alt="Integrated Water Management" fill className="object-cover transition-transform duration-700 group-hover:scale-105" />
                 {/* strong overlay for text readability */}
                 <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/50 to-black/60" />
