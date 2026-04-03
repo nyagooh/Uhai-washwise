@@ -219,11 +219,11 @@ export default function Home() {
         </section>
 
         {/* ================================================================
-            5. WHAT WE DO — Single integrated card featuring core services
+            5. WHAT WE DO — Three service cards with media
         ================================================================ */}
         <section className="py-24 lg:py-36 bg-white">
           <div className="container-full">
-            <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="max-w-3xl mb-12">
+            <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="max-w-3xl mb-16">
               <div className="label mb-5">What We Do</div>
               <h2 className="h-xl text-[#0F172A] mb-4">
                 <span style={{ color: '#0598CE' }}>Water Quality,</span> Predictive Water Quality, Waste Management & <span style={{ color: '#0598CE' }}>Integrated Water Resource Management</span>
@@ -233,49 +233,71 @@ export default function Home() {
               </p>
             </motion.div>
 
-            <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.1 }}
-              className="rounded-3xl overflow-hidden shadow-2xl hover:shadow-3xl transition-all duration-500 group">
-              <div className="relative h-[600px] overflow-hidden bg-gray-900">
-                <Image src="/WETLANDS/green-grass-growing-near-lake.jpg" alt="Integrated Water Management" fill className="object-cover transition-transform duration-700 group-hover:scale-105" />
-                {/* strong overlay for text readability */}
-                <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/50 to-black/60" />
-                {/* content overlay with three service areas */}
-                <div className="absolute inset-0 flex flex-col justify-center items-start p-8 lg:p-16">
-                  <div className="max-w-2xl">
-                    <h3 className="text-3xl lg:text-4xl font-bold text-white mb-6">Our Integrated Approach</h3>
-                    <div className="space-y-4">
-                      <div className="flex items-start gap-4">
-                        <div className="w-12 h-12 rounded-full flex-shrink-0 flex items-center justify-center" style={{ backgroundColor: '#0598CE' }}>
-                          <span className="text-white font-bold">1</span>
-                        </div>
-                        <div>
-                          <h4 className="text-lg font-bold text-white mb-1">Water Data Visualization</h4>
-                          <p className="text-sm text-white/80">Real-time dashboards that make complex water quality data accessible to decision-makers.</p>
-                        </div>
-                      </div>
-                      <div className="flex items-start gap-4">
-                        <div className="w-12 h-12 rounded-full flex-shrink-0 flex items-center justify-center" style={{ backgroundColor: '#0598CE' }}>
-                          <span className="text-white font-bold">2</span>
-                        </div>
-                        <div>
-                          <h4 className="text-lg font-bold text-white mb-1">Predictive Water Quality</h4>
-                          <p className="text-sm text-white/80">Predictive models that forecast contamination risks and guide targeted interventions before crises emerge.</p>
-                        </div>
-                      </div>
-                      <div className="flex items-start gap-4">
-                        <div className="w-12 h-12 rounded-full flex-shrink-0 flex items-center justify-center" style={{ backgroundColor: '#2F6F4E' }}>
-                          <span className="text-white font-bold">3</span>
-                        </div>
-                        <div>
-                          <h4 className="text-lg font-bold text-white mb-1">Integrated Water Resource Management</h4>
-                          <p className="text-sm text-white/80">Holistic water management combining waste reduction, ecosystem restoration, and community-driven circular economy programs.</p>
-                        </div>
-                      </div>
+            <div className="grid lg:grid-cols-3 gap-8">
+              {/* Card 1: Water Data Visualization with Video */}
+              <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0 }}
+                className="rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-500 group">
+                <div className="relative h-[450px] bg-gray-900 overflow-hidden">
+                  <video
+                    autoPlay muted loop playsInline
+                    className="absolute inset-0 w-full h-full object-cover"
+                    poster="/ChatGPT Image Feb 6, 2026, 12_40_42 PM.png"
+                  >
+                    <source src="/ai.MP4" type="video/mp4" />
+                  </video>
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
+                  <div className="absolute bottom-0 left-0 right-0 p-6">
+                    <div className="w-12 h-12 rounded-full flex items-center justify-center mb-4" style={{ backgroundColor: '#0598CE' }}>
+                      <span className="text-white font-bold text-lg">1</span>
                     </div>
+                    <h3 className="text-xl font-bold text-white mb-2">Water Data Visualization</h3>
+                    <p className="text-sm text-white/80">Real-time dashboards that make complex water quality data accessible to decision-makers.</p>
                   </div>
                 </div>
-              </div>
-            </motion.div>
+              </motion.div>
+
+              {/* Card 2: Predictive Water Quality with Image */}
+              <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.1 }}
+                className="rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-500 group">
+                <div className="relative h-[450px] bg-gray-900 overflow-hidden">
+                  <Image 
+                    src="/AI wATER PREDICTING TOOL/Dashboard.png" 
+                    alt="Predictive Water Quality Dashboard" 
+                    fill 
+                    className="object-cover group-hover:scale-105 transition-transform duration-500"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
+                  <div className="absolute bottom-0 left-0 right-0 p-6">
+                    <div className="w-12 h-12 rounded-full flex items-center justify-center mb-4" style={{ backgroundColor: '#0598CE' }}>
+                      <span className="text-white font-bold text-lg">2</span>
+                    </div>
+                    <h3 className="text-xl font-bold text-white mb-2">Predictive Water Quality</h3>
+                    <p className="text-sm text-white/80">Predictive models that forecast contamination risks and guide targeted interventions before crises emerge.</p>
+                  </div>
+                </div>
+              </motion.div>
+
+              {/* Card 3: Integrated Water Resource Management with Image */}
+              <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.2 }}
+                className="rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-500 group">
+                <div className="relative h-[450px] bg-gray-900 overflow-hidden">
+                  <Image 
+                    src="/waste management/IMG_0583.png" 
+                    alt="Integrated Water Resource Management" 
+                    fill 
+                    className="object-cover group-hover:scale-105 transition-transform duration-500"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
+                  <div className="absolute bottom-0 left-0 right-0 p-6">
+                    <div className="w-12 h-12 rounded-full flex items-center justify-center mb-4" style={{ backgroundColor: '#2F6F4E' }}>
+                      <span className="text-white font-bold text-lg">3</span>
+                    </div>
+                    <h3 className="text-xl font-bold text-white mb-2">Integrated Water Resource Management</h3>
+                    <p className="text-sm text-white/80">Holistic water management combining waste reduction, ecosystem restoration, and community-driven circular economy programs.</p>
+                  </div>
+                </div>
+              </motion.div>
+            </div>
           </div>
         </section>
 

@@ -3,7 +3,7 @@
 import { motion } from 'framer-motion'
 import Image from 'next/image'
 import Link from 'next/link'
-import { FiArrowRight, FiCheck, FiTarget, FiEye, FiHeart } from 'react-icons/fi'
+import { FiArrowRight, FiCheck, FiTarget, FiEye, FiHeart, FiMail, FiPhone, FiMapPin } from 'react-icons/fi'
 
 const fade = {
   hidden: { opacity: 0, y: 30 },
@@ -173,43 +173,69 @@ export default function AboutPage() {
           </div>
         </section>
 
-        {/* CTA — Dark */}
-        <section className="py-24 lg:py-36" style={{ backgroundColor: '#0B1F33' }}>
+        {/* CTA — Get in Touch (light background, matching homepage) */}
+        <section className="py-24 lg:py-36" style={{ backgroundColor: '#F8FAFC' }}>
           <div className="container-full">
-            <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="max-w-2xl">
-              <div className="label-light mb-5">Get in Touch</div>
-              <h2 className="h-xl text-white mb-6">Ready to <span style={{ color: '#0598CE' }}>Partner</span> With Us?</h2>
-              <p className="body-light mb-10 max-w-lg">Have questions or ready to collaborate? We would love to hear from you.</p>
-              <div className="flex flex-wrap gap-3 mb-10">
-                <Link href="/contact" className="btn-primary">Send a Message <FiArrowRight size={15} /></Link>
-                <a href="mailto:uhaiwashwise@outlook.com" className="btn-outline">uhaiwashwise@outlook.com</a>
-              </div>
-              
-              {/* Social Media Links */}
-              <div className="flex items-center gap-4">
-                <span className="text-sm text-white/60">Follow us:</span>
-                <div className="flex gap-3">
-                  <a href="https://www.linkedin.com/company/uhai-washwise" target="_blank" rel="noopener noreferrer" 
-                    className="w-10 h-10 rounded-lg flex items-center justify-center transition-all duration-300"
-                    style={{ backgroundColor: 'rgba(255,255,255,0.1)', color: '#FFFFFF' }}
-                    onMouseEnter={(e) => e.currentTarget.style.backgroundColor = 'rgba(255,255,255,0.2)'}
-                    onMouseLeave={(e) => e.currentTarget.style.backgroundColor = 'rgba(255,255,255,0.1)'}>
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
-                      <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.026-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.225 0z"/>
-                    </svg>
+            <div className="grid lg:grid-cols-12 gap-12 lg:gap-20">
+              <motion.div initial={{ opacity: 0, x: -25 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} className="lg:col-span-5">
+                <div className="label mb-5">Get in Touch</div>
+                <h2 className="h-xl text-[#0F172A] mb-6">
+                  Let&apos;s Build a Resilient Future <span style={{ color: '#0598CE' }}>Together</span>
+                </h2>
+                <p className="body-lg mb-10 max-w-lg">
+                  Whether you are an investor, government partner, researcher, or community leader — we are ready to collaborate on meaningful impact.
+                </p>
+
+                <div className="flex flex-wrap gap-3 mb-12">
+                  <a href="mailto:uhaiwashwise@outlook.com" className="btn-primary">
+                    Partner With Us <FiMail size={15} />
                   </a>
-                  <a href="#" 
-                    className="w-10 h-10 rounded-lg flex items-center justify-center transition-all duration-300"
-                    style={{ backgroundColor: 'rgba(255,255,255,0.1)', color: '#FFFFFF' }}
-                    onMouseEnter={(e) => e.currentTarget.style.backgroundColor = 'rgba(255,255,255,0.2)'}
-                    onMouseLeave={(e) => e.currentTarget.style.backgroundColor = 'rgba(255,255,255,0.1)'}>
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
-                      <path d="M23.953 4.57a10 10 0 002.856-9.958 10 10 0 01-2.856.9 5 5 0 002.19-2.72v-.26a10 10 0 00-8.5 4.23 5 5 0 00-8.6 5.2A14 14 0 011.07 4.57a5 5 0 001.55 6.68 5 5 0 01-2.27-.616v.06a5 5 0 004.01 4.9 5 5 0 01-2.25.09 5 5 0 004.66 3.48A10 10 0 010 19.54a14 14 0 007.557 2.209c7.332 0 11.34-6.469 11.34-12.076 0-.184-.003-.367-.01-.55A8.1 8.1 0 0024 4.59z"/>
-                    </svg>
-                  </a>
+                  <Link href="/contact" className="btn-outline-dark">
+                    Send a Message <FiArrowRight size={15} />
+                  </Link>
                 </div>
-              </div>
-            </motion.div>
+
+                <div className="pt-8" style={{ borderTop: '1px solid #E8EDF2' }}>
+                  <p className="text-[11px] uppercase tracking-[0.15em] font-bold text-[#0F172A] mb-4">Quick Contact</p>
+                  <div className="space-y-3">
+                    {[
+                      { icon: FiMail, text: 'uhaiwashwise@outlook.com', href: 'mailto:uhaiwashwise@outlook.com' },
+                      { icon: FiPhone, text: '0710433161 / 0724318117' },
+                      { icon: FiMapPin, text: 'Posta Flats, Ondiek Road, Kisumu, Kenya' },
+                    ].map((item) => (
+                      <div key={item.text} className="flex items-center gap-3">
+                        <div className="w-9 h-9 rounded-lg flex items-center justify-center" style={{ backgroundColor: '#E8F6FC' }}>
+                          <item.icon size={14} style={{ color: '#0598CE' }} />
+                        </div>
+                        {item.href ? (
+                          <a href={item.href} className="text-sm hover:underline" style={{ color: '#0598CE' }}>{item.text}</a>
+                        ) : (
+                          <span className="text-sm text-[#475569]">{item.text}</span>
+                        )}
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </motion.div>
+
+              <motion.div initial={{ opacity: 0, x: 25 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} className="lg:col-span-7">
+                <div className="relative h-[500px] rounded-2xl overflow-hidden">
+                  <Image src="/AI wATER PREDICTING TOOL/unrecognizable-ecologist-standing-where-sewage-waste-water-meets-river-taking-samples-determine-level-contamination-pollution.jpg" alt="Field work" fill className="object-cover" />
+                  <div className="absolute inset-0" style={{ background: 'linear-gradient(135deg, rgba(11,31,51,0.4) 0%, transparent 100%)' }} />
+                  <div className="absolute bottom-6 left-6 right-6 p-6 rounded-xl backdrop-blur-md" style={{ backgroundColor: 'rgba(255,255,255,0.95)', border: '1px solid rgba(0,0,0,0.05)' }}>
+                    <div className="flex items-start gap-4">
+                      <div className="w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0" style={{ backgroundColor: '#E8F6FC' }}>
+                        <FiMapPin size={20} style={{ color: '#0598CE' }} />
+                      </div>
+                      <div>
+                        <h4 className="text-sm font-bold text-[#0F172A] mb-1">Based in Kenya</h4>
+                        <p className="text-xs text-[#94A3B8]">Operating across East Africa, partnering with 50+ communities on water security and environmental resilience.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </motion.div>
+            </div>
           </div>
         </section>
       </main>
