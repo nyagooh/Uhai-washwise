@@ -33,7 +33,7 @@ const capabilities = [
     icon: FiRefreshCw,
     title: 'Waste Management Solutions',
     subtitle: 'Circular Economy',
-    media: { type: 'video', src: '/uhai-seq.mp4' },
+    media: { type: 'video', src: 'https://www.youtube.com/embed/tRvBv77Lczs?autoplay=1&mute=1&loop=1&playlist=tRvBv77Lczs&controls=0' },
     desc: 'We design and implement circular economy programs that transform waste into valuable resources. Our community-grounded systems create green livelihoods while diverting pollutants from water bodies and critical ecosystems.',
     features: ['Integrated solid waste management', 'Recycling & material recovery', 'Community collection cooperatives', 'Organic waste & composting', 'Impact measurement & reporting'],
     accent: '#2F6F4E',
@@ -48,13 +48,15 @@ export default function ServicesPage() {
       <main>
         {/* Hero — Dark with Video */}
         <section className="relative min-h-[70vh] flex items-end overflow-hidden">
-          <video
-            autoPlay muted loop playsInline
-            className="absolute inset-0 w-full h-full object-cover"
-            poster="/ChatGPT Image Feb 6, 2026, 12_40_42 PM.png"
-          >
-            <source src="/uhai-seq.mp4" type="video/mp4" />
-          </video>
+          <div className="absolute inset-0 overflow-hidden pointer-events-none">
+            <iframe
+              src="https://www.youtube.com/embed/tRvBv77Lczs?autoplay=1&mute=1&loop=1&playlist=tRvBv77Lczs&controls=0&showinfo=0&rel=0&modestbranding=1&playsinline=1"
+              allow="autoplay; encrypted-media"
+              className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300%] h-[300%] min-w-full min-h-full"
+              style={{ border: 'none' }}
+              title="Background video"
+            />
+          </div>
           <div className="absolute inset-0" style={{ background: 'linear-gradient(180deg, rgba(11,31,51,0.6) 0%, rgba(11,31,51,0.4) 40%, rgba(11,31,51,0.92) 100%)' }} />
           <div className="container-full relative z-10 pb-16 lg:pb-24 pt-40">
             <motion.div initial="hidden" animate="visible" variants={{ visible: { transition: { staggerChildren: 0.1 } } }}>
@@ -76,11 +78,20 @@ export default function ServicesPage() {
               <div className="grid lg:grid-cols-12 gap-10 lg:gap-20 items-center">
                 <motion.div initial={{ opacity: 0, x: i % 2 === 0 ? -25 : 25 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}
                   className={`lg:col-span-6 relative h-[500px] lg:h-[650px] rounded-2xl overflow-hidden ${i % 2 === 1 ? 'lg:order-2' : ''}`}>
-                  {s.media.type === 'video' ? (
+                  {s.media.type === 'video' && s.media.src.includes('youtube.com') ? (
+                    <div className="absolute inset-0 overflow-hidden pointer-events-none">
+                      <iframe
+                        src={s.media.src + '&showinfo=0&rel=0&modestbranding=1&playsinline=1'}
+                        allow="autoplay; encrypted-media"
+                        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300%] h-[300%] min-w-full min-h-full"
+                        style={{ border: 'none' }}
+                        title="Background video"
+                      />
+                    </div>
+                  ) : s.media.type === 'video' ? (
                     <video
                       autoPlay muted loop playsInline
                       className="absolute inset-0 w-full h-full object-cover"
-                      poster="/ChatGPT Image Feb 6, 2026, 12_40_42 PM.png"
                     >
                       <source src={s.media.src} type="video/mp4" />
                     </video>

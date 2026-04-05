@@ -62,13 +62,15 @@ export default function Home() {
             1. HERO — Cinematic video (uhai-seq.mp4)
         ================================================================ */}
         <section className="relative min-h-screen flex items-center overflow-hidden">
-          <video
-            autoPlay muted loop playsInline
-            className="absolute inset-0 w-full h-full object-cover"
-            poster="/ChatGPT Image Feb 6, 2026, 12_40_42 PM.png"
-          >
-            <source src="/uhai-seq.mp4" type="video/mp4" />
-          </video>
+          <div className="absolute inset-0 overflow-hidden pointer-events-none">
+            <iframe
+              src="https://www.youtube.com/embed/tRvBv77Lczs?autoplay=1&mute=1&loop=1&playlist=tRvBv77Lczs&controls=0&showinfo=0&rel=0&modestbranding=1&playsinline=1"
+              allow="autoplay; encrypted-media"
+              className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300%] h-[300%] min-w-full min-h-full"
+              style={{ border: 'none' }}
+              title="Background video"
+            />
+          </div>
           <div className="absolute inset-0" style={{
             background: 'linear-gradient(180deg, rgba(11,31,51,0.7) 0%, rgba(11,31,51,0.35) 40%, rgba(11,31,51,0.88) 100%)',
           }} />
