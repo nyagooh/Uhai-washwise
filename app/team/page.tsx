@@ -3,6 +3,7 @@
 import { motion } from 'framer-motion'
 import Image from 'next/image'
 import Link from 'next/link'
+import BackgroundVideo from '@/components/BackgroundVideo'
 import { FiArrowRight, FiLinkedin, FiAward, FiMapPin } from 'react-icons/fi'
 import { FaXTwitter } from 'react-icons/fa6'
 
@@ -56,12 +57,7 @@ export default function TeamPage() {
       <main>
         {/* Hero with Video */}
         <section className="relative py-20 md:py-32 overflow-hidden min-h-[60vh] flex items-center">
-          <video
-            autoPlay muted loop playsInline
-            className="absolute inset-0 w-full h-full object-cover"
-          >
-            <source src="https://res.cloudinary.com/dw0jgbbxh/video/upload/uhai-seq_1_nvvetn.mp4" type="video/mp4" />
-          </video>
+          <BackgroundVideo src="https://res.cloudinary.com/dw0jgbbxh/video/upload/uhai-seq_1_nvvetn.mp4" />
           <div className="absolute inset-0 bg-black/45" />
           <div className="container-main relative z-10 text-center">
             <motion.div initial="hidden" animate="visible" variants={fadeUp}>

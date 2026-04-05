@@ -4,6 +4,7 @@ import { motion, AnimatePresence } from 'framer-motion'
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
+import BackgroundVideo from '@/components/BackgroundVideo'
 import {
   FiArrowRight, FiArrowUpRight, FiX,
   FiDroplet, FiTarget, FiEye, FiHeart,
@@ -62,12 +63,7 @@ export default function Home() {
             1. HERO — Cinematic video (uhai-seq.mp4)
         ================================================================ */}
         <section className="relative min-h-screen flex items-center overflow-hidden">
-          <video
-            autoPlay muted loop playsInline
-            className="absolute inset-0 w-full h-full object-cover"
-          >
-            <source src="https://res.cloudinary.com/dw0jgbbxh/video/upload/uhai-seq_1_nvvetn.mp4" type="video/mp4" />
-          </video>
+          <BackgroundVideo src="https://res.cloudinary.com/dw0jgbbxh/video/upload/uhai-seq_1_nvvetn.mp4" />
           <div className="absolute inset-0" style={{
             background: 'linear-gradient(180deg, rgba(11,31,51,0.7) 0%, rgba(11,31,51,0.35) 40%, rgba(11,31,51,0.88) 100%)',
           }} />
@@ -237,13 +233,7 @@ export default function Home() {
               <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0 }}
                 className="rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-500 group">
                 <div className="relative h-[450px] bg-gray-900 overflow-hidden">
-                  <video
-                    autoPlay muted loop playsInline
-                    className="absolute inset-0 w-full h-full object-cover"
-                    poster="/ChatGPT Image Feb 6, 2026, 12_40_42 PM.png"
-                  >
-                    <source src="https://res.cloudinary.com/dw0jgbbxh/video/upload/ai_pnujrn.mp4" type="video/mp4" />
-                  </video>
+                  <BackgroundVideo src="https://res.cloudinary.com/dw0jgbbxh/video/upload/ai_pnujrn.mp4" />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
                   <div className="absolute bottom-0 left-0 right-0 p-6">
                     <div className="w-12 h-12 rounded-full flex items-center justify-center mb-4" style={{ backgroundColor: '#0598CE' }}>

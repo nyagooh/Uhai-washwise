@@ -3,6 +3,7 @@
 import { motion } from 'framer-motion'
 import Image from 'next/image'
 import Link from 'next/link'
+import BackgroundVideo from '@/components/BackgroundVideo'
 import { FiArrowRight, FiArrowUpRight, FiBarChart2, FiDroplet, FiRefreshCw, FiCheck, FiMail, FiPhone, FiMapPin, FiActivity } from 'react-icons/fi'
 
 const fade = {
@@ -48,12 +49,7 @@ export default function ServicesPage() {
       <main>
         {/* Hero — Dark with Video */}
         <section className="relative min-h-[70vh] flex items-end overflow-hidden">
-          <video
-            autoPlay muted loop playsInline
-            className="absolute inset-0 w-full h-full object-cover"
-          >
-            <source src="https://res.cloudinary.com/dw0jgbbxh/video/upload/uhai-seq_1_nvvetn.mp4" type="video/mp4" />
-          </video>
+          <BackgroundVideo src="https://res.cloudinary.com/dw0jgbbxh/video/upload/uhai-seq_1_nvvetn.mp4" />
           <div className="absolute inset-0" style={{ background: 'linear-gradient(180deg, rgba(11,31,51,0.6) 0%, rgba(11,31,51,0.4) 40%, rgba(11,31,51,0.92) 100%)' }} />
           <div className="container-full relative z-10 pb-16 lg:pb-24 pt-40">
             <motion.div initial="hidden" animate="visible" variants={{ visible: { transition: { staggerChildren: 0.1 } } }}>
@@ -76,12 +72,7 @@ export default function ServicesPage() {
                 <motion.div initial={{ opacity: 0, x: i % 2 === 0 ? -25 : 25 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}
                   className={`lg:col-span-6 relative h-[500px] lg:h-[650px] rounded-2xl overflow-hidden ${i % 2 === 1 ? 'lg:order-2' : ''}`}>
                   {s.media.type === 'video' ? (
-                    <video
-                      autoPlay muted loop playsInline
-                      className="absolute inset-0 w-full h-full object-cover"
-                    >
-                      <source src={s.media.src} type="video/mp4" />
-                    </video>
+                    <BackgroundVideo src={s.media.src} />
                   ) : (
                     <Image src={s.media.src} alt={s.title} fill className="object-cover" />
                   )}

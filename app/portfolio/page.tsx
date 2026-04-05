@@ -3,6 +3,7 @@
 import { motion } from 'framer-motion'
 import Image from 'next/image'
 import Link from 'next/link'
+import BackgroundVideo from '@/components/BackgroundVideo'
 import { FiArrowRight, FiMapPin, FiUsers, FiDroplet } from 'react-icons/fi'
 
 const fadeUp = {
@@ -67,12 +68,7 @@ export default function PortfolioPage() {
       <main>
         {/* Hero — Dark with Video */}
         <section className="relative min-h-[70vh] flex items-end overflow-hidden">
-          <video
-            autoPlay muted loop playsInline
-            className="absolute inset-0 w-full h-full object-cover"
-          >
-            <source src="https://res.cloudinary.com/dw0jgbbxh/video/upload/uhai-seq_1_nvvetn.mp4" type="video/mp4" />
-          </video>
+          <BackgroundVideo src="https://res.cloudinary.com/dw0jgbbxh/video/upload/uhai-seq_1_nvvetn.mp4" />
           <div className="absolute inset-0" style={{ background: 'linear-gradient(180deg, rgba(11,31,51,0.6) 0%, rgba(11,31,51,0.4) 40%, rgba(11,31,51,0.92) 100%)' }} />
           <div className="container-full relative z-10 pb-16 lg:pb-24 pt-40">
             <motion.div initial="hidden" animate="visible" variants={{ visible: { transition: { staggerChildren: 0.1 } } }}>
@@ -90,7 +86,7 @@ export default function PortfolioPage() {
         {/* Stats */}
         <section className="py-16 bg-primary-500">
           <div className="container-main">
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 text-center">
               {[
                 { value: '50+', label: 'Communities Served' },
                 { value: '25+', label: 'Water Bodies Monitored' },
