@@ -59,7 +59,7 @@ export default function Home() {
       <main>
 
         {/* ================================================================
-            1. HERO — Cinematic video (UHAI SEQ.mp4)
+            1. HERO — Cinematic video (uhai-seq.mp4)
         ================================================================ */}
         <section className="relative min-h-screen flex items-center overflow-hidden">
           <video
@@ -67,7 +67,7 @@ export default function Home() {
             className="absolute inset-0 w-full h-full object-cover"
             poster="/ChatGPT Image Feb 6, 2026, 12_40_42 PM.png"
           >
-            <source src="/UHAI SEQ.mp4" type="video/mp4" />
+            <source src="/uhai-seq.mp4" type="video/mp4" />
           </video>
           <div className="absolute inset-0" style={{
             background: 'linear-gradient(180deg, rgba(11,31,51,0.7) 0%, rgba(11,31,51,0.35) 40%, rgba(11,31,51,0.88) 100%)',
@@ -243,7 +243,7 @@ export default function Home() {
                     className="absolute inset-0 w-full h-full object-cover"
                     poster="/ChatGPT Image Feb 6, 2026, 12_40_42 PM.png"
                   >
-                    <source src="/ai.MP4" type="video/mp4" />
+                    <source src="https://res.cloudinary.com/dw0jgbbxh/video/upload/ai_pnujrn.mp4" type="video/mp4" />
                   </video>
                   <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
                   <div className="absolute bottom-0 left-0 right-0 p-6">

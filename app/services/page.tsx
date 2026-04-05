@@ -15,7 +15,7 @@ const capabilities = [
     icon: FiBarChart2,
     title: 'AI Data Visualization',
     subtitle: 'Insights at a Glance',
-    media: { type: 'video', src: '/ai.MP4' },
+    media: { type: 'video', src: 'https://res.cloudinary.com/dw0jgbbxh/video/upload/ai_pnujrn.mp4' },
     desc: 'We build interactive dashboards that transform complex environmental datasets into clear, actionable visual intelligence. Our platform enables policymakers, researchers, and community leaders to understand water quality patterns at a glance.',
     features: ['Real-time data dashboards', 'Geospatial mapping & visualization', 'Predictive trend analytics', 'Automated reporting & exports', 'Multi-stakeholder access levels'],
     accent: '#0598CE',
@@ -33,7 +33,7 @@ const capabilities = [
     icon: FiRefreshCw,
     title: 'Waste Management Solutions',
     subtitle: 'Circular Economy',
-    media: { type: 'video', src: '/UHAI SEQ.mp4' },
+    media: { type: 'video', src: '/uhai-seq.mp4' },
     desc: 'We design and implement circular economy programs that transform waste into valuable resources. Our community-grounded systems create green livelihoods while diverting pollutants from water bodies and critical ecosystems.',
     features: ['Integrated solid waste management', 'Recycling & material recovery', 'Community collection cooperatives', 'Organic waste & composting', 'Impact measurement & reporting'],
     accent: '#2F6F4E',
@@ -53,7 +53,7 @@ export default function ServicesPage() {
             className="absolute inset-0 w-full h-full object-cover"
             poster="/ChatGPT Image Feb 6, 2026, 12_40_42 PM.png"
           >
-            <source src="/UHAI SEQ.mp4" type="video/mp4" />
+            <source src="/uhai-seq.mp4" type="video/mp4" />
           </video>
           <div className="absolute inset-0" style={{ background: 'linear-gradient(180deg, rgba(11,31,51,0.6) 0%, rgba(11,31,51,0.4) 40%, rgba(11,31,51,0.92) 100%)' }} />
           <div className="container-full relative z-10 pb-16 lg:pb-24 pt-40">

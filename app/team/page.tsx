@@ -61,7 +61,7 @@ export default function TeamPage() {
             className="absolute inset-0 w-full h-full object-cover"
             poster="/ChatGPT Image Feb 6, 2026, 12_40_42 PM.png"
           >
-            <source src="/UHAI SEQ.mp4" type="video/mp4" />
+            <source src="/uhai-seq.mp4" type="video/mp4" />
           </video>
           <div className="absolute inset-0 bg-black/45" />
           <div className="container-main relative z-10 text-center">

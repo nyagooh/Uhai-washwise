@@ -44,7 +44,7 @@ export default function ImpactsPage() {
             className="absolute inset-0 w-full h-full object-cover"
             poster="/WETLANDS/green-grass-growing-near-lake.jpg"
           >
-            <source src="/UHAI SEQ.mp4" type="video/mp4" />
+            <source src="/uhai-seq.mp4" type="video/mp4" />
           </video>
           <div className="absolute inset-0" style={{ background: 'linear-gradient(180deg, rgba(11,31,51,0.5) 0%, rgba(11,31,51,0.3) 40%, rgba(11,31,51,0.92) 100%)' }} />
           <div className="container-full relative z-10 pb-16 lg:pb-24 pt-40">
